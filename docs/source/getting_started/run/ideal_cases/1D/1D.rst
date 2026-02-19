@@ -1,0 +1,522 @@
+One dimensional (single column z) with ideal surface
+==================================================================
+
+Some of the most important advantages to use one dimensional (or single column, 1D) atmospheric simulations are :
+
+* **Simplicity :** simpler and require fewer computing resources than 2D or 3D models.
+
+* **Study vertical processes and surface-atmosphere interactions :** focus on vertical processes in the atmosphere, such as convection, cloud formation, and heat and moisture exchange without the complexity of horizontal advection.
+
+* **Parameterisation development and testing :** used to develop and test new physical parameterisations (e.g. for clouds, precipitation or radiation) before they are integrated into 2D or 3D models.
+
+To perform a 1D simulation with Meso-NH you need to :ref:`prepare the initial condition <1d_prep_ideal_case>` and :ref:`run the model <1d_mesonh>` using the :ref:`prep_ideal_case` and :ref:`mesonh` executables respectively. These two steps are described in the following sections:
+
+.. contents::
+   :local:
+   :depth: 1
+   :backlinks: top
+
+.. warning::
+
+   This kind of simulation is not parallelized and can only be run on 1 core.
+
+.. note::
+
+   You can find all the namelists presented in this section as well as the scripts here:
+
+   .. treeview::
+   
+      - :dir:`folder` |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/
+      
+        - :dir:`folder` 001_prep_ideal_case : directory to :ref:`prepare the initial condition <1d_prep_ideal_case>`
+        - :dir:`folder` 002_mesonh : directory to :ref:`run the model <1d_mesonh>`
+        - :dir:`folder` 003_python : directory to :ref:`plot the figure <1d_plot>`
+
+   The different steps must be performed in the order indicated by the directory numbers.
+
+.. _1d_prep_ideal_case:
+
+Prepare the initial condition (:ref:`prep_ideal_case`)
+------------------------------------------------------------------
+
+To create the initial condition for a vertical 1D Meso-NH simulation you have to use :ref:`prep_ideal_case` program. This program reads a file called :file:`PRE_IDEA1.nam` defining the characteristics of the simulation.
+
+.. tip::
+
+   To see all the namelists you can use in the :ref:`prep_ideal_case` program or to obtain information about namelists, please go :ref:`here <executables_and_namelists>`.
+
+In the :file:`PRE_IDEA1.nam` file, we recommend to have the following minimum informations and namelists:
+
+* The name of the NetCDF files you will create with the :ref:`prep_ideal_case` program (without the extension) in :ref:`NAM_LUNITn <nam_lunitn>` namelist:
+
+  .. code:: fortran
+
+     &NAM_LUNITn CINIFILE    = "INI",
+                 CINIFILEPGD = "PGD" /
+
+  .. note::
+
+     In this example, you will create the two NetCDF files :file:`INI.nc` and :file:`PGD.nc` corresponding respectively to initial and surface boundary conditions files.
+
+* The number of points along x (i) and y (j) direction (it has to be 1 in 1D configuration) in :ref:`NAM_DIMn_PRE <nam_dimn_pre>` namelist:
+
+  .. code:: fortran
+
+     &NAM_DIMn_PRE NIMAX = 1,
+                   NJMAX = 1 /
+
+* The horizontal resolution along i and j direction in :ref:`NAM_GRIDH_PRE <nam_gridh_pre>` namelist:
+
+  .. code:: fortran
+
+     &NAM_GRIDH_PRE XDELTAX = 1000.,
+                    XDELTAY = 1000. /
+
+  .. note::
+
+     It is better to set XDELTAX and XDELTAY to a value that is consistent with the relevant resolution of the parameterization you are testing (at least 1000.0 (m), or even 50 000 (m) if climate applications are targeted).
+
+* The vertical grid discretisation in :ref:`NAM_VER_GRID <nam_ver_grid>` namelist:
+
+  .. code:: fortran
+
+     &NAM_VER_GRID NKMAX  = 100,
+                   ZDZGRD = 40.,
+                   ZDZTOP = 40. /
+
+  .. note::
+
+     In this example, you will use 100 vertical grid points with a vertical resolution of 40 m everywhere.
+
+* The surface representation in :ref:`NAM_GRn_PRE <nam_grn_pre>`, :ref:`NAM_PGD_SCHEMES <nam_pgd_schemes>` and :ref:`NAM_COVER <nam_cover>` namelists:
+
+  .. code:: fortran
+
+     &NAM_GRn_PRE CSURF        = "EXTE" /
+     &NAM_COVER XUNIF_COVER(1) =  1.0   /
+     &NAM_PGD_SCHEMES CSEA     = "FLUX" /
+
+  .. note::
+
+     * In this example, you will use SURFEX (CSURF = "EXTE"), a cover containing 100 % sea points (XUNIF_COVER(1) = 1.0) and a prescribed ideal flux surface condition (CSEA = "FLUX").
+   
+     * The values of surface fluxes are given in the simulation namelist (see :ref:`simulation <1d_mesonh>` section).
+
+* The type of initial profile you will impose in :ref:`NAM_CONF_PRE <nam_conf_pre>`:
+
+  .. code:: fortran
+
+     &NAM_CONF_PRE CIDEAL = "RSOU" /
+
+* The characteristic of the vertical profile is given in the :ref:`freeformat part <freeformat_prep_ideal_case>` of the :file:`PRE_IDEA1.nam` file:
+
+  .. code:: fortran
+
+     RSOU
+     2025 6 11 0.
+     "ZUVTHVHU"
+     0.
+     100000.
+     305.
+     0.
+
+     2
+     0        0      0
+     4000     0      0
+
+     4
+       20.00     300.00  0.00
+     1000.00     300.00  0.00
+     4000.00     317.90  0.00
+
+  .. note::
+
+     In this example you will impose an horizontal wind speed of 0 m/s, a relative humidty of 0 % (dry simulation) and a constant potential temperature of 300 K from 0 m to 1000 m and then a regular increase of the potential temperature up to the top of the domain (4000 m).
+
+.. tip::
+
+   See the full :file:`PRE_IDEA1.nam` file:
+   
+   .. toggle::
+
+      .. code-block:: fortran
+
+         &NAM_LUNITn CINIFILE    = "INI",
+                     CINIFILEPGD = "PGD" /
+
+         &NAM_DIMn_PRE NIMAX = 1,
+                       NJMAX = 1 /
+                      
+         &NAM_GRIDH_PRE XDELTAX = 1000.,
+                        XDELTAY = 1000. /
+
+         &NAM_VER_GRID NKMAX  = 100,
+                       ZDZGRD = 40.,
+                       ZDZTOP = 40. /
+
+         &NAM_GRn_PRE CSURF        = "EXTE" /
+         &NAM_COVER XUNIF_COVER(1) =  1.0   /
+         &NAM_PGD_SCHEMES CSEA     = "FLUX" /
+     
+         &NAM_CONF_PRE CIDEAL = "RSOU" /     
+ 
+         RSOU
+         2025 6 11 0.
+         "ZUVTHVHU"
+         0.
+         100000.
+         300.
+         0.
+
+         2
+         0        0      0
+         4000     0      0
+
+         4
+           20.0     300.0  0.0
+         1000.0     300.0  0.0
+         4000.0     317.9  0.0
+
+   This file is located here :
+   
+   .. code-block:: bash
+      :substitutions:   
+      
+      |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/001_prep_ideal_case/
+
+You can launch :ref:`prep_ideal_case` program using :file:`run_prep_ideal_case.sh` script (execution takes less than 2 s):
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/001_prep_ideal_case/
+   ./run_prep_ideal_case.sh
+
+At the end of the :ref:`prep_ideal_case` execution, you need to have following files:
+
+.. role:: gray
+   :class: text-gray
+
+.. treeview::
+
+   - :dir:`folder` |MNH_directory_extract_current|/MY_RUN/tutorials/1D/001_prep_ideal_case/
+
+     - :dir:`file` PRE_IDEA1.nam :gray:`: The namelist file from this example`
+     - :dir:`file` INI.des :gray:`: The descriptive part of the initial condition file`
+     - :dir:`file` INI.nc :gray:`: The NetCDF part of the initial condition file`
+     - :dir:`file` PGD.nc :gray:`: The NetCDF part of the physiographic data file`
+     - :dir:`file` OUTPUT_LISTING1 :gray:`: File containing debug informations`
+
+.. tip::
+
+   To verify that the program has been executed correctly, you should see the following lines at the end of the :file:`OUTPUT_LISTING1` file:
+
+   .. code-block:: bash
+
+      ****************************************************
+      * PREP_IDEAL_CASE: PREP_IDEAL_CASE ENDS CORRECTLY. *
+      ****************************************************
+
+.. _1d_mesonh:
+
+Launch the simulation (:ref:`mesonh`)
+-----------------------------------------------------------------
+
+To launch the Meso-NH simulation you have to use :ref:`mesonh` program. This program reads a file called :file:`EXSEG1.nam` defining the characteristics of the simulation.
+
+.. tip::
+
+   To see all the namelists you can use in the :ref:`mesonh` program or to obtain information about namelists, please go :ref:`here <executables_and_namelists>`.
+
+In the :file:`EXSEG1.nam` file, we recommend to have the following minimum informations and namelists:
+
+
+* The name of the NetCDF files created by the :ref:`prep_ideal_case` program in :ref:`NAM_LUNITn <nam_lunitn>` namelist:
+
+  .. code:: fortran
+
+     &NAM_LUNITn CINIFILE    = "INI",
+                 CINIFILEPGD = "PGD" /
+
+* The simulated length (in s) and the activation of Coriolis effect in :ref:`NAM_DYN <nam_dyn>` namelist :
+
+  .. code:: fortran
+
+     &NAM_DYN XSEGLEN = 25200.0,
+              LCORIO  = .FALSE. /
+
+* The backup output writing period in :ref:`NAM_BACKUP <nam_backup>` namelist:
+
+  .. code:: fortran
+
+     &NAM_BACKUP XBAK_TIME(1,1) = 25200.0 /
+
+* The time step and pressure solver option in :ref:`NAM_DYNn <nam_dynn>` namelist:
+
+  .. code:: fortran
+
+     &NAM_DYNn XTSTEP   = 10.0,
+               CPRESOPT = "ZRESI" /
+
+* The temporal and advection schemes in :ref:`NAM_ADVn <nam_advn>` namelist:
+
+  .. code:: fortran
+
+     &NAM_ADVn CTEMP_SCHEME    = "RKC4",
+               CUVW_ADV_SCHEME = "CEN4TH",
+               CMET_ADV_SCHEME = "PPM_01" /
+
+* The physical parametrization options in :ref:`NAM_PARAMn <nam_paramn>` namelist:
+
+  .. code:: fortran
+
+     &NAM_PARAMn CTURB  = "TKEL",
+                 CRAD   = "NONE",
+                 CCLOUD = "NONE",
+                 CSCONV = "EDKF",
+                 CDCONV = "NONE" /
+                 
+  .. note::
+
+     In this example you will activate 1.5 order turbulence scheme (TKEL, :cite:t:`cuxart_turbulence_2000`) and shallow convection (EDKF, :cite:t:`pergaud_parameterization_2009`) parametrizations.
+
+* The turbulence scheme option in :ref:`NAM_TURBn <nam_turbn>` namelist:
+
+  .. code:: fortran
+  
+     &NAM_TURBn CTURBDIM="1DIM",
+                CTURBLEN="RM17" /
+
+  .. note::
+
+     In this example you will use 1D version of the turbulence scheme and the mixing lentgh of :cite:t:`rodier_evaluation_2017`.
+
+* The turbulence diagnostics in :ref:`NAM_LES <nam_les>`:
+
+  .. code:: fortran
+  
+     &NAM_LES LLES_MEAN = .TRUE. /
+     
+  .. note::
+
+     Only the mean variables are stored in this example.
+
+* The shallow convection options in :ref:`NAM_PARAM_MFSHALLn <nam_param_mfshalln>`:
+
+  .. code:: fortran
+  
+     &NAM_PARAM_MFSHALLn CMF_UPDRAFT = "EDKF",
+                         LMIXUV      = .TRUE.,
+                         LMF_FLX     = .TRUE. /
+
+  .. note::
+
+     You will chose to use EDKF parametrization (:code:`CMF_UPDRAFT = "EDKF"`), to activate wind mixing from thermal structures (:code:`LMIXUV = .TRUE.`) and to store the mass fluxes (:code:`LMF_FLX = .TRUE.`).
+
+
+* The heat fluxes imposed at the surface boundary condition in :ref:`NAM_IDEAL_FLUX <nam_ideal_flux>`:
+
+  .. code:: fortran
+
+     &NAM_IDEAL_FLUX NFORCF    = 2,
+                     XTIMEF(1) = 0.,
+                     XTIMEF(2) = 25200.,
+                     XSFTH(1)  = 200.0,
+                     XSFTH(2)  = 200.0 /
+                     
+  .. note::
+
+     In this example, you will force your simulation with surface constant heat flux of 200 W/m2 throughout the simulation.
+
+.. tip::
+
+   See the full :file:`EXSEG1.nam` file:
+   
+   .. toggle::
+
+      .. code-block:: fortran
+
+         &NAM_LUNITn CINIFILE    = "INI" ,
+                     CINIFILEPGD = "PGD" /
+
+         &NAM_DYN XSEGLEN = 25200.0,
+                  LCORIO  = .FALSE. /
+
+         &NAM_BACKUP XBAK_TIME(1,1) = 25200.0 /
+
+         &NAM_DYNn XTSTEP   = 10.0,
+                   CPRESOPT = "ZRESI" /
+
+         &NAM_ADVn CTEMP_SCHEME    = "RKC4",
+                   CUVW_ADV_SCHEME = "CEN4TH",
+                   CMET_ADV_SCHEME = "PPM_01" /
+
+         &NAM_PARAMn CTURB  = "TKEL",
+                     CRAD   = "NONE",
+                     CCLOUD = "NONE",
+                     CSCONV = "EDKF",
+                     CDCONV = "NONE" /
+
+         &NAM_TURBn CTURBDIM="1DIM",
+                    CTURBLEN="RM17" /
+
+         &NAM_LES LLES_MEAN = .TRUE. /
+
+         &NAM_PARAM_MFSHALLn CMF_UPDRAFT = "EDKF",
+                             LMIXUV      = .TRUE.,
+                             LMF_FLX     = .TRUE. /
+
+         &NAM_IDEAL_FLUX NFORCF    = 2,
+                         XTIMEF(1) = 0.,
+                         XTIMEF(2) = 25200.,
+                         XSFTH(1)  = 200.0,
+                         XSFTH(2)  = 200.0 /
+
+   This file is located here :
+
+   .. code-block:: bash
+      :substitutions:   
+         
+      |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/002_mesonh/
+
+You can launch :ref:`mesonh` program using :file:`run_mesonh.sh` script (execution takes less than 15 s):
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/002_mesonh/
+   ./run_mesonh.sh
+
+At the end of the :ref:`mesonh` execution, you need to have following files:
+
+.. role:: gray
+   :class: text-gray
+
+.. treeview::
+
+   - :dir:`folder` your_run_directory/
+
+     - :dir:`file` INI.des :gray:`: The descriptive part of the initial condition file`
+     - :dir:`file` INI.nc :gray:`: The NetCDF part of the initial condition file`
+     - :dir:`file` PGD.nc :gray:`: The NetCDF part of the physiographic data file`
+     - :dir:`file` EXSEG1.nam :gray:`: The file you've created from this example`
+     - :dir:`file` EXP01.1.SEG01.000.des :gray:`: The descriptive part of the simulated output file`
+     - :dir:`file` EXP01.1.SEG01.000.nc :gray:`: The NetCDF part of the simulated output file`
+     - :dir:`file` EXP01.1.SEG01.001.des :gray:`: The descriptive part of the simulated output file`
+     - :dir:`file` EXP01.1.SEG01.001.nc :gray:`: The NetCDF part of the simulated output file`
+     - :dir:`file` OUTPUT_LISTING0 :gray:`: File containing debug informations`
+     - :dir:`file` OUTPUT_LISTING1 :gray:`: File containing debug informations`
+
+.. tip::
+
+   * The *.000.nc file contains :ref:`NAM_LES <nam_les>` output.
+   
+   * The *.001.nc file contains :ref:`NAM_BACKUP <nam_backup>` output. This file can be used to restart the simulation. It contains one time variables.
+
+   * To verify that the program has been executed correctly, you should see the following lines at the end of the :file:`OUTPUT_LISTING1` file:
+
+     .. code-block:: bash
+
+        |----------------------------------------------------------------------------------------------------|
+        |     CPUTIME/ELAPSED                   ||   SUM(PROC)   |MEAN(PROC)| MIN(PROC | MAX(PROC)| PERCENT %|
+        |----------------------------------------------------------------------------------------------------|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        | MODEL1                      | CPUTIME ||         12.142|    12.142|    12.142|    12.142|   100.000|
+        | MODEL1                      | ELAPSED ||         12.159|    12.159|    12.159|    12.159|   100.000|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+        |====================================================================================================|
+        | SECOND/STEP=2521            | CPUTIME ||          0.005|     0.005|     0.005|     0.005|     0.040|
+        | SECOND/STEP=2521            | ELAPSED ||          0.005|     0.005|     0.005|     0.005|     0.040|
+        |----------------------------------------------------------------------------------------------------|
+        | MICROSEC/STP/PT=100         | CPUTIME ||         48.163|    48.163|    48.163|    48.163|   100.000|
+        | MICROSEC/STP/PT=100         | ELAPSED ||         48.230|    48.230|    48.230|    48.230|   100.000|
+        |====================================================================================================|
+
+.. _1d_plot:
+
+Plot results
+-----------------------------------------------------------------
+
+You can plot the results using :file:`run_python.sh` script (execution takes less than few seconds):
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/003_python/
+   ./run_python.sh
+
+The figure created visible below shows an example of a graph that you can plot from the 1D simulation you just performed. It shows the temporal evolution of the atmospheric boundary layer through the vertical potential temperature profile.
+
+.. figure:: 1D.png
+
+   Example of 1D simulation output. Evolution of the vertical profile of potential temperature.
+
+.. tip::
+
+   See the python script used to plot this figure:
+
+   .. toggle::
+     
+      .. code-block:: python
+
+         #!/usr/bin/python
+         # -*- coding: utf-8 -*-
+
+         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         import numpy as np
+         import netCDF4
+         import matplotlib.pyplot as plt
+         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+         # #########################################################
+         # ###           To be defined by user                   ###
+         # #########################################################
+
+         cfg_file_name = 'EXP01.1.SEG01.000.nc'
+
+         # #########################################################
+
+         # ------------------------------------------------------
+         #   Read netcdf file and variables
+         # ------------------------------------------------------
+
+         file_MNH       = netCDF4.Dataset(cfg_file_name)
+         time_MNH       = file_MNH['time_les'][:]/3600.0
+         level_MNH      = file_MNH['level_les']
+         mean_theta_MNH = file_MNH['LES_budgets']['Mean']['Cartesian']['Not_time_averaged']['Not_normalized']['cart']['MEAN_TH']
+
+         # ------------------------------------------------------
+         #   Quick plot
+         # ------------------------------------------------------
+
+         plt.pcolormesh(time_MNH[:], level_MNH, np.transpose(mean_theta_MNH), shading="auto", cmap="coolwarm")
+
+         # ------------------------------------------------------
+         #   Some adjustments to the plot
+         # ------------------------------------------------------
+
+         plt.grid(True, linestyle='--', linewidth=0.2)
+
+         cbar=plt.colorbar()
+         cbar.set_label("Potential temperature (K)")
+
+         plt.xlabel("Time (h)")
+         plt.ylabel("Height (m)")
+
+         plt.savefig('1D.png', bbox_inches='tight', dpi=400)
+
+   This file is located here :
+   
+   .. code-block:: bash
+      :substitutions:   
+
+      |MNH_directory_extract_current|/MY_RUN/tutorials/ideal_cases/1D/003_python/
+
+Other examples
+-----------------------------------------------------------------
+
+You can find other 1D simulation examples in :ref:`cases_catalogue` section.

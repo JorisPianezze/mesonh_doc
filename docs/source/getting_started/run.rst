@@ -1,0 +1,28 @@
+Run 
+============================================================================
+
+Principle
+*****************************************************************************
+
+In Meso-NH, simulations can be divived in two categories:
+   
+* :ref:`ideal_cases` correspond to simulations which are initialized with an idealized atmosphere, typically with a radiosonding. In this kind of simulation you can use 1D, 2D or 3D grid on cartesian or conformal projections.
+   
+* :ref:`real_cases` correspond to simulations which are initialized with large-scale 3D atmospheric fields (IFS, ARPEGE, AROME, GFS, etc.).
+
+For both catergories, you will have to use several :ref:`executables_and_namelists` to pre-process, run and post-process diagnostics of your simulation. To deepens Meso-NH's functionalities, please go to the following tutorials. 
+
+Workflows examples
+*****************************************************************************
+
+Both categories are described in the following sections :
+
+.. toctree::
+   :maxdepth: 2
+
+   run/ideal_cases.rst
+   run/real_cases.rst
+   
+.. note::
+
+   If you need other settings, please visit the :ref:`cases_catalogue` section.

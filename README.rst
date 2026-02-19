@@ -1,9 +1,21 @@
-Template for the Read the Docs tutorial
+Meso-NH's beta documentation
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Git repository for Meso-NH's documentation.
 
-Read the tutorial here:
+You can read the documentation here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://mesonh-beta-test-guide.readthedocs.io
+
+Documentation coding rules :
+
+* use :code: for namelist name and for variable name (except in table)
+
+* use :program: for programs like python, MESONH, ...
+
+* use :file: for files
+
+* use :command: for inline commands
+
+* use blocks :note:, :warning:, ...
+
