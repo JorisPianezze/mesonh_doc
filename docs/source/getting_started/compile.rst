@@ -312,37 +312,45 @@ On Datarmor (IFREMER)
 
    You can find Datarmor documentation `here <https://w3z.ifremer.fr/intraric/Mon-IntraRIC/Calcul-scientifique/Datarmor>`_, only available on IFREMER intranet.
 
-.. csv-table:: Filesystem of Datarmor
-   :header: "", "Homedir", "Workdir", "Scratchdir", "Storedir"
-   :widths: 30, 30, 30, 30, 30
+.. warning::
 
-   "Location", "$HOME", "$DATAWORK", "$SCRATCH", ""
-   "Disk space", "50 Go / user", "1 To / group", "10 To / group", ""
-   "Data lifetime", "Saved", "Unsaved", "15 days", ""
+   At the time being, Meso-NH |MNH_xyz_version_current| is not supported on the Datarmor machine.
+   The reason is due to the fact that the system is too old.
+   Support for recent Meso-NH versions will be provided as soon as the system will be updated.
+   In the meantime, you can compile Meso-NH version up to 5.7.x on Datarmor.
 
-.. tip::
+..
+  .. csv-table:: Filesystem of Datarmor
+     :header: "", "Homedir", "Workdir", "Scratchdir", "Storedir"
+     :widths: 30, 30, 30, 30, 30
 
-   We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir or the Scratchdir.
+     "Location", "$HOME", "$DATAWORK", "$SCRATCH", ""
+     "Disk space", "50 Go / user", "1 To / group", "10 To / group", ""
+     "Data lifetime", "Saved", "Unsaved", "15 days", ""
 
-On Datarmor you can compile in interactive mode using:
+  .. tip::
 
-.. code-block:: bash
-   :substitutions:
+     We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir or the Scratchdir.
 
-   cd |MNH_directory_extract_current|/src
-   ./configure
-   . ../conf/profile_mesonh
-   make
-   make installmaster
+  On Datarmor you can compile in interactive mode using:
 
-.. note::
+  .. code-block:: bash
+     :substitutions:
 
-   To verify your compilation you can run test case examples with:
+     cd |MNH_directory_extract_current|/src
+     ./configure
+     . ../conf/profile_mesonh
+     make
+     make installmaster
 
-   .. code-block:: bash
+  .. note::
 
-      cd MY_RUN/KTEST
-      ./run_all_KTESTPACK
+     To verify your compilation you can run test case examples with:
+
+     .. code-block:: bash
+
+        cd MY_RUN/KTEST
+        ./run_all_KTESTPACK
 
 .. _compilation_olympe_calmip:
 
@@ -358,12 +366,12 @@ On Olympe (CALMIP)
    :widths: 30, 30, 30, 30, 30
 
    "Location", "/users/$GROUPE/$USER", "/tmdir/$USER", ":math:`\emptyset`", "/store/$GROUPE/$USER"
-   "Disk space", "5 Go / user", "Unlimited", ":math:`\emptyset`", "1 To / group"
-   "Data lifetime", "Saved", "100 days", ":math:`\emptyset`", "Saved"
+   "Disk space", "5 GiB / user", "Unlimited", ":math:`\emptyset`", "1 TiB / group"
+   "Data lifetime", "Saved", "Purged (100 days)", ":math:`\emptyset`", "Saved"
 
 .. tip::
 
-   We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir and store the files in storedir.
+   We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir and store the files in Storedir.
 
 On Olympe you can compile in interactive mode using:
 
@@ -372,7 +380,8 @@ On Olympe you can compile in interactive mode using:
 
    cd |MNH_directory_extract_current|/src
    ./configure
-   . ../conf/profile_mesonh
+   . ../conf/profile_mesonh-LXifx-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MPIINTEL-O2
+   export MAKEFLAGS='-j 16' # optional, to speed up the compilation on up to 16 processes/cores
    make
    make installmaster
 
@@ -493,14 +502,17 @@ If you have already compiled the same version of Meso-NH on this computer (same 
 Compile with additional libraries
 =============================================================================
 
-It's possible to compile Meso-NH with additionnal libraries like FOREFIRE, RTTOV, ECRAD, MEGAN, OASIS... In the following subsections you will find information to compile Meso-NH with these libraries.
+It's possible to compile Meso-NH with additionnal libraries for :ref:`compile_mesonh_with_forefire`, :ref:`compile_mesonh_with_rttov`, :ref:`compile_mesonh_with_megan` and :ref:`compile_mesonh_with_oasis`. In the following subsections you will find information to compile Meso-NH with these libraries.
 
-ForeFire runs (external package needed)
+
+.. _compile_mesonh_with_forefire:
+
+Wildfire spread (ForeFire)
 -----------------------------------------------------------------------------
 
-ForeFire is an open-source code for wildland fire spread models. The interface to this tool is already compiled in Méso-NH (from version 6.0.0).
+ForeFire is an open-source code for wildland fire spread models. The interface to this tool is already compiled in Meso-NH (from version 6.0.0).
 
-The |forefire_link| package must be compiled independently of Méso-NH. It can be cloned with:
+The |forefire_link| package must be compiled independently of Meso-NH. It can be cloned with:
 
 .. code-block:: bash
 
@@ -515,112 +527,74 @@ It depends on netCDF and scons for its compilation. The :file:`libForeFIre.so` t
 
 .. _compile_mesonh_with_rttov:
 
-RTTOV for optional radiative computation
+Radiative computation (RTTOV)
 -----------------------------------------------------------------------------
 
-RTTOV (Radiative Transfer for TOVS) is a very fast radiative transfer model for passive visible, infrared and microwave downward-viewing satellite radiometers, spectrometers and interferometers.
-When coupled with Meso-NH, RTTOV enables a direct comparison between simulation outputs and satellite observations, removing the need for additional assumptions or inversions.
-For that, you need to download and compile RTTOV first, then you need to compile Meso-NH including RTTOV. Meso-NH is coupled to the last version of RTTOV (14.0) but this version is not include in the Meso-NH's package because it needs a licence agrement.
+RTTOV (Radiative Transfer for TOVS) is a highly efficient radiative transfer model designed for passive visible, infrared, and microwave satellite radiometers, spectrometers, and interferometers.
+It facilitates a direct comparison between model simulations and satellite observations, eliminating the need for additional assumptions or inversion processes.
+While Meso-NH is compatible with the latest version of RTTOV (v14.1), this version is not included in the Meso-NH package due to licensing restrictions.
 
-Before compiling RTTOV, you need to compile NetCDF and HDF5 libraries:
+First, you need to download the RTTOV package :file:`rttov141.tar.xz` by following the instructions given on the `RTTOV website <https://nwpsaf.eu/site/software/rttov/>`_  and untar the RTTOV zip file :file:`rttov141.tar.xz` at the location described below:
 
 .. code-block:: bash
+   :substitutions:
 
-   cd MNH/src/
+   cd |MNH_directory_extract_current|/src/LIB
+   mkdir RTTOV-14.1
+   cd RTTOV-14.1
+   tar xJf rttov141.tar.xz
+
+To compile Meso-NH with RTTOV, you just have to define the VER_RTTOV environment variable before running the :file:`configure` script:
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/src/
+   export VER_RTTOV=RTTOVAUTO
    ./configure
-   . ../conf/profile_mesonh-your_configuration
-   make cdf
-
-Download the RTTOV package :file:`rttov140.tar.xz` by following the instructions given on the `RTTOV website <https://nwpsaf.eu/site/software/rttov/>`_  and untar the RTTOV zip file :file:`rttov140.tar.xz`:
-
-.. code-block:: bash
-
-   cd MNH/src/LIB
-   mkdir RTTOV-14.0
-   cd RTTOV-14.0
-   tar xJf rttov140.tar.xz
-   cd build
-
-Then you have to edit :file:`Makefile.local` file and set HDF5_PREFIX, FFLAGS_NETCDF, LDFLAGS_NETCDF and LDFLAGS_HDF5 as shown below:
-
-.. code-block:: bash
-
-   HDF5_PREFIX = $(SRC_MESONH)/src/dir_obj${XYZ}/MASTER/NETCDF-${VERSION_CDFF}
-   FFLAGS_NETCDF  = -D_RTTOV_NETCDF -I$(HDF5_PREFIX)/include
-   LDFLAGS_NETCDF = -L$(HDF5_PREFIX)/lib -lnetcdff -lnetcdf
-   LDFLAGS_HDF5 = -L$(HDF5_PREFIX)/lib64 -lhdf5hl_fortran -lhdf5_hl -lhdf5_fortran -lhdf5 -lsz -laec -lz -ldl
-
-Finally you can build RTTOV using:
-
-.. code-block:: bash
-
-   cd RTTOV-14.0/src
-   ../build/Makefile.PL RTTOV_NETCDF=1
-   make ARCH=ifort
-
-.. note::
-
-   Other available options are gfortran, NAG, pgf90 and IBM.
-
-Now you need to compile Meso-NH using :file:`configure` script of Meso-NH preceded with the setting of the MNH_RTTOV variables :
-
-.. code-block:: bash
-  
-   cd MNH/src/
-   export MNH_RTTOV=1
-   export VER_RTTOV=14.0
-   ./configure
-   ...
 
 Then, you can follow the compilation steps described in the section dedicated to your computer.
 
-
-MNH_ECRAD for optional compilation of new ECRAD radiative library from ECMWF
------------------------------------------------------------------------------
-
-The default version of ECRAD is 1.4.0 (open-source) and is provided in the Meso-NH package. To use ECRAD, do:
-
-.. code-block:: bash
-
-   export MNH_ECRAD=1
-   ./configure
-
-The version of ECRAD is set by (by default):
-
-.. code-block:: bash
-
-   export VER_ECRAD=140
-
-If you want to use a different version of ECRAD, you can set the environment variable `VER_ECRAD` to the desired version number. But you must have the corresponding ECRAD package installed in the Meso-NH source directory.
-
 .. note::
 
-   ECRAD has been tailored to Meso-NH. The modified files are included in the directory :file:`${SRC_MESONH}/src/LIB/RAD/ecrad-1.4.0_mnh`.
+   * RTTOV is automatically compiled during Meso-NH compilation.   
 
-To compile Meso-NH with ECRAD, you can follow the steps described in the section dedicated to
-your computer (interactive or batch mode). To use ECRAD during a simulation, replace RAD=’ECMW’ by RAD=’ECRA’ in EXSEG1.nam and
-add link to all “ecrad-1.X.X/data” files in your Meso-NH run directory:
-
-.. code-block:: bash
-
-   ln -sf ${SRC_MESONH}/src/LIB/RAD/ecrad-1.X.X/data/* .
-
-.. tip::
-
-   You can replace CDATADIR = “.” by CDATADIR = “data” of ini radiations ecrad.f90 to link only the data folder instead of all the files one by one. See :file:`MY_RUN/KTEST/007_16janvier/008_run2` test case for example.
+   * RTTOV can be used with :ref:`diag` program by setting :ref:`nam_diag_satellite_simulator` namelist.
 
 
-MNH_MEGAN for optional compilation of MEGAN code
+.. _compile_mesonh_with_megan:
+
+Biogenic emissions (MEGAN)
 -----------------------------------------------------------------------------
 
-To use MEGAN, do:
+Model of Emissions of Gases and Aerosols from Nature (`MEGAN <https://www2.acom.ucar.edu/modeling/model-emissions-gases-and-aerosols-nature-megan>`_) is a comprehensive modeling system designed to estimate
+the net emission of gases and aerosols from terrestrial ecosystems into the atmosphere. To compile MEGAN with Meso-NH, you just have to define MNH_MEGAN environment variable before doing :file:`configure`:
 
 .. code-block:: bash
 
    export MNH_MEGAN=1
    ./configure
 
-To compile Meso-NH with MEGAN, you can follow the steps described in the section dedicated to your computer (interactive or batch mode).
+Then can follow the steps described in the section dedicated to your computer (interactive or batch mode).
+
+
+.. _compile_mesonh_with_oasis:
+
+Ocean-wave coupling (OASIS)
+-----------------------------------------------------------------------------
+
+Ocean Atmosphere Sea Ice Soil coupler (`OASIS <https://oasis.cerfacs.fr/>`_) is a flexible coupling framework designed to exchange data and synchronize interactions between different components of Earth system models, such as the atmosphere, ocean, sea ice, and land surface. To compile Meso-NH with OASIS, you just have to define the VER_OASIS environment variable before running the :file:`configure` script.
+
+.. code-block:: bash
+
+   export VER_OASIS=OASISAUTO
+   ./configure
+
+Then can follow the steps described in the section dedicated to your computer (interactive or batch mode).
+
+.. tip::
+
+   You can launch the test case |MNH_directory_extract_current|/examples/KTESTS/013_Iroise_OASIS_coupling to verify your installation.
 
 
 Compile with modified and/or new sources

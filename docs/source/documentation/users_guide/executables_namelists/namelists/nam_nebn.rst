@@ -13,7 +13,7 @@ This namelist is new and regroup options related to internal clouds life cycle.
    "LSTATNW","LOGICAL",".FALSE."
    "XTMINMIX","REAL","253.16"
    "XTMAXMIX","REAL","273.16"
-   "LSUBG_COND","LOGICAL",".FALSE."
+   "LSUBG_COND","LOGICAL",".TRUE."
    "CCONDENS","CHARACTER(LEN=80)","'CB02'"
    "CLAMBDA3","CHARACTER(LEN=4)","'CB'"
    "LSIGMAS","LOGICAL",".TRUE."
@@ -42,7 +42,7 @@ This namelist is new and regroup options related to internal clouds life cycle.
   * 'CB' : to use the formulation originally associated to the use of CCONDENS='CB02'
   * 'NONE' : to use a value of 1 (no modulation)
 
-* :code:`VSIGQSAT` : coefficient applied to qsat variance contribution. Only available if LSIGMAS=.TRUE.
+* :code:`VSIGQSAT` : coefficient applied to qsat variance contribution. Only available if :code:`LSIGMAS=.TRUE.`. Use :code:`VSIGQSAT=0` tu turn off the qsat variance contribution
 
 * :code:`LSIGMAS` : flag for using Sigma_s from turbulence scheme instead parameterized values in ice subgrid condensation scheme
 
@@ -60,6 +60,6 @@ This namelist is new and regroup options related to internal clouds life cycle.
   * 'N' : No ice
   * 'S' : Ice fraction given by the slow microphysics
 
-* :code:`LCONDBORN` : flag to limit condensation
+* :code:`LCONDBORN` : true to limit condensation: reduce the distribution width  with respect to te total water content to avoid condensate too much water vapor not present 
 
 
