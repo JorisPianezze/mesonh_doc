@@ -13,7 +13,7 @@ We recommend to use python (https://www.python.org/) to analyse and visualize Me
 Ncview
 ------------------------------------------------
 
-ncview (http://mesonh.aero.obs-mip.fr/cgi-bin/mesonh/publi.pl?art=on&phd=on) can be used to quickly preview the contents of a Meso-NH file.
+ncview (https://cirrus.ucsd.edu/ncview/) can be used to quickly preview the contents of a Meso-NH file.
 
 .. warning::
 
