@@ -8,7 +8,7 @@ Release date : XX/XX/2026
  .. note::
    **Summary**
 
-   * **GPU**: MNH-V6-0-0 can be run on GPU. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
+   * **GPU**: MNH-V6-0-0 can be run on GPUs. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
    
    * **Default values** are changed for ECRAD, turbulence, ICE3 and condensation schemes.
    
@@ -16,9 +16,9 @@ Release date : XX/XX/2026
    
    * **Wind turbine**: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
    
-   * **NetCDF compression** is now enabled by default for all written netCDF files with a zsdt library. Zsdt is even faster than using no compression and reduces the size of netCDF files by 3.
+   * **NetCDF compression** is now enabled by default for all written netCDF files with the Zstandard library. Zstd is even faster than using no compression and reduces significantly the size of the netCDF files.
    
-   * **LFI** format are no longer supported for writing.
+   * **LFI**: this file format is no longer supported for writing.
    
    * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
    
@@ -32,9 +32,9 @@ Release date : XX/XX/2026
 
    * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
 
-   * **Cleaning & Restruction**: src/LIB/SURCOUCHE is moved to MNH/io MNH/parallel, new subdirectories in src/MNH. MY_RUN renamed examples. Overall cleaning of obsolete binaries and tools.
+   * **Cleaning & restructuration**: src/LIB/SURCOUCHE is moved to MNH/io and MNH/parallel; new subdirectories in src/MNH; MY_RUN renamed in examples; overall cleaning of obsolete binaries and tools.
 
-   * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic case 
+   * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases
 
 .. contents::
    :local:
