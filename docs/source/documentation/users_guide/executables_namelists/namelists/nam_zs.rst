@@ -3,11 +3,11 @@
 NAM_ZS
 -----------------------------------------------------------------------------
 
+This namelist defines the orography settings. It is used by the :ref:`prep_pgd` executable and can be included in its corresponding :file:`PRE_PGD1.nam` input file.
+
 .. warning::
 
    This namelist comes from SURFEX 9.0.0 user guide https://www.umr-cnrm.fr/surfex/IMG/pdf/surfex_tecdoc.pdf.
-
-This namelist defines the orography file and orographic treatment to be done.
 
 .. csv-table:: NAM_ZS content
    :header: "Fortran name", "Fortran type", "Default value"
