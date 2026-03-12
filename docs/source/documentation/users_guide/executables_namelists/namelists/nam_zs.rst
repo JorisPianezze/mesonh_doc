@@ -4,6 +4,7 @@ NAM_ZS
 -----------------------------------------------------------------------------
 
 This namelist defines the orography settings. It is used by the :ref:`prep_pgd` executable and can be included in its corresponding :file:`PRE_PGD1.nam` input file.
+If you do not include it, the default settings are those defined in the table below.
 
 .. warning::
 
