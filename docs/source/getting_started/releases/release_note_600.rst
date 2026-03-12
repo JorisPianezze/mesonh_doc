@@ -8,33 +8,33 @@ Release date : XX/XX/2026
  .. note::
    **Summary**
 
-   * GPU : MNH-V6-0-0 can be run on GPU. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
+   * **GPU**: MNH-V6-0-0 can be run on GPU. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
    
-   * Default values are changed for ECRAD, turbulence, ICE3 and condensation schemes.
+   * **Default values** are changed for ECRAD, turbulence, ICE3 and condensation schemes.
    
-   * Radiation scheme: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
+   * **Radiation scheme**: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
    
-   * Wind turbine: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
+   * **Wind turbine**: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
    
-   * NetCDF compression is now enabled by default for all written netCDF files with a zsdt library. Zsdt is even faster than using no compression and reduces the size of netCDF files by 3.
+   * **NetCDF compression** is now enabled by default for all written netCDF files with a zsdt library. Zsdt is even faster than using no compression and reduces the size of netCDF files by 3.
    
-   * LFI format are no longer supported for writing.
+   * **LFI** format are no longer supported for writing.
    
-   * Aerosol & Chemistry: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
+   * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
    
-   * Turbulence: updated constants impacting all mixing lengths, new Goger term, dynamical and buoyancy TKE production from EDMF.
+   * **Turbulence**: updated constants impacting all mixing lengths, new Goger term, dynamical and buoyancy TKE production from EDMF.
 
-   * Shallow convection: new coefficients to tune the scheme, new type of env mixing for buoyancy sorting scheme, upward length to use in the dry detrainement and mixing of TKE by updrafts.
+   * **Shallow convection**: new coefficients to tune the scheme, new type of env mixing for buoyancy sorting scheme, upward length to use in the dry detrainement and mixing of TKE by updrafts.
 
-   * Microphysics ICE3: new PDF used to diagnose autoconversion from the shallow convection cloud, Kogan autocoversion of liquid water
+   * **Microphysics ICE3**: new PDF used to diagnose autoconversion from the shallow convection cloud, Kogan autocoversion of liquid water
 
-   * Microphysics LIMA: option to mimic the ICE3 scheme, new graupel processes options, PDF for subgrid precipitation, new prognostic up to 4 ice crystal shapes, self collection of ice crystals, init of CCN and IFN by ORILAM, interpolation of CAMS fields
+   * **Microphysics LIMA**: option to mimic the ICE3 scheme, new graupel processes options, PDF for subgrid precipitation, new prognostic up to 4 ice crystal shapes, self collection of ice crystals, init of CCN and IFN by ORILAM, interpolation of CAMS fields
 
-   * Diagnostics: online coarse-graining with multiple user defined sub-domains.
+   * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
 
-   * Cleaning & Restruction: src/LIB/SURCOUCHE is moved to MNH/io MNH/parallel, new subdirectories in src/MNH. MY_RUN renamed examples. Overall cleaning of obsolete binaries and tools.
+   * **Cleaning & Restruction**: src/LIB/SURCOUCHE is moved to MNH/io MNH/parallel, new subdirectories in src/MNH. MY_RUN renamed examples. Overall cleaning of obsolete binaries and tools.
 
-   * Coupling: HRRR-WRF and ICON-EU can be used as external file for realistic case 
+   * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic case 
 
 .. contents::
    :local:
