@@ -478,7 +478,7 @@ Compile the code :
 
    * The compilation takes about 20 minutes on one core. To speedup the compilation, set the environment variable `MAKEFLAGS` to the number of cores you want to use.
 
-   * If you do not have sufficient space in your $HOME directory, install the whole package directly on the $WORKDIR. The name of the $WORKDIR differs in the differents computer centers.
+   * If you do not have enough space in your $HOME directory, install the whole package directly on the $WORKDIR. The name of the $WORKDIR differs in the different computer centers.
 
      .. warning::
 
@@ -498,7 +498,7 @@ If you have already compiled the same version of Meso-NH on this computer (same 
 
 .. note::
 
-   This will delete the dir-obj$XYZ directory content with all the preprocessed sources contained in it.
+   This will delete the dir_obj$XYZ directory content with all the preprocessed sources contained in it.
 
 
 Compile with additional libraries
