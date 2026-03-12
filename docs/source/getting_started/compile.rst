@@ -423,6 +423,7 @@ On Nuwa you can compile in interactive mode using:
    cd |MNH_directory_extract_current|/src
    ./configure
    . ../conf/profile_mesonh
+   export MAKEFLAGS='-j 8' # optional, to speed up the compilation on up to 8 processes/cores
    make
    make installmaster
 
@@ -432,7 +433,7 @@ On Nuwa you can compile in interactive mode using:
 
    .. code-block:: bash
 
-      cd MY_RUN/KTEST
+      cd examples/test_cases
       ./run_all_KTESTPACK
 
 .. _compilation_unknown_computer:
