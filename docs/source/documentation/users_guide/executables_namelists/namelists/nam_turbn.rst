@@ -128,7 +128,7 @@ It contains the characteristics of the turbulence scheme used by the model n. Th
 
 * :code:`LBL89EXP`: true to use the exposant from the BL89 paper ( which is LOG(16.)/(4.*LOG(XKARMAN)+LOG(XCED)-3.*LOG(XCMFS))). Otherwise 2./3. (False in AROME cycl 50t1)
 
-* :code:`LLEMARIE21`: true to use Lemarie et al. 2021 constant in DELT/DEAR mixing length (:math:`0.5**(-6/7)` instead of :math:`0.5**(-1.5)`)
+* :code:`LLEMARIE21`: true to use Lemarie et al. 2021 constant in DELT/DEAR mixing length (:math:`0.5^{-6/7}` instead of :math:`0.5^{-1.5}`)
 
 .. note::
 
