@@ -18,7 +18,7 @@ To perform a 3D Meso-NH simulation with real initial and surface conditions you 
 
    .. treeview::
    
-      - :dir:`folder` |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/
+      - :dir:`folder` |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/
       
         - :dir:`folder` 001_prep_pgd : directory to :ref:`prepare the physiographic data <prep_pgd_real_one_domain_era5>`
         - :dir:`folder` 002_prep_real_case : directory to :ref:`prepare the initial condition <prep_real_case_one_domain_era5>`        
@@ -160,14 +160,14 @@ In the :file:`PRE_PGD1.nam` file, we recommend to have the following minimum inf
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/001_prep_pgd/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/001_prep_pgd/
 
 You can launch :ref:`prep_pgd` program using :file:`run_prep_pgd.sh` script (execution takes less than 2 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/001_prep_pgd/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/001_prep_pgd/
    ./run_prep_pgd.sh
 
 At the end of the :ref:`prep_pgd` execution, you need to have following files:
@@ -267,14 +267,14 @@ In the :file:`PRE_REAL1.nam` file, we recommend to have the following minimum in
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/002_prep_ideal_case/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/002_prep_ideal_case/
 
 You can launch :ref:`prep_real_case` program using :file:`run_prep_real_case.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/002_prep_real_case/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/002_prep_real_case/
    ./run_prep_real_case.sh
 
 At the end of the :ref:`prep_real_case` execution, you need to have following files:
@@ -529,14 +529,14 @@ In the :file:`EXSEG1.nam` file, we recommend to have the following minimum infor
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/003_mesonh/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/003_mesonh/
 
 You can launch :ref:`mesonh` program using :file:`run_mesonh.sh` script (execution takes approximately 50 s on 2 cores):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/003_mesonh/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/003_mesonh/
    ./run_mesonh.sh
 
 At the end of the :ref:`mesonh` execution, you need to have following files:
@@ -639,14 +639,14 @@ In the :file:`DIAG1.nam` file, we recommend to have the following minimum inform
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/004_diag/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/004_diag/
 
 You can launch :ref:`diag` program using :file:`run_diag.sh` script (execution takes less than 15 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/004_diag/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/004_diag/
    ./run_diag.sh
 
 At the end of the :ref:`diag` execution, you need to have following files:
@@ -686,7 +686,7 @@ You can plot the results using :file:`run_python.sh` script (execution takes les
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/005_python/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/005_python/
    ./run_python.sh
 
 The figure created visible shows an example of a graph that you can plot from the simulation you just performed. It shows a classic episode of the Autan wind. Gray areas correspond to mountain higher than 500 m.
@@ -771,7 +771,7 @@ The figure created visible shows an example of a graph that you can plot from th
    .. code-block:: bash
       :substitutions:
                
-      This file is located here : |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/005_python/
+      This file is located here : |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/005_python/
             
 Other examples
 -----------------------------------------------------------------

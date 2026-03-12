@@ -350,7 +350,7 @@ On Datarmor (IFREMER)
 
      .. code-block:: bash
 
-        cd MY_RUN/KTEST
+        cd examples/test_cases
         ./run_all_KTESTPACK
 
 .. _compilation_olympe_calmip:
@@ -596,7 +596,7 @@ Then can follow the steps described in the section dedicated to your computer (i
 
 .. tip::
 
-   You can launch the test case |MNH_directory_extract_current|/examples/KTESTS/013_Iroise_OASIS_coupling to verify your installation.
+   You can launch the test case |MNH_directory_extract_current|/examples/test_cases/013_Iroise_OASIS_coupling to verify your installation.
 
 
 Compile with modified and/or new sources

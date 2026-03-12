@@ -5,7 +5,7 @@ Cases catalogue
 
    This section is not finished yet.
 
-This catalogue lists all test cases available in ``MNH-VX-X-X/MY_RUN``
+This catalogue lists all test cases available in ``MNH-VX-X-X/examples``
 
 Idealized cases
 ---------------------

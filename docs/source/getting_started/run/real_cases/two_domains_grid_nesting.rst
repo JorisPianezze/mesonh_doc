@@ -18,7 +18,7 @@ To perform a 3D Meso-NH simulation with real initial and surface conditions and 
 
    .. treeview::
    
-      - :dir:`folder` |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/1domain_from_ERA5/
+      - :dir:`folder` |MNH_directory_extract_current|/examples/tutorials/real_cases/1domain_from_ERA5/
       
         - :dir:`folder` 001_prep_pgd_d1 : directory to :ref:`prepare the physiographic data <prep_pgd_d1_two_domains_era5>`
         - :dir:`folder` 002_prep_pgd_d2 : directory to :ref:`prepare the physiographic data <prep_pgd_d2_two_domains_era5>`
@@ -165,14 +165,14 @@ In the :file:`PRE_PGD1.nam` file, we recommend to have the following minimum inf
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d1/.
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d1/.
 
 You can launch :ref:`prep_pgd` program using :file:`run_prep_pgd.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d1/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d1/
    ./run_prep_pgd.sh
 
 At the end of the :ref:`prep_pgd` execution, you need to have following files:
@@ -318,14 +318,14 @@ In the :file:`PRE_PGD1.nam` file, we recommend to have the following minimum inf
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d2/.
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d2/.
 
 You can launch :ref:`prep_pgd` program using :file:`run_prep_pgd.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d2/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/001_prep_pgd_d2/
    ./run_prep_pgd.sh
 
 At the end of the :ref:`prep_pgd` execution, you need to have following files:
@@ -407,14 +407,14 @@ In the :file:`PRE_NEST_PGD1.nam` file, we recommend to have the following minimu
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/003_prep_nest_pgd_d1_and_d2/.
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/003_prep_nest_pgd_d1_and_d2/.
 
 You can launch :ref:`prep_nest_pgd` program using :file:`run_prep_nest_pgd.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/003_prep_nest_pgd_d1_and_d2/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/003_prep_nest_pgd_d1_and_d2/
    ./run_prep_nest_pgd.sh
 
 At the end of the :ref:`prep_nest_pgd` execution, you need to have following files:
@@ -519,14 +519,14 @@ In the :file:`PRE_REAL1.nam` file, we recommend to have the following minimum in
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/004_prep_real_case_d1/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/004_prep_real_case_d1/
 
 You can launch :ref:`prep_real_case` program using :file:`run_prep_real_case.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/004_prep_real_case_d1/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/004_prep_real_case_d1/
    ./run_prep_real_case.sh
 
 At the end of the :ref:`prep_ideal_case` execution, you need to have following files:
@@ -597,14 +597,14 @@ In the :file:`SPAWN1.nam` file, we recommend to have the following minimum infor
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/005_spawning_d1_to_d2/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/005_spawning_d1_to_d2/
 
 You can launch :ref:`spawning` program using :file:`run_spawning.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/005_spawning_d1_to_d2/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/005_spawning_d1_to_d2/
    ./run_spawning.sh
 
 At the end of the :ref:`spawning` execution, you need to have following files:
@@ -685,14 +685,14 @@ In the :file:`PRE_REAL1.nam` file, we recommend to have the following minimum in
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/006_prep_real_case_d2/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/006_prep_real_case_d2/
 
 You can launch :ref:`prep_real_case` program using :file:`run_prep_real_case.sh` script (execution takes less than 4 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/006_prep_real_case_d2/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/006_prep_real_case_d2/
    ./run_prep_real_case.sh
 
 At the end of the :ref:`prep_real_case` execution, you need to have following files:
@@ -922,7 +922,7 @@ In the :file:`EXSEG1.nam` file, we recommend to have the following minimum infor
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
 
 For domain 2, we recommend to have the following minimum informations and namelists in :file:`EXSEG2.nam` file:
 
@@ -1033,14 +1033,14 @@ For domain 2, we recommend to have the following minimum informations and nameli
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
 
 You can launch :ref:`mesonh` program using :file:`run_mesonh.sh` script (execution takes less than 50 s on 2 cores):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/007_mesonh_d1_and_d2/
    ./run_mesonh.sh
 
 At the end of the :ref:`mesonh` execution, you need to have following files:
@@ -1167,14 +1167,14 @@ In the :file:`DIAG1.nam` file, we recommend to have the following minimum inform
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/008_diag_d1/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/008_diag_d1/
 
 You can launch :ref:`diag` program using :file:`run_diag.sh` script (execution takes less than 15 s):
 
 .. code-block:: bash
    :substitutions:
 
-   cd |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/008_diag_d1/
+   cd |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/008_diag_d1/
    ./run_diag.sh
 
 At the end of the :ref:`diag` execution, you need to have following files:
@@ -1206,7 +1206,7 @@ At the end of the :ref:`diag` execution, you need to have following files:
 
 .. note::
 
-   You have to compute diagnostic for both domains in |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/009_diag_d2/.
+   You have to compute diagnostic for both domains in |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/009_diag_d2/.
 
 .. _3d_plot_two_domains_era5:
 
@@ -1347,7 +1347,7 @@ The following figure shows an example of a graph that you can plot from the two 
    .. code-block:: bash
       :substitutions:
       
-      |MNH_directory_extract_current|/MY_RUN/tutorials/real_cases/2domains_from_ERA5/010_python_d1_and_d2/
+      |MNH_directory_extract_current|/examples/tutorials/real_cases/2domains_from_ERA5/010_python_d1_and_d2/
          
 Other examples
 -----------------------------------------------------------------
