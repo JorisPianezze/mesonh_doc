@@ -128,10 +128,34 @@ For the CPU partitions
 For the GPU partitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning::
+To compile Meso-NH for GPUs, you should use the new environement variable MNH_GPU with the configure command.
 
-   To compile Meso-NH for GPUs, contact the `Meso-NH support and development team <https://mesonh.cnrs.fr/contact/>`_.
+On Jean-Zay you have 3 kinds of Nvidia GPUs : V100/A100/H100, so for V100 use:
 
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/src
+   MNH_GPU=V100 ./configure
+
+This will generate a profil_mesonh with compiler Nvidia<=>ARCH=LXnvhpc2202, the name of the Gpus MNH_GPU=V100 and OPTLEVEL=MANAGEDO2 compiler option 
+for you :
+
+.. code-block:: bash
+   :substitutions:
+
+   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V6-0-0-V100-MPIAUTO-MANAGEDO2
+
+Compile the code as usually.
+
+The same for other A100 & H100 Gpus
+
+Bench test case using this GPUs version could be find in the directory
+
+.. code-block:: bash
+   :substitutions:
+
+   ${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/
 
 .. _compilation_adastra_cines:
 
