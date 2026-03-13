@@ -125,7 +125,7 @@ For the CPU partitions
       cd |MNH_directory_extract_current|/src
       sbatch -A your_projet.on.cpu job_make_examples_HPE_jeanzay
 
-For the GPU partitions
+For the Nvidia GPU partitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To compile Meso-NH for GPUs, you should use the new environement variable MNH_GPU with the configure command.
@@ -200,7 +200,7 @@ Install the Meso-NH package in your $HOME (default 50GB of quota) and compile in
 
       sbatch -A your_projet.on.cpu job_make_examples_HPE_adastra_genoa
 
-For the GPU partitions
+For the AMD GPU partitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To compile Meso-NH for GPUs, you should use the new environement variable MNH_GPU with the configure command.
 
