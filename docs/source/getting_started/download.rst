@@ -82,7 +82,7 @@ Once the repository is cloned, it's better for you to work on a stable version o
    cd |MNH_directory_extract_current|
    git checkout -b MYB-MNH-V|MNH_xyz_version_hyphen_current| |MNH_pack_current|
 
-MYB-MNH-V |MNH_xyz_version_hyphen_current| is the name of the local branch you created and |MNH_pack_current| is the tag on which it is based.
+MYB-MNH-V-|MNH_xyz_version_hyphen_current| is the name of the local branch you created and |MNH_pack_current| is the tag on which it is based.
 
 .. note::
 
@@ -138,7 +138,7 @@ Then untar the file MNH-V |MNH_xyz_version_hyphen_current|.tar.gz where you want
 
 .. note::
 
-   Each MNH-VX-Y-Z version available in :ref:`Tarball (from Zenodo) <tarball>` corresponds to a PACK-MNH-VX-Y-Z git tag in the :ref:`Git repository <git>`. The different stable releases are visible :ref:`here <releases>`.
+   Each MNH-VX-Y-Z version available in :ref:`Tarball (from Zenodo) <tarball>` corresponds to a PACK-MNH-VX-Y-Z git tag in the :ref:`Git repository <git>`. The different stable releases are listed :ref:`here <releases>`.
 
 .. tip::
 
@@ -153,7 +153,7 @@ Then untar the file MNH-V |MNH_xyz_version_hyphen_current|.tar.gz where you want
 What do you download ?
 -----------------------------------------------------------------------------
 
-Meso-NH's package contains sources, makefiles, pre-compiled executables, graphic tools and basic examples.
+Meso-NH's package contains sources, makefiles, pre-compiled executables, graphic tools and basic and advanced examples.
 
 Hereafter is a quick description of Meso-NH's tree :
 
@@ -166,7 +166,7 @@ Hereafter is a quick description of Meso-NH's tree :
 
      - :dir:`folder` bin/ :gray:`: Miscellaneous scripts for compilation and execution`
      - :dir:`folder` conf/ :gray:`: Location of profile_mesonh files (`:ref:`compilation`:gray:`)`
-     - [-] :dir:`folder` examples/ :gray:`: Tests cases and benchmarks (`:ref:`compilation`:gray:`)`
+     - :dir:`folder` examples/ :gray:`: Tests cases and benchmarks (`:ref:`compilation`:gray:`)`
 
        - :dir:`folder` bench/
        - :dir:`folder` integration_cases/
@@ -179,7 +179,7 @@ Hereafter is a quick description of Meso-NH's tree :
      
        - :dir:`folder` ACLIB/ :gray:`: ACLIB's source code`
        - :dir:`folder` ARCH_SRC/ :gray:`: Architecture-specific source code`
-       - [-] :dir:`folder` LIB/ :gray:`: External libraries (ECCODES, ECRAD, NETCDF, OASIS, ...)`
+       - :dir:`folder` LIB/ :gray:`: External libraries (ECCODES, ECRAD, NETCDF, OASIS, ...)`
        
          - :dir:`folder` BITREP/
          - :dir:`folder` COMPRESS4LFI/

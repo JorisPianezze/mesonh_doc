@@ -3,11 +3,11 @@ External data
 
 .. note::
 
-   Depending of your application :
+   Depending of your application:
    
-   * Surface data can be needed by the :ref:`prep_pgd` program. 
+   * Physiographic static surface data are needed by the :ref:`prep_pgd` program. 
    
-   * Atmospheric data can be needed by the :ref:`prep_real_case` program.
+   * Atmospheric and surface data are needed by the :ref:`prep_real_case` program.
 
 .. toctree::
    :maxdepth: 2

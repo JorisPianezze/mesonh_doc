@@ -1,6 +1,6 @@
 .. _grids:
 
-Grids
+Grid
 ================================================
 
 Meso-NH use a C-grid in the Arakawa convention :cite:`arakawa_computational_1977`, both on the horizontal and on the vertical. This grid is shown on the following figure with:
@@ -23,5 +23,5 @@ Meso-NH use a C-grid in the Arakawa convention :cite:`arakawa_computational_1977
    :align: center
    :alt: Meso-NH's grids
 
-   Meso-NH's grids.
+   Meso-NH's grid
 

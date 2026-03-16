@@ -16,7 +16,7 @@ Release date : XX/XX/2026
    
       * **LFI**: this file format is no longer supported for writing.   
 
-      * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases
+      * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases.
 
       * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
 
@@ -24,11 +24,11 @@ Release date : XX/XX/2026
 
       * **Default values** are changed for ECRAD, turbulence, ICE3 and condensation schemes.
    
-      * **Radiation scheme**: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
+      * **Radiation**: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
    
       * **Wind turbine**: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
    
-      * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
+      * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry codes of MOCAGE and ARPEGE-ALADIN-climat.
    
       * **Turbulence**: updated constants impacting all mixing lengths, new Goger term, dynamical and buoyancy TKE production from EDMF.
 
@@ -100,7 +100,7 @@ ECRAD is now **compiled by default**. You can use either the old radiation schem
 
 All namelist keys available in ECRAD-offline is now available with Méso-NH (see the `reference ECMWF documentation <https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&modificationDate=1655480733414&api=v2>`_)
 
-.. note::
+.. warning::
 
    To use ECRAD, you still must link data files found at $SRC_MESONH/src/LIB/RAD/ecrad-1.6.1/data/ in the folder of the simulation (MESONH step).
 
@@ -121,9 +121,9 @@ All namelist keys available in ECRAD-offline is now available with Méso-NH (see
    "LUSE_AEROSOLS", "LOGICAL", ".TRUE."
    "LUSE_GENERAL_AEROSOL_OPTICS", "LOGICAL", ".FALSE."
    "LDO_LW_AEROSOL_SCATTERING", "LOGICAL", ".TRUE."
-   "NAEROSOL_TYPES", "INTEGER", "6"
+   "NAEROSOL_TYPES", "INTEGER", "12"
    "NI_AEROSOL_TYPE_MAP", "INTEGER(NMAXAEROSOLTYPES)", "(1,2,3,4,5,6/)"
-   "CAEROSOL_OPTICS_OVERRIDE_FILE_NAME", "CHARACTER(LEN=511)", "aerosol_ifs_rrtm_tegen.nc"
+   "CAEROSOL_OPTICS_OVERRIDE_FILE_NAME", "CHARACTER(LEN=511)", "aerosol_ifs_rrtm_49R1.nc"
    "CLIQUID_MODEL_NAME", "CHARACTER(LEN=63)", "SOCRATES"
    "CICE_MODEL_NAME", "CHARACTER(LEN=63)", "Fu-IFS"
    "LUSE_GENERAL_CLOUD_OPTICS", "LOGICAL", ".TRUE."
@@ -385,12 +385,12 @@ To use with LCONTROL_EOL=.TRUE. in NAM_EOL.
    :header: "Fortran name", "Fortran type", "Default value"
    :widths: 30, 40, 30
    
-   "CMETH_OPS", "CHARACTER(LEN=9)", "TABLE    "
+   "CMETH_OPS", "CHARACTER(LEN=9)", "TABLE"
    "CCONTROL_CSVDATA", "CHARACTER(LEN=NFILENAMELGTMAX)", "data_TABLE.csv"
-   "XCON_AVG_PERIOD", "REAL", "10."
-   "XCON_DIST_VEL", "REAL", "240."
-   "XCON_RAD_VEL", "REAL", "120."
-
+   "XCON_AVG_PERIOD", "REAL", "10.0"
+   "XCON_DIST_VEL","REAL","240.0"
+   "XCON_RAD_VEL","REAL","120.0"
+   
 * :code:`CMETH_OPS`: method for operational state control
 
   * 'TABLE': the rotational velocity and blade pitch angle are linearly interpolated from a table given in CCONTROL_CSVDATA. The inflow velocity used to interpolate is defined as the mean wind on a virtual disk defined by XCON_DIST_VEL and XCON_RAD_VEL and over a time period XCON_AVG_PERIOD.
@@ -546,7 +546,9 @@ Compression is now enabled by default for all written netCDF files.
 
 As a reminder, compression for all files is enabled or disabled via the ``LIO_COMPRESS`` parameter in the :ref:`nam_confio` namelist.
 
-**Note:** if ``LIO_COMPRESS = .TRUE.``, the parameters ``LIO_COMPRESS_ALGO`` and ``LIO_COMPRESS_LEVEL`` take precedence over those in the ``NAM_BACKUP`` and ``NAM_OUTPUT`` namelists (however, no impact if compression is imposed per variable in the outputs).
+.. note::
+
+  if ``LIO_COMPRESS = .TRUE.``, the parameters ``LIO_COMPRESS_ALGO`` and ``LIO_COMPRESS_LEVEL`` take precedence over those in the ``NAM_BACKUP`` and ``NAM_OUTPUT`` namelists (however, no impact if compression is imposed per variable in the outputs).
 
 
 Zstandard (zstd) compression
@@ -905,7 +907,7 @@ For a smooth transition from the classic FORTRAN Méso-NH namelist to csv format
 
    By default, :file:`Table_aer_general_aclibn.csv` and :file:`Table_chem_general_aclibn.csv` are ignored (not read). Traditional Méso-NH namelist is used.
 
-.. note::
+.. warning::
 
    The Table_aer_species_aclibn.csv are always read, so using NAM_DUST, NAM_SALT or NAM_CH_ORILAM must be carefully cross-checked with the Tables!
 
@@ -1210,7 +1212,7 @@ Renaming parameters for CEFRADL and CEFRADI:
 Cleaning and restructuration
 ----------------------------------------------------------------------------
 
-- The :file:`src/LIB/SURCOUCHE` directory has been removed. It contained source files par parallelization and for I/O. They all have been moved to the :file:`src/MNH/parallel` and :file:`src/MNH/io` directories.
+- The :file:`src/LIB/SURCOUCHE` directory has been removed. It contained source files for parallelization and for I/O. They all have been moved to the :file:`src/MNH/parallel` and :file:`src/MNH/io` directories.
 - Subdirectories in the :file:`src/MNH` directory have been created. The :file:`src/MNH` directory contained a lot of files with different functionalities.
   To better organize the code, several subdirectories have been created and files have been moved.
   This is only a first step and more restructuring will be done in the future.
