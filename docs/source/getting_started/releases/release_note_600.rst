@@ -8,33 +8,38 @@ Release date : XX/XX/2026
  .. note::
    **Summary**
 
-   * **GPU**: MNH-V6-0-0 can be run on GPUs. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
-   
-   * **Default values** are changed for ECRAD, turbulence, ICE3 and condensation schemes.
-   
-   * **Radiation scheme**: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
-   
-   * **Wind turbine**: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
-   
-   * **NetCDF compression** is now enabled by default for all written netCDF files with the Zstandard library. Zstd is even faster than using no compression and reduces significantly the size of the netCDF files.
-   
-   * **LFI**: this file format is no longer supported for writing.
-   
-   * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
-   
-   * **Turbulence**: updated constants impacting all mixing lengths, new Goger term, dynamical and buoyancy TKE production from EDMF.
+   * **Performance**: MNH-V6-0-0 can be run on GPUs. The dynamics (advection schemes and pressure solvers), the microphysics ICE3 and the turbulence scheme are accelerated. The tested chips are NVIDIA GPUs V100/A100/H100, NVIDIA GH200 APUs, AMD GPUs MI250X and AMD APUs MI300A.
 
-   * **Shallow convection**: new coefficients to tune the scheme, new type of env mixing for buoyancy sorting scheme, upward length to use in the dry detrainement and mixing of TKE by updrafts.
+   * **Input / Output**
 
-   * **Microphysics ICE3**: new PDF used to diagnose autoconversion from the shallow convection cloud, Kogan autocoversion of liquid water
+      * **NetCDF compression** is now enabled by default for all written netCDF files with the Zstandard library. Zstd is even faster than using no compression and reduces significantly the size of the netCDF files.
+   
+      * **LFI**: this file format is no longer supported for writing.   
 
-   * **Microphysics LIMA**: option to mimic the ICE3 scheme, new graupel processes options, PDF for subgrid precipitation, new prognostic up to 4 ice crystal shapes, self collection of ice crystals, init of CCN and IFN by ORILAM, interpolation of CAMS fields
+      * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases
 
-   * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
+      * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
+
+   * **Physics parameterizations and dynamics**
+
+      * **Default values** are changed for ECRAD, turbulence, ICE3 and condensation schemes.
+   
+      * **Radiation scheme**: ECRAD updated to 1.6.1 version and compiled by default. More than 50 new namelist options from ECRAD-offline are now available.
+   
+      * **Wind turbine**: code updated to EOL-2.0.1. It includes a new kinematic architecture with 6D harmonic floating motion, controller architecture including now TABLE, JONKM, and ROSCO methods and a 3D Gaussian smearing method.
+   
+      * **Aerosol & Chemistry**: new library ACLIB included. It wraps the original Méso-NH code and exposes interfaces to use the aerosols and chemistry code of MOCAGE and ARPEGE-ALADIN-climat.
+   
+      * **Turbulence**: updated constants impacting all mixing lengths, new Goger term, dynamical and buoyancy TKE production from EDMF.
+
+      * **Shallow convection**: new coefficients to tune the scheme, new type of env mixing for buoyancy sorting scheme, upward length to use in the dry detrainement and mixing of TKE by updrafts.
+
+      * **Microphysics LIMA**: option to mimic the ICE3 scheme, new graupel processes options, PDF for subgrid precipitation, new prognostic up to 4 ice crystal shapes, self collection of ice crystals, init of CCN and IFN by ORILAM, interpolation of CAMS fields
+
+      * **Microphysics ICE3**: new PDF used to diagnose autoconversion from the shallow convection cloud, Kogan autocoversion of liquid water
 
    * **Cleaning & restructuration**: src/LIB/SURCOUCHE is moved to MNH/io and MNH/parallel; new subdirectories in src/MNH; MY_RUN renamed in examples; overall cleaning of obsolete binaries and tools.
 
-   * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases
 
 .. contents::
    :local:
@@ -1076,11 +1081,11 @@ LIMA
 
 * :code:`XT0CRIAUTI`: threshold temperature for the ice->snow autoconversion threshold
 
-* :code:`XCRIAUTI`: ?
+* :code:`XCRIAUTI`: minimum value for the ice :math:`\rightarrow` snow autoconversion threshold
 
-* :code:`XACRIAUTI`: ?
+* :code:`XACRIAUTI`: A parameter for the ice :math:`\rightarrow` snow autoconversion 10**(aT+b) law
 
-* :code:`XBCRIAUTI`: ?
+* :code:`XBCRIAUTI`: B parameter for the ice :math:`\rightarrow` snow autoconversion 10**(aT+b) law
 
 * :code:`CSUBG_PR_PDF`: PDF for subgrid precipitation. Options are the same as in :ref:`nam_param_icen`.
 

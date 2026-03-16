@@ -263,11 +263,11 @@ It contains the options for the 2 moment mixed phase cloud parameterizations use
 
 * :code:`XT0CRIAUTI`: threshold temperature for the ice->snow autoconversion threshold
 
-* :code:`XCRIAUTI`: ?
+* :code:`XCRIAUTI`: minimum value for the ice :math:`\rightarrow` snow autoconversion threshold
 
-* :code:`XACRIAUTI`: ?
+* :code:`XACRIAUTI`: A parameter for the ice :math:`\rightarrow` snow autoconversion 10**(aT+b) law
 
-* :code:`XBCRIAUTI`: ?
+* :code:`XBCRIAUTI`: B parameter for the ice :math:`\rightarrow` snow autoconversion 10**(aT+b) law
 
 * :code:`CSUBG_PR_PDF`: PDF for subgrid precipitation. Options are the same as in :ref:`nam_param_icen`.
 
