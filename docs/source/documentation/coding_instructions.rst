@@ -1,56 +1,21 @@
-Coding instructions
+Developer's guide
 =============================================================================
 
-Meso-NH is build upon many contribution since 30 years. As the code is growing and shared with increasing models and contributors, a number of coding norms must be followed. At each pack release, a new tag is attached to its name (such as MNH-V5-5-0, MNH-V5-7-0 etc). The integration of contributions to a pack depends on its type described in a first part. Coding norms and guidance are described in a second part.
+Meso-NH is build upon many contribution since 30 years. As the code is growing and shared with increasing models and contributors, a number of coding norms must be followed.
 
-Integration workflow and guidelines
-*****************************************************************************
+.. contents::
+   :local:
+   :depth: 2
 
-Meso-NH packs VX-X-X can be divided into two categories :
-
-* developement/major release-pack : the first and second X of VX-X (e.g. 5.4, 5.5, 5.6 etc)
-
-* bugfix release-pack : the third X of VX-X-X (e.g. 5.4.1, 5.4.2, 5.4.3...)
-
-A major release contains several scientific and technical changes and numerous bugfixes/commits. The time frequency of major release is about one over 12 to 18 months depending on the amount of contributors. A bugfix release contains a sufficient number of minor commit/bugfixes to justify a new release, or a hot bugfix that may impact a large number of users. The time frequency of bugfix can vary to a few days up to 12 months depending on the stability of the current pack release (usually a few months). At the integrator's demand, contributors are invited 1 to 3 months in advance to prepare their git branches (:ref:`cf Git section<git>`). Depending on the number of potential contribution and their content (only minors or major), the integrator may asks to only fetch bugfixes or main developpement contributions
-
-Bugfix release-pack
------------------------------------------------------------------------------
-
-In the case of a bugfix release-pack, please follow these guidelines :
-
-* do not forget to base your work on the last version of the master's branch : use git pull
-
-* only commits with bugfixes are asked. Cherry-picking is possible, please prepare a list of commits hash to share.
-
-.. note::
-
-   Please note that contributions from entire branches with major developments would be declined and postponed to the next call of contributions for a major release.
-
-Major release-pack
------------------------------------------------------------------------------
-
-In the case of a major release-pack, please follow these guidelines :
-
-* do not forget to merge the master's branch into your work before sharing your branch : use git pull
-
-* if your development is a new feature, you will be asked to share at least one new test case related to your work with python3 plots showing the interests variables related to your new work. This is important to us to track new bugs in case of non-wanted modifications of a part of your work.
-
-* if your development is a major modification of a current part of the code, you will be asked to share at least one new test case with python3 plots showing the interests variables related to your new work and to have tested your branch on 2 other cases that is impacted by your development.
-
-* you will be asked to provide a contribution to the release note and scientific guide if necessary.s
-
-* your work is published in a peer-reviewd paper (recommended)
-
-Coding guidelines
+Coding best practices
 *****************************************************************************
 
 General
 -----------------------------------------------------------------------------
 
-These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYEX, LIB.
+These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYEX, ACLIB, LIB.
 
-**File structure :**
+**File structure:**
 
 * Check if the function you code is already coded
 
@@ -58,7 +23,7 @@ These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYE
 
 * For new file, keep the common structure with an updated statements for the LICENCE and documentation
 
-**Code ergonomy :**
+**Code ergonomy:**
 
 * Maximum 132 characters per line, use &
 
@@ -72,7 +37,7 @@ These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYE
 
 * Comment your code !
 
-**Clean code :**
+**Clean code:**
 
 * Remove debugging PRINTs and WRITE before committing
 
@@ -82,21 +47,9 @@ These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYE
 
 * Remove unused module variables (USE MODD ...)
 
-* Select the variables used : USE MODD TOTO, ONLY : MYVAR
+* Select the variables used: USE MODD TOTO, ONLY : MYVAR
 
-**Variables :**
-
-* Variables names must follow the DOCTOR norm described in the following table :
-
-.. csv-table:: Norm DOCTOR
-   :header: "Type/Status", "INTEGER", "REAL", "LOGICAL", "CHARACTER", "TYPE"
-   :widths: 30, 30, 30, 30, 30, 30
-   
-   "Global", "N", "X", "L (not LP)", "C", "T (not TP, TS, TZ)"
-   "Dummy argument", "K", "P", "O (not PP)", "H", "TP"
-   "Local", "I", "Z (not IS)", "G (not GS, ZS)", "Y (not YS, YP)", "TZ"   
-   "Loop control", "J (not JP)", "/", "/", "/", "/"
-   
+**Variables:**
 
 * Variables names must be consistent through subroutines (a variable must be easily found with grep)
 
@@ -106,11 +59,26 @@ These guidelines apply mostly to every FORTRAN sources in src/ MNH, SURFEX, PHYE
 
 * Pointer must be initialized by NULL()
 
-**Reproductibility :**
+**Reproductibility:**
 
-* Use the parallelizaded version of basic functions (functions ended by ll such as MAX ll or SUM3D ll)
+* Use the parallelizaded version of basic functions (functions ended by ll such as MAX_ll or SUM3D_ll)
 
 * Avoid anticipated exit of a loop with EXIT, CYCLE, RETURN statements
+
+Variables names
+-----------------------------------------------------------------------------
+
+ Variables first letter(s) must follow the DOCTOR norm:
+
+.. csv-table:: Norm DOCTOR
+   :header: "Type/Status", "INTEGER", "REAL", "LOGICAL", "CHARACTER", "TYPE"
+   :widths: 30, 30, 30, 30, 30, 30
+   
+   "Global", "N", "X", "L (not LP)", "C", "T (not TP, TS, TZ)"
+   "Dummy argument", "K", "P", "O (not PP)", "H", "TP"
+   "Local", "I", "Z (not IS)", "G (not GS, ZS)", "Y (not YS, YP)", "TZ"   
+   "Loop control", "J (not JP)", "/", "/", "/", "/"
+
 
 Extra rules for PHYEX
 -----------------------------------------------------------------------------
@@ -120,7 +88,7 @@ The general idea behind these rules is that all the physics can be run with arra
 
 The following extra rules apply on PHYEX/ :
 
-**Variables :**
+**Variables:**
 
 * Do not use allocatables
 
@@ -134,7 +102,7 @@ The following extra rules apply on PHYEX/ :
 
 * Horizontal dimensions arrays are packed into one dimension : instead of A(D%NIT, D%NJT, D%NKT), use A(D%NIJT, D%NKT) where D%NIT, D%NJT, D%NKT are physical dimensions in x, y, z directions and D%NIJT = D%NIT*D%NJT
 
-**Subroutines :**
+**Subroutines:**
 
 * Do not use functions returning arrays, use subroutines
 
@@ -149,3 +117,66 @@ The following extra rules apply on PHYEX/ :
 * Temporary no (:) on TYPE%VAR
 
 * Compilation keys must be avoided. If really needed, the statements betwen ifdef and else must not split a statement
+
+Extra rules for ACLIB
+-----------------------------------------------------------------------------
+
+ACLIB is shared with other models. Specific rules must be followed:
+
+* Use explicit dimensions in variable declaration
+
+* Do not add Méso-NH specific modules/variables into ACLIB, but add variables through the interfaces instead. 
+  If a new specific module is needed, make sure that this module is Méso-NH agnostic (not dependent of other Méso-NH specific modules that would be incompatible with other host models)
+
+* Use dedicated ACLIB custom types as it is implemented (e.g. use CST_ACLIB for constants and not MODD_CST from MesoNH world)
+
+* Internal routines in :file:`src/ACLIB` must be agnostic from parallelization as much as possible to ease future use of cross-codes in different host models.
+
+
+How to contribute to the code ?
+*****************************************************************************
+
+Meso-NH packs VX-X-X are divided into two categories :
+
+* major release-pack: X and Y of VX-Y (e.g. 5.4, 5.5, 5.6, etc)
+
+* bugfix release-pack: Z of VX-Y-Z (e.g. 5.4.1, 6.0.1)
+
+A call of contribution is done for a major release-pack. For bugfixes only, you can contribute anytime.
+
+Clone the git repository
+-----------------------------------------------------------------------------
+
+Contributions are merged into the official branches via the `official repository <https://src.koda.cnrs.fr/mesonh/mesonh-code>`_. Follow the instructions to clone the repository :ref:`here <git>`. Then:
+
+* If you have a JANUS account (CNRS), log in and create a fork of the repository. Code in your own branch.
+
+* If you **do not** have a JANUS account, contact us (mesonhsupport  .at.  utoulouse.fr) and we will send you a token to be able to create a personal branch in the official repository.
+
+Once your developpement is ready, create a merge-request.
+
+Major release-pack
+-----------------------------------------------------------------------------
+
+A major release contains several scientific and technical changes and numerous bugfixes. The time frequency of a major release is about one over 12 to 18 months depending on the amount of contributors. In the case of a major release-pack, please follow these guidelines :
+
+* Merge the master's branch into your work before sharing your branch with :code:`git pull`. Resolve conflits if any and test the compilation.
+
+* **New feature**: you must share at least **one new test case** related to your work **with python3 plots** showing the interesting variables related to your new work.
+
+* **Major modification** of a current part of the code: you must share at least one new test case with python3 plots showing the interests variables related to your new work and to have tested your branch on 2 other cases that is impacted by your development (see the :ref:`cases_catalogue`)
+
+* Provide a contribution to the user's guide (this website) and scientific guide.
+
+Bugfix release-pack
+-----------------------------------------------------------------------------
+
+A bugfix release contains a sufficient number of minor bugfixes to justify a new release, or a hot bugfix that may impact a large number of users. The time frequency of bugfix can vary to a few days up to 12 months depending on the stability of the current pack release (usually a few months). Please follow these guidelines:
+
+* Merge your branch on the last version of the master's branch with :code:`git pull`. Resolve conflits if any and test the compilation.
+
+* only commits with bugfixes are asked. If your bugfixes are in a developpement branch, create a bugfix-branch and cherry-picks only bugfix commits.
+
+.. warning::
+
+   Contributions of branches with major developments would be declined and postponed to the next call of contributions for a major release.
