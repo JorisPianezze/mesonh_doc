@@ -128,33 +128,26 @@ For the CPU partitions
 For the Nvidia GPU partitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To compile Meso-NH for GPUs, you should use the new environement variable MNH_GPU with the configure command.
+On Jean-Zay, 3 different types of Nvidia GPUs are available: V100, A100 and H100.
+To enable the compilation for GPUs, the :code:`MNH_GPU` environment variable must be set to the corresponding value (V100, A100 or H100) before running the :code:`configure` command.
 
-On Jean-Zay you have 3 kinds of Nvidia GPUs : V100/A100/H100, so for V100 use:
+For example, to compile Meso-NH for V100 GPUs, use the following commands:
 
 .. code-block:: bash
    :substitutions:
 
    cd |MNH_directory_extract_current|/src
    MNH_GPU=V100 ./configure
+   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-V100-MPIAUTO-MANAGEDO2
+   make |& tee error$XYZ
+   make installmaster
 
-This will generate a profil_mesonh with compiler Nvidia<=>ARCH=LXnvhpc2202, the name of the Gpus MNH_GPU=V100 and OPTLEVEL=MANAGEDO2 compiler option :
+This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXnvhpc2202`
+that uses the Nvidia compiler, :code:`MNH_GPU=V100` and :code:`OPTLEVEL=MANAGEDO2` that selects the compiler options.
 
-.. code-block:: bash
-   :substitutions:
+The compilation takes around 2 hours (in interactive on Jean-Zay, you are limited to one core).
 
-   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V6-0-0-V100-MPIAUTO-MANAGEDO2
-
-Compile the code as usually(very long about 2 hours).
-
-The same for other A100 & H100 Gpus
-
-Bench test case using this GPUs version could be find in the directory
-
-.. code-block:: bash
-   :substitutions:
-
-   ${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/
+A test case using GPUs can be found in the directory :file:`${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/`.
 
 .. _compilation_adastra_cines:
 
@@ -202,45 +195,35 @@ Install the Meso-NH package in your $HOME (default 50GB of quota) and compile in
 
 For the AMD GPU partitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To compile Meso-NH for GPUs, you should use the new environement variable MNH_GPU with the configure command.
 
-On Adastra you have two type of devices :
+On Adastra, 2 different types of AMD devices are available:
 
-- AMD GPUs : MI250X . The "X" indique that this device is a so called "discrete GPU" 
-            <=> physical separated from the CPUs on the compute node 
-   
-- AMD APUs : MI300A . The "A" indique that this device is a so called "APU" (Accelerated Processor Unit) 
-                 <=> On the same chip there is GPUs and a CPUs , sharing the same fast memory(HBM)
+* MI250X: the *X* indicates that this device is a so called *discrete GPU*.
+  This means that the GPU is physically separated from the CPUs on the compute node,
+  and has its own dedicated memory.
 
+* MI300A: the *A* indicates that this device is a so called *APU* (Accelerated Processor Unit).
+  This means that the GPU and the CPUs are on the same chip and share the same fast memory (HBM).
 
-For the configure command, we drop the letter X/A , so for MI250X GPUs us :
+To enable the compilation for GPUs, the :code:`MNH_GPU` environment variable must be set to the corresponding value (MI250 or MI300, without the *X* or *A*) before running the :code:`configure` command.
+
+For example, to compile Meso-NH for MI250X GPUs, use the following commands:
 
 .. code-block:: bash
    :substitutions:
 
    cd |MNH_directory_extract_current|/src
    MNH_GPU=MI250 ./configure
+   ../conf/profile_mesonh-LXcray-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MI250-CCE1800-MPICRAY-MANAGED
+   make |& tee error$XYZ
+   make installmaster
 
-This will generate a profil_mesonh with compiler CRAY<=>ARCH=LXcray, currently version CCE/1800
-the name of the Gpus MNH_GPU=MI250 and OPTLEVEL=MANAGED compiler option :
+This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXcray`
+that uses the Cray compiler (version CCE1800), :code:`MNH_GPU=MI250` and :code:`OPTLEVEL=MANAGED` that selects the compiler options.
 
-.. code-block:: bash
-   :substitutions:
+The compilation takes around 1 hour.
 
-   ../conf/profile_mesonh-LXcray-R8I4-MNH-V6-0-0-MI250-CCE1800-MPICRAY-MANAGED
-
-
-Compile the code as usually( very long,  about 1 hour)
-
-=> In the same way for MI300A APUs, use MNH_GPU=MI300, etc ...
-
-
-Bench test case using this GPUs version could be find in the directory
-
-.. code-block:: bash
-   :substitutions:
-
-   ${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/
+A test case using GPUs can be found in the directory :file:`${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/`.
 
 
 .. _compilation_irene_tgcc:
