@@ -138,7 +138,7 @@ For example, to compile Meso-NH for V100 GPUs, use the following commands:
 
    cd |MNH_directory_extract_current|/src
    MNH_GPU=V100 ./configure
-   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-V100-MPIAUTO-MANAGEDO2
+   . ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-V100-MPIAUTO-MANAGEDO2
    make |& tee error$XYZ
    make installmaster
 
@@ -214,7 +214,7 @@ For example, to compile Meso-NH for MI250X GPUs, use the following commands:
 
    cd |MNH_directory_extract_current|/src
    MNH_GPU=MI250 ./configure
-   ../conf/profile_mesonh-LXcray-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MI250-CCE1800-MPICRAY-MANAGED
+   . ../conf/profile_mesonh-LXcray-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MI250-CCE1800-MPICRAY-MANAGED
    make |& tee error$XYZ
    make installmaster
 
@@ -394,6 +394,72 @@ On Datarmor (IFREMER)
 
         cd examples/test_cases
         ./run_all_KTESTPACK
+
+.. _compilation_olympe_kairos:
+
+On Kairos (CALMIP)
+-----------------------------------------------------------------------------
+
+.. csv-table:: Filesystem of Kairos
+   :header: "", "Homedir", "Workdir", "Scratchdir"
+   :widths: 30, 30, 30, 30
+
+   "Location", "/kairos1/$GROUP/$USER", "/work/$GROUP/$USER", "/scratch/$USER"
+   "Disk space", "50 GiB / group", "5 TiB / group", "unlimited"
+   "Inodes (files)", "1 M / group", "5 M / group", "unlimited"
+   "Data lifetime", "Saved", "Saved", "Purged"
+
+.. tip::
+
+   We recommend to install Meso-NH on your Workdir, run the simulation on the Scratchdir (but be careful with the automatic purge)
+   and store the files in the Workdir.
+
+For the CPU partitions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/src
+   ./configure
+   export MAKEFLAGS='-j 32' # optional, to speed up the compilation on up to 32 processes/cores
+   . ../conf/profile_mesonh-LXifx-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MPIINTEL-O2
+   make |& tee error$XYZ
+   make installmaster
+
+
+.. note::
+
+   To run the test case examples, do:
+
+   .. code-block:: bash
+      :substitutions:
+
+      cd examples/test_cases
+      ./run_all_KTESTPACK
+
+
+For the Nvidia GPU partitions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On Kairos, the compilation of Meso-NH with GPU support must be done on the GraceHopper nodes.
+
+Use the following commands, once connected to a GraceHopper node:
+
+.. code-block:: bash
+   :substitutions:
+
+   cd |MNH_directory_extract_current|/src
+   MNH_GPU=GH200 ./configure
+   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-GH200-MPIAUTO-UNIFIED
+   make |& tee error$XYZ
+   make installmaster
+
+This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXnvhpc2202`
+that uses the Nvidia compiler, :code:`MNH_GPU=GH200` and :code:`OPTLEVEL=UNIFIED` that selects the compiler options.
+
+A test case using GPUs can be found in the directory :file:`${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/`.
+
 
 .. _compilation_olympe_calmip:
 
