@@ -3,7 +3,7 @@
 MNH-V6-0-0
 ============================================================================
 
-Release date : XX/XX/2026
+Release date : XX/03/2026
 
  .. note::
    **Summary**
@@ -16,7 +16,7 @@ Release date : XX/XX/2026
    
       * **LFI**: this file format is no longer supported for writing.   
 
-      * **Coupling**: HRRR-WRF and ICON-EU can be used as external file for realistic cases.
+      * **Coupling**: HRRR-WRF (USA) and ICON (Europe and global) can be used as external file for realistic cases.
 
       * **Diagnostics**: online coarse-graining with multiple user defined sub-domains.
 
@@ -1051,6 +1051,7 @@ LIMA
    "LICE_ISC", "LOGICAL", ".FALSE."
    "LINITORILAM", "LOGICAL", ".FALSE."
    "LINTERP_CAMS", "LOGICAL", ".FALSE."
+   "LFREEZ_RATE", "LOGICAL", ".TRUE."
 
 * :code:`LICE3`: Use to mimic the ICE3 scheme. If set to .TRUE., some parameters are set :
 
@@ -1107,6 +1108,7 @@ LIMA
 
 * :code:`LINTERP_CAMS`: true to interpolate CAMS data at each time step (from Large-Scale fields)
 
+* :code:`LFREEZ_RATE`: true to limit riming efficiency (heat budget on icy hydrometeors collecting supercooled liquid water)
 
 Condensation
 ****************************************************************************
@@ -1230,11 +1232,11 @@ Cleaning and restructuration
 - The :file:`src/ARCH_SRC` directory has been cleaned. Obsolete sources have been removed.
 
 
-HRRR-WRF and ICON-EU as initialization and forcing models
+HRRR-WRF and ICON as initialization and forcing models
 ----------------------------------------------------------------------------
 
 * HRRR-WRF: Initializing and forcing Méso-NH with daily operational model HRRR is now possible. More info in :ref:`extracthrrr`
-* ICON-EU: Initializing and forcing Méso-NH with daily operational model ICON-EU is now possible. More info in :ref:`extracticon`
+* ICON: Initializing and forcing Méso-NH with daily operational model ICON-EU or ICON-Global is now possible. More info in :ref:`extracticon`
 
 
 Miscellaneous changes

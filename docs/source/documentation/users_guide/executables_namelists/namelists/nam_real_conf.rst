@@ -18,6 +18,7 @@ NAM_REAL_CONF
    "LCOUPLING","LOGICAL",".FALSE."
    "NHALO","INTEGER","1"
    "JPHEXT","INTEGER","1"
+   "NVERLEVEL_GRIB","INTEGER","120"
 
 * :code:`CEQNSYS` : EQuatioN SYStem
 
@@ -52,3 +53,5 @@ NAM_REAL_CONF
 * :code:`NHALO` : Size of the halo for parallel distribution. This variable is related to computer performance but has no impact on simulation results.
 
 * :code:`JPHEXT` :  Horizontal External points number. JPHEXT must be equal to 3 for cyclic cases with WENO5.
+
+* :code:`NVERLEVEL_GRIB` : number of vertical levels of ICON grib data files used as init or coupling (120 for ICON-global; 74 for ICON-EU)

@@ -85,6 +85,7 @@ It contains the options for the 2 moment mixed phase cloud parameterizations use
    "LICE_ISC", "LOGICAL", ".FALSE."
    "LINITORILAM", "LOGICAL", ".FALSE."
    "LINTERP_CAMS", "LOGICAL", ".FALSE."
+   "LFREEZ_RATE", "LOGICAL", ".TRUE."
 
 * :code:`NMOM_C` : number of prognostic moments for cloud droplets.
 
@@ -286,3 +287,5 @@ It contains the options for the 2 moment mixed phase cloud parameterizations use
 * :code:`LINITORILAM`: true to initialize CCN and IF by ORILAM
 
 * :code:`LINTERP_CAMS`: true to interpolate CAMS data at each time step (from Large-Scale fields)
+
+* :code:`LFREEZ_RATE`: true to limit riming efficiency (heat budget on icy hydrometeors collecting supercooled liquid water)
