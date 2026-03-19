@@ -450,13 +450,13 @@ Use the following commands, once connected to a GraceHopper node:
    :substitutions:
 
    cd |MNH_directory_extract_current|/src
-   MNH_GPU=GH200 ./configure
-   ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-GH200-MPIAUTO-UNIFIED
+   ./configure
+   . ../conf/profile_mesonh-LXnvhpc2202-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MPIAUTO-UNIFIED
    make |& tee error$XYZ
    make installmaster
 
 This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXnvhpc2202`
-that uses the Nvidia compiler, :code:`MNH_GPU=GH200` and :code:`OPTLEVEL=UNIFIED` that selects the compiler options.
+that uses the Nvidia compiler, and :code:`OPTLEVEL=UNIFIED` that selects the compiler options.
 
 A test case using GPUs can be found in the directory :file:`${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/`.
 
