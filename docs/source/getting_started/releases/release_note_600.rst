@@ -3,7 +3,7 @@
 MNH-V6-0-0
 ============================================================================
 
-Release date : XX/03/2026
+Release date : 19/03/2026
 
  .. note::
    **Summary**
@@ -62,7 +62,7 @@ For this first release, the schemes ported to GPUs are:
 Two type of GPUs vendors are supported: Nvidia and AMD.
 
 * For Nvidia GPUs, the *nvhpc* compiler suite is used. It is free to download on the |nvhpc_link|.
-  The code has been tested on different supercomputers (Jean-Zay, Belenos, Irene, Turpan, Nuwa, Romeo, Kairos) with different GPU types, such as V100, A100, H100 and GH200.
+  The code has been tested on different supercomputers (Jean-Zay, Belenos, Irene, Turpan, Nuwa, Romeo, Kairos) with different GPU types, such as **V100, A100, H100** and **GH200**.
 
 .. |nvhpc_link| raw:: html
 
