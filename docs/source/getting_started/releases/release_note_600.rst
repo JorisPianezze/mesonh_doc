@@ -58,6 +58,13 @@ For this first release, the schemes ported to GPUs are:
 
 * Pressure solvers (Multi-Grid and FFT)
 
+For developpment & modification done for GPUs port you could look at :
+ - For MNH-55 + OpenACC :: 
+   Escobar & al : Porting the Meso-NH atmospheric model on different GPU architectures for the next generation of supercomputers (version MESONH-v55-OpenACC), Geosci. Model Dev., 18, 2679–2700, 2025. https://doi.org/10.5194/gmd-18-2679-2025 
+ - For MNH-57/60 + OpenACC :: 
+   13th Meso-NH user’s meeting, 13-15 Oct. 2025 : 
+   Avancement du portage de Méso-NH sur GPU :
+   https://mesonh.cnrs.fr/wp-content/uploads/2025/10/20251015_0915_escobar.pdf
 
 Two type of GPUs vendors are supported: Nvidia and AMD.
 
