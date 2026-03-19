@@ -94,6 +94,8 @@ Applicatives cases
    IDEAL/STERAO/case_description.rst
    IDEAL/OCEAN_LES/case_description.rst
    IDEAL/BLOWSNOW_c1b1D/case_description.rst
+   IDEAL/SNOW_BLOW/case_description.rst
+
 
 .. csv-table:: Applicatives cases
    :header: "Name", "Dim.", "Nb pts", "Dx", "Dz","Dt","LBC","Duration"
@@ -106,6 +108,7 @@ Applicatives cases
    "OCEAN_LES", "3D", "128x128x100", "125m", "20m", "10s", "CYCL", "6h"
    "", "3D", "320x240x100", "12.5m", "20m", "5s", "OPEN", "6h"
    "BLOWSNOW_c1b1D", "1D", "1x1x70", "10000m", "6m", "0.5s", "CYCL", "1200s"
+   "SNOW_BLOW", "3D", "60x60x70", "50m", "10m", "1.5s", "OPEN", "3h"
    "IBM/CUBE", "3D", "640x160x41", "3.12cm", "3.12cm", "0.0175s", "OPEN", "1250s"
    "IBM/CYCLINDER", "3D", "60x400x10", "10m", "10m", "2.5s", "OPEN+WALL", "100000s"
    "IBM/ICIF_OBJ", "3D", "1200x1200x150", "1m", "1m", "0.04s", "OPEN", "100s"
@@ -131,6 +134,7 @@ Applicatives cases
    "OCEAN_LES", "CEN4TH", "None", "None", "1D-DELT","None", "None", "None"
    "", "CEN4TH", "None", "None", "3D-DELT","None", "None", "None"
    "BLOWSNOW_c1b1D", "", "ISBA", "None", "1D-BL89","None", "None", "None"
+   "SNOW_BLOW", "", "ISBA", "FIXE", "3D-DEAR","None", "ICE3", "None"
    "IBM/CUBE", "WENO5", "ideal Flux", "None", "3D-DELT","None", "None", "None"
    "IBM/CYLINDER", "WENO5", "ideal Flux", "None", "None","None", "None", "None"
    "IBM/ICIF_OBJ", "WENO5", "ideal Flux", "None", "3D-DEAR","None", "None", "None"
@@ -160,7 +164,6 @@ the initialization and coupling of the atmosphere from operational data (forecas
    REAL/KMAP/case_description.rst
    REAL/PANAME/case_description.rst
    REAL/SALT/case_description.rst
-   REAL/SNOW_BLOW/case_description.rst
    REAL/TROCCINOX/case_description.rst
    REAL/XYNTHIA_2.5km/case_description.rst
 
@@ -179,7 +182,18 @@ the initialization and coupling of the atmosphere from operational data (forecas
    "FOG_3D", "300x300x34", "500m", "0.25m", "4s", "12h", "2009-02-27", "AROME", "Paris"
    "HAIC", "360x250x70", "2500m", "30m", "10s", "24h", "2015-05-29", "AROME", "Guyana"
    "ICART2M", "30x30x60", "15000m", "60m", "120s", "3h", "2004-08-10", "IFS", "?"
-   "", "60x60x60 ", "2500m", "60m", "30s", "3h", "", "", ""
+   "", "60x60x60 ", "2500m", "60m", "30s", "", "", "", ""
+   "ICCARE_CORSE", "300x300x70", "2000m", "40m", "5s", "24h", "2016-10-13", "IFS", "Corsica"
+   "", "600x800x70 ", "500m", "40m", "1.7s", "", "", "", ""
+   "KMAP", "150x150x50", "32000m", "60m", "5s", "12h", "1999-09-17", "IFS", "South-East France"
+   "", "144x144x50 ", "8000m", "60m", "2.5s", "", "", "", ""
+   "", "160x160x50 ", "2000m", "60m", "1.25s", "", "", "", ""
+   "PANAME", "400x400x68", "1200m", "4m", "20s", "24h", "2023-07-12", "AROME", "Ile-de-France - Paris"
+   "", "400x400x68", "300m", "4m", "5s", "", "", "", ""
+   "", "300x300x68", "100m", "4m", "1.7s", "", "", "", ""
+   "SALT", "160x90x50", "25000m", "60m", "40s", "18h", "2018-01-18", "IFS", "La Reunion"
+   "", "50x50x50", "5000m", "60m", "8s", "", "", "", ""
+
 
 .. csv-table:: Realistic cases
    :header: "Name", "Wind Advection", "Surface", "Rad", "Turb", "Shallow Conv.", "Micro.", "Deep conv."
@@ -196,6 +210,16 @@ the initialization and coupling of the atmosphere from operational data (forecas
    "HAIC", "CEN4TH", "SURFEX", "ECMW/ECRAD", "1D-BL89","EDKF", "ICE3/LIMA", "None"
    "ICART2M", "CEN4TH", "SURFEX", "ECMW", "1D-BL89","EDKF", "ICE3", "KAFR"
    "", "CEN4TH", "SURFEX", "ECMW", "1D-BL89","EDKF", "ICE3", "None"
+   "ICCARE_CORSE", "WENO5", "SURFEX", "ECMW", "1D-BL89","EDKF", "LIMA", "None"
+   "", "WENO5", "SURFEX", "ECMW", "3D-BL89","None", "LIMA", "None"
+   "KMAP", "WENO5", "SURFEX", "ECRAD", "1D-BL89","None", "ICE3", "KAFR"
+   "", "WENO5", "SURFEX", "ECRAD", "1D-BL89","None", "ICE3", "KAFR"
+   "", "WENO5", "SURFEX", "ECRAD", "1D-BL89","EDKF", "ICE3", "None"
+   "PANAME", "WENO3", "SURFEX", "ECMW", "1D-HM21","EDKF", "ICE3", "None"
+   "", "WENO3", "SURFEX", "ECMW", "3D-HM21","None", "ICE3", "None"
+   "", "CEN4TH", "SURFEX", "ECMW", "3D-HM21","None", "ICE3", "None"
+   "SALT", "CEN4TH", "SURFEX", "ECMW", "1D-BL89","KAFR", "ICE3", "KAFR"
+   "", "CEN4TH", "SURFEX", "ECMW", "1D-BL89","KAFR", "ICE3", "KAFR"
 
 Technical cases
 ---------------------
