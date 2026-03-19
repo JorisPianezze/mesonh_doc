@@ -45,9 +45,9 @@ Release date : XX/03/2026
    :local:
    :depth: 2
 
-Running on GPU
+Running on GPUs
 ----------------------------------------------------------------------------
-The Meso-NH MNH-V6-0-0 is the first official version supporting offloading computation to GPUs, with the use of OpenACC API.
+The 6.0.0 version of Meso-NH is the first official version supporting offloading computation to GPUs, with the use of the OpenACC API.
 For this first release, the schemes ported to GPUs are:
 
 * Advection (scalars and wind)
@@ -57,31 +57,42 @@ For this first release, the schemes ported to GPUs are:
 * Cloud (ICE3)
 
 * Pressure solvers (Multi-Grid and FFT)
- 
 
-Two type of GPUs vendors are supported: NVIDIA & AMD.
 
-* For NVIDIA GPUs, we use the Nvidia "nvhpc" compiler suite, with is free to download https://developer.nvidia.com/hpc-sdk . The code had been tested on differents supercomputer in France (Jean-Zay, Beleons, Irene, Turpan, Nuwa) with **NVIDIA GPUs V100/A100/H100** and also **GH200 APUs** (ROMEO, KAIROS)
+Two type of GPUs vendors are supported: Nvidia and AMD.
 
-* For AMD GPUs : Due to leak of good free fortran compiler supporting OpenACC, the porting as been done with the proprietary HPE/CRAY fortran compiler which is only usable in France on ADASTRA supercomputer at CINES (LUMI at EURO-HPC/Finland or FRONTIER/EL-CAPITAN at the USA could also be used) tested on **AMD GPUs MI250X** and **AMD APUs MI300A**.
+* For Nvidia GPUs, the *nvhpc* compiler suite is used. It is free to download on the |nvhpc_link|.
+  The code has been tested on different supercomputers (Jean-Zay, Belenos, Irene, Turpan, Nuwa, Romeo, Kairos) with different GPU types, such as V100, A100, H100 and GH200.
 
-For the schemes not ported to GPUs:
+.. |nvhpc_link| raw:: html
 
-* the user could use them: computations of non-GPU ported schemes will compute on CPUs;
+   <a href="https://developer.nvidia.com/hpc-sdk" target="_blank">NVIDIA HPC SDK website</a>
 
-* the results will be correct, bit reproductible with CPUs only runs (with OPTLEVEL=OPENACCDEFONLY), this is achieved thanks to the automatic "MANAGED MEMORY" usage betwen CPU and GPU (with OPTLEVEL=MANAGED);
+* For AMD GPUs, due to the lack of a freely available and efficient Fortran compiler supporting OpenACC,
+  the porting has been done with the proprietary HPE/Cray Fortran compiler. At the time being, it is only available in France on the Adastra supercomputer at CINES
+  (LUMI in Finland or Frontier and El Capitan in the US could also be used).
+  **MI250X GPUs** and **MI300A APUs** have been tested.
 
-* performance of the whole code will be lower, and if of interest it will be good opportunited to collaborate with the support team to port the scheme to GPUs.
+For the parts not ported to GPUs:
+
+* the user could use them: computations of parts not ported to GPUs will be executed on CPUs;
+
+* the results will be correct. They are bit-reproductible between CPU (with *OPTLEVEL=OPENACCDEFONLY*) and GPU runs.
+  The memory transfers betwen CPUs and GPUs are automatically managed thanks to the *managed memory* (with *OPTLEVEL=MANAGED*) or *unified memory* (with *OPTLEVEL=UNIFIED*);
+
+* performance of the whole code will be lower. If useful or necessary, please contact the support team to initiate a collaboration to port it.
 
  .. note::
 
-  They are limitations on the schemes ported to GPU  (limitations due to missing time to port theses fonctionnalites, not due to limitation of OpenACC):
+  There are limitations to the GPU version. These limitations are due to a lack of time to port these features, and not to a limitation of OpenACC.
+  The main limitations are:
 
   * No grid-nesting
 
   * Only open boundaries
 
-  * For the new Multi-Grid solver, only square :math:`2^N` grid points in horizontal directions
+  * For the new Multi-Grid solver, the number of points in the horizontal directions must be a power of 2 (e.g. 128, 256, 512, etc.).
+
 
 Default namelist changes
 ----------------------------------------------------------------------------
