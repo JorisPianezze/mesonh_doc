@@ -155,3 +155,8 @@ Part V: Diagnostics
   * **Radar diagnostics on Plan Position Indicators (PPI):** A radar simulator for high-resolution nonhydrostatic models :cite:p:`caumont_radar_2006`
 
 * **Satellite diagnostics:** A midlatitude cloud database validated with satellite observation :cite:p:`chaboureau_midlatitude_2008`
+
+Part VI: Ocean version
+-----------------------------------------------------------------------------
+
+* **Méso-NH Ocean** a coupled ocean–atmosphere version permits the study of turbulent interactions between the atmosphere and the ocean at very fine scales within a single code without external coupler :cite:p:`redelsperger2026`
