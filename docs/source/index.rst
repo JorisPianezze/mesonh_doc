@@ -34,10 +34,16 @@ Meso-NH website
 
 .. toctree::
    :maxdepth: 2
-   :caption: Examples
+   :caption: Applications
 
-   examples/cases_catalogue.rst
-   Applications <https://mesonh.cnrs.fr/#Applications>
+   applications/catalogue/cases_catalogue.rst
+   applications/aerosol.rst
+   applications/chemistry.rst
+   applications/LES.rst
+   applications/electricity.rst
+   applications/explicit-building.rst
+   applications/forest-fire.rst
+   applications/wind-turbine.rst
 
 .. toctree::
    :maxdepth: 2

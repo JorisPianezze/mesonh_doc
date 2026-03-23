@@ -1,6 +1,6 @@
 .. _cases_catalogue:
 
-Cases catalogue
+Namelist catalogue
 ============================================
 
 .. warning::
