@@ -3,13 +3,13 @@ Tutorial material
 
 A 4-day tutorial class is organized two times a year at Toulouse (France) :
 
-* A session in November is only in face-to-face and presentations are in French (materials in English).
+* A session in November in face-to-face only and presentations in French (materials in English).
 
-* A session in March is in hybrid (face-to-face + remote) and presentations are in English.
+* A session in March in hybrid (face-to-face & remote) and presentations in English.
 
 .. note::
 
-   The next tutorial will be held on 10-13 March 2026 (registration deadline 19th February). For more information (application and registration), send an email to quentin.rodier .at. meteo.fr. 
+   The next tutorial will be held on 2-5 November 2026 (registration deadline 2nd October). For more information (application and registration), send an email to quentin.rodier .at. meteo.fr. 
 
 Agenda
 ------------------------------------------------------------------------------

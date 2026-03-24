@@ -1,26 +1,16 @@
 Wildland fire
 ============================================
 
-Case description
+.. warning::
 
-listing des étapes techniques
-
-Specific numerical setup
-- rayonnement
-- LIMA...
-(Cas réel : tracer la topo avec echelle commune à tous)
-
-Output intéressants
-
-Figures
-Lien vers le pdf
-
-Ressources numériques requises
-- ver_user
-- noeud/procs du run, elapsed 
+   This section is not finished yet.
 
 
-Classements
-- cas idéalisés/ cas réels applications
+FOREFIRE
+----------------------------------------------------------------------------
 
-Tableau général avec cas test vs options physiques activées, grid-nesting, 
+Blaze
+----------------------------------------------------------------------------
+
+Publications
+----------------------------------------------------------------------------
