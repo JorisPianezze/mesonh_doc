@@ -360,6 +360,10 @@ On Datarmor (IFREMER)
    Compilation was not in place for Datarmor when Meso-NH version 6.0.0 was released.
    To use the following procedure, you have to download a slightly more recent version of Meso-NH that includes the necessary configuration for Datarmor.
 
+.. warning::
+
+   To compile Meso-NH on Datarmor, you need to use the bash shell. If you are using another shell, please switch to bash with the command :code:`bash` before running the compilation commands.
+
 .. DATA NEED TO BE CHECKED (Filesystem of Datarmor and tip on which filesytem to use)
 
    .. csv-table:: Filesystem of Datarmor
