@@ -357,43 +357,43 @@ On Datarmor (IFREMER)
 
 .. warning::
 
-   At the time being, Meso-NH |MNH_xyz_version_current| is not supported on the Datarmor machine.
-   The reason is due to the fact that the system is too old.
-   Support for recent Meso-NH versions will be provided as soon as the system will be updated.
-   In the meantime, you can compile Meso-NH version up to 5.7.x on Datarmor.
+   Compilation was not in place for Datarmor when Meso-NH version 6.0.0 was released.
+   To use the following procedure, you have to download a slightly more recent version of Meso-NH that includes the necessary configuration for Datarmor.
 
-..
-  .. csv-table:: Filesystem of Datarmor
-     :header: "", "Homedir", "Workdir", "Scratchdir", "Storedir"
-     :widths: 30, 30, 30, 30, 30
+.. DATA NEED TO BE CHECKED (Filesystem of Datarmor and tip on which filesytem to use)
 
-     "Location", "$HOME", "$DATAWORK", "$SCRATCH", ""
-     "Disk space", "50 Go / user", "1 To / group", "10 To / group", ""
-     "Data lifetime", "Saved", "Unsaved", "15 days", ""
+   .. csv-table:: Filesystem of Datarmor
+      :header: "", "Homedir", "Workdir", "Scratchdir", "Storedir"
+      :widths: 30, 30, 30, 30, 30
 
-  .. tip::
+      "Location", "$HOME", "$DATAWORK", "$SCRATCH", ""
+      "Disk space", "50 Go / user", "1 To / group", "10 To / group", ""
+         "Data lifetime", "Saved", "Unsaved", "15 days", ""
 
-     We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir or the Scratchdir.
+   .. tip::
 
-  On Datarmor you can compile in interactive mode using:
+      We recommend to install Meso-NH on your Homedir, run the simulation on the Workdir or the Scratchdir.
 
-  .. code-block:: bash
-     :substitutions:
+On Datarmor, you can compile in interactive mode using:
 
-     cd |MNH_directory_extract_current|/src
-     ./configure
-     . ../conf/profile_mesonh
-     make
-     make installmaster
+.. code-block:: bash
+   :substitutions:
 
-  .. note::
+   cd |MNH_directory_extract_current|/src
+   ./configure
+   export MAKEFLAGS='-j 8' # optional, to speed up the compilation on up to 8 processes/cores
+   . ../conf/profile_mesonh-LXgfortran-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MPIINTEL-O2
+   make |& tee error$XYZ
+   make installmaster
 
-     To verify your compilation you can run test case examples with:
+.. note::
 
-     .. code-block:: bash
+   To verify your compilation you can run test case examples with:
 
-        cd examples/test_cases
-        ./run_all_KTESTPACK
+   .. code-block:: bash
+
+      qsub job_make_examples_SGI_datarmor
+
 
 .. _compilation_olympe_kairos:
 
@@ -456,7 +456,7 @@ Use the following commands, once connected to a GraceHopper node:
    make installmaster
 
 This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXnvhpc2202`
-that uses the Nvidia compiler, and :code:`OPTLEVEL=UNIFIED` that selects the compiler options.
+  that uses the Nvidia compiler, and :code:`OPTLEVEL=UNIFIED` that selects the compiler options.
 
 A test case using GPUs can be found in the directory :file:`${SRC_MESONH}/examples/bench/MNH-OPENACC-EXA/test-cases/`.
 
