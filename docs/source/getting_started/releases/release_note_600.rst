@@ -1277,10 +1277,3 @@ Microphysics: removol of C1R3 and C3R5 schemes
 The C1R3 and C3R5 microphysics schemes have been removed from the code.
 These schemes were not maintained, not documented, and not used in any example test case.
 &NAM_DYNn LHORELAX_SVC1R3 is deleted.
-
-Ocean-Atmosphere-Wave coupling
-****************************************************************************
-
-Bug Fix: Resolved an issue with the rotation of sea surface currents, ensuring accurate transformation from lon/lat to x/y grid coordinates when using oceanic/wave coupling. 
-
-
