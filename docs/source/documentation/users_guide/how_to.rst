@@ -45,7 +45,7 @@ For that, you can copy and run the following python's script :
 Get the list of authorized number of horizontal grid points
 *****************************************************************************
 
-When you use :code:`CPRESOPT='ZRESI'` or `'CRESI'` in :ref:`nam_dyn` or :ref:`nam_dyn_pre` or :ref:`nam_real_conf`, the number of the horizontal grid points need to satisfy the rule of 2n * 3p * 5q.
+When you use :code:`CPRESOPT='ZRESI'` or :code:`CPRESOPT='CRESI'` in :ref:`nam_dynn` or :ref:`nam_dynn_pre` or :ref:`nam_real_conf`, the number of the horizontal grid points need to satisfy the rule of 2n * 3p * 5q.
 The list of current authorized number grid points is visible in the following table :
 
 .. csv-table:: List of authorized number of horizontal grid points
