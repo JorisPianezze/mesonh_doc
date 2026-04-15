@@ -45,8 +45,28 @@ For that, you can copy and run the following python's script :
 Get the list of authorized number of horizontal grid points
 *****************************************************************************
 
-Print possible values for the horizontal grid size (rule of 2n * 3p * 5q).
-For that, you can copy and run the following python's script :
+When you use :code:`CPRESOPT='ZRESI'` or `'CRESI'` in :ref:`nam_dyn` or :ref:`nam_dyn_pre` or :ref:`nam_real_conf`, the number of the horizontal grid points need to satisfy the rule of 2n * 3p * 5q.
+The list of current authorized number grid points is visible in the following table :
+
+.. csv-table:: List of authorized number of horizontal grid points
+   :widths: 10, 10, 10, 10, 10, 10, 10, 10, 10
+
+      "1",    "2",    "3",    "4",    "5",    "6",    "8",    "9",   "10"
+     "12",   "15",   "16",   "18",   "20",   "24",   "25",   "27",   "30"
+     "32",   "36",   "40",   "45",   "48",   "50",   "54",   "60",   "64"
+     "72",   "75",   "80",   "81",   "90",   "96",  "100",  "108",  "120"
+    "125",  "128",  "135",  "144",  "150",  "160",  "162",  "180",  "192"
+    "200",  "216",  "225",  "240",  "243",  "250",  "256",  "270",  "288"
+    "300",  "320",  "324",  "360",  "375",  "384",  "400",  "405",  "432"
+    "450",  "480",  "486",  "500",  "512",  "540",  "576",  "600",  "625"
+    "640",  "648",  "675",  "720",  "729",  "750",  "768",  "800",  "810"
+    "864",  "900",  "960",  "972", "1000", "1024", "1080", "1125", "1152"
+   "1200", "1215", "1250", "1280", "1296", "1350", "1440", "1458", "1500"
+   "1536", "1600", "1620", "1728", "1800", "1875", "1920", "1944", "2000"
+   "2025", "2048", "2160", "2187", "2250", "2304", "2400", "2430", "2500"
+   "2560", "2592", "2700", "2880", "2916", "3000", "3072", "3125", "3200"
+
+If you need more grid points, you can copy and run the following python's script :
 
 .. code-block:: python
 
@@ -65,7 +85,7 @@ For that, you can copy and run the following python's script :
    val.sort()
    np.set_printoptions(formatter={'float': '{: 5.0f}'.format})
    print(val)
-   
+
 Suppress the orography
 *****************************************************************************   
 
