@@ -25,7 +25,7 @@ This namelist is used to:
    "NMONTH", "INTEGER", ""
    "NDAY", "INTEGER", ""
    "XTIME", "REAL", ""
-   "NHALO_PREP", "INTEGER", "2"
+   "NHALO_PREP", "INTEGER", "0"
    "LWRITE_EXTERN", "LOGICAL", ".FALSE."
 
 * :code:`CFILE` / :code:`CFILEPGD` : name of the prep / pgd file used to define the date and the file in which to read the needed data (e.g. temperature).
