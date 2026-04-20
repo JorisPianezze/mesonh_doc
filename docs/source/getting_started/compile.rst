@@ -67,6 +67,48 @@ For the **VER_USER** compilation, you will use following commands:
 
 .. _compilation_on_different_systems:
 
+Supported / tested compilers
+=============================================================================
+
+Meso-NH should compile with any modern compiler.
+However, compiler bugs, missing or poorly supported Fortran features, or other issues can cause compilation to fail or lead to incorrect results.
+Meso-NH has only been tested on a limited number of environments.
+Below is a list of the tested compilers and their versions. Please note that other environment elements, such as the MPI library, may also affect compatibility.
+
+====================  ==============  ==================  ==============  ===================  ==============  =============================  ================  ===============
+Fortran                                C                                   C++                                  Compile                       Basic test cases  Full test cases
+------------------------------------  ----------------------------------  -----------------------------------  -----------------------------  ----------------  ---------------
+Compiler              Version         Compiler            Version         Compiler             Version
+====================  ==============  ==================  ==============  ===================  ==============  =============================  ================  ===============
+Cray CCE (ftn)        18.0.0          Cray CCE (cc)       18.0.0          Cray CCE (CC)        18.0.0          Yes                            Yes
+GCC (gfortran)        6.5.0           GCC (gcc)           6.5.0           GCC (g++)            6.5.0           No (in eccodes_lib)
+GCC (gfortran)        7.5.0           GCC (gcc)           7.5.0           GCC (g++)            7.5.0           Yes
+GCC (gfortran)        8.5.0           GCC (gcc)           8.5.0           GCC (g++)            8.5.0           No (problems with contiguous)
+GCC (gfortran)        9.4.0           GCC (gcc)           9.4.0           GCC (g++)            9.4.0           Yes
+GCC (gfortran)        9.5.0           GCC (gcc)           9.5.0           GCC (g++)            9.5.0           Yes
+GCC (gfortran)        10.5.0          GCC (gcc)           10.5.0          GCC (g++)            10.5.0          Yes
+GCC (gfortran)        11.5.0          GCC (gcc)           11.5.0          GCC (g++)            11.5.0          No (in eccodes_lib)
+GCC (gfortran)        12.2.0          GCC (gcc)           12.2.0          GCC (g++)            12.2.0          Yes                            Yes
+GCC (gfortran)        12.5.0          GCC (gcc)           12.5.0          GCC (g++)            12.5.0          Yes
+GCC (gfortran)        13.1.0          GCC (gcc)           13.1.0          GCC (g++)            13.1.0          No (compiler bug)
+GCC (gfortran)        13.2.0          GCC (gcc)           13.2.0          GCC (g++)            13.2.0          No (compiler bug)
+GCC (gfortran)        13.3.0          GCC (gcc)           13.3.0          GCC (g++)            13.3.0          Yes
+GCC (gfortran)        13.4.0          GCC (gcc)           13.4.0          GCC (g++)            13.4.0          Yes
+GCC (gfortran)        14.3.0          GCC (gcc)           14.3.0          GCC (g++)            14.3.0          Yes
+GCC (gfortran)        15.2.0          GCC (gcc)           15.2.0          GCC (g++)            15.2.0          Yes
+Intel oneAPI (ifort)  2022.1.2        Intel oneAPI (icc)  2022.1.2        Intel oneAPI (icpc)  2022.1.2        Yes                            Yes
+Intel oneAPI (ifort)  2023.1.0        Intel oneAPI (icc)  2023.1.0        Intel oneAPI (icpc)  2023.1.0        Yes                            Yes
+Intel oneAPI (ifx)    2024.1.0        Intel oneAPI (icx)  2024.1.0        Intel oneAPI (icpx)  2024.1.0        Yes                            Yes               Yes
+Intel oneAPI (ifx)    2024.0.0        GCC (gcc)           15.2.0          GCC (g++)            15.2.0          Yes                            Yes
+Intel oneAPI (ifx)    2025.0.0        Intel oneAPI (icx)  2025.0.0        Intel oneAPI (icpx)  2025.0.0        Yes                            Yes
+Intel oneAPI (ifx)    2025.3.1        Intel oneAPI (icx)  2025.3.1        Intel oneAPI (icpx)  2025.3.1        Yes                            Yes
+Intel oneAPI (ifx)    2025.3.2        Intel oneAPI (icx)  2025.3.2        Intel oneAPI (icpx)  2025.3.2        Yes
+NVIDIA (nvfortran)    24.7            GCC (gcc)           11.5.0          NVIDIA (nvc++)       24.7            Yes
+NVIDIA (nvfortran)    26.1            NVIDIA (nvfortran)  26.1            NVIDIA (nvc++)       26.1            Yes
+====================  ==============  ==================  ==============  ===================  ==============  =============================  ================  ===============
+
+
+
 Compile on different systems
 =============================================================================
 
