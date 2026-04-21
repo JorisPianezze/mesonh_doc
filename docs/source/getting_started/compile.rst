@@ -216,7 +216,7 @@ On Adastra (CINES)
 For the CPU partition (Genoa CPUs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Install the Meso-NH package in your $HOME (default 50GB of quota) and compile in interactive mode:
+Install the Meso-NH package in your $HOME and compile in interactive mode:
 
 .. code-block:: bash
    :substitutions:
