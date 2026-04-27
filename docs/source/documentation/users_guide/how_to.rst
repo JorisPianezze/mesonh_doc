@@ -260,7 +260,7 @@ Install Doxygen
 
 .. tip::
 
-   You can install Doxygen automatically or manually by following the procedure described below. Last version tested is version 1.13.2 released on 9 January 2025.
+   You can install Doxygen automatically or manually by following the procedure described below. Last version tested is version 1.16.1 released on 27 April 2026.
 
 First ensure that you have the necessary build tools installed (e.g., g++, Python, CMake, Flex, Bison, Graphviz), then follow these steps:
 
@@ -268,7 +268,7 @@ First ensure that you have the necessary build tools installed (e.g., g++, Pytho
 
    git clone https://github.com/doxygen/doxygen.git
    cd doxygen
-   git checkout Release_1_13_2
+   git checkout Release_1_16_1
    mkdir build
    cd build
    cmake -G "Unix Makefiles" ..
@@ -309,7 +309,7 @@ Then, generate the documentation with
 
 You can now open the documentation in a web-browser by loading the file /doxygen_mesonh_doc/index.html.
 
-If you have trouble to generate the tree, the documentation is available on demand (~1.2 Go) at mesonhsupport .at. obs-mip.fr
+If you have trouble to generate the tree, the documentation is available on demand (~1.7 Go) at mesonhsupport .at. utoulouse.fr
 
 Compress Meso-NH output files
 *****************************************************************************
