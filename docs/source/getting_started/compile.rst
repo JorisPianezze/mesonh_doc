@@ -256,12 +256,12 @@ For example, to compile Meso-NH for MI250X GPUs, use the following commands:
 
    cd |MNH_directory_extract_current|/src
    MNH_GPU=MI250 ./configure
-   . ../conf/profile_mesonh-LXcray-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MI250-CCE1800-MPICRAY-MANAGED
+   . ../conf/profile_mesonh-LXcray-R8I4-MNH-V|MNH_xyz_version_hyphen_current|-MI250-CCE1800-MPICRAY-MANAGEDO2
    make |& tee error$XYZ
    make installmaster
 
 This will generate the configuration file (:file:`profile_mesonh`) with :code:`ARCH=LXcray`
-that uses the Cray compiler (version CCE1800), :code:`MNH_GPU=MI250` and :code:`OPTLEVEL=MANAGED` that selects the compiler options.
+that uses the Cray compiler (version CCE1800), :code:`MNH_GPU=MI250` and :code:`OPTLEVEL=MANAGEDO2` that selects the compiler options.
 
 The compilation takes around 1 hour.
 
