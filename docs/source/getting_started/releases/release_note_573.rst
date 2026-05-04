@@ -9,6 +9,7 @@ Release date : 04/05/2026
    
    We fully encourage all users of 5-7-2 to move to 5-7-3.
    As this release includes only bug fixes, the results should be exactly the same as 5-7-2 (except for possible corrections), but with more stability and reliability.
+   This is true in the same environment (especially with the same compiler version and options).
 
 Aircraft
 **********************************
