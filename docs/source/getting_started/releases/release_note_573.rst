@@ -7,7 +7,8 @@ Release date : 04/05/2026
 
 .. note::
    
-   We fully encourage all users of 5-7-2 to move to 5-7-3
+   We fully encourage all users of 5-7-2 to move to 5-7-3.
+   As this release includes only bug fixes, the results should be exactly the same as 5-7-2 (except for possible corrections), but with more stability and reliability.
 
 Aircraft
 **********************************
@@ -26,7 +27,7 @@ SURFEX
 * READ_SURFX2COV_MNH / READ_SURFX2COV_1COV_MNH: bugfix: force GCOVER_PACKED to FALSE if not found in file (instead of having an unpredictible value)
 * WRITE_SURFX2_MNH: do not write emission fields (no real meaning in backup files + problem with last dimension which is the number of instants and not the vertical levels
 * rewrite temporal_dists to handle dates < 1990 + simplify the algo using the 1st March deviation
-* fix when using TEB and sea coupling"
+* fix when using TEB and sea coupling
 
 Outputs & Backups
 **********************************
@@ -42,3 +43,4 @@ Others
 * set_perturb: remove MPPDB_CHECK of XTHM (no more meaning + crash in some cases)
 * fix: pass XSVT and not XSVT(:,:,:,1) to MEAN_FIELD to prevent crash in DEBUG mode if NSV=1
 * fix when using coupling with oceanic currents + refactoring
+* fix: XACPRR used before allocation (when using old electricity scheme, fix issue #52)
