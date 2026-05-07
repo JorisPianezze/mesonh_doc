@@ -1,6 +1,6 @@
 .. _nam_param_radn:
 
-NAM_PARAM_RADN
+NAM_PARAM_RADn
 -----------------------------------------------------------------------------
 
 It contains some options retained for the radiative scheme used by the model n CRAD = "ECMWF"; and some options common for both CRAD = "ECMWF" or "ECRA" in :ref:`nam_paramn`)

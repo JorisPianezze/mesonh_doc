@@ -1,6 +1,6 @@
 .. _nam_param_kafrn:
 
-NAM_PARAM_KAFRN
+NAM_PARAM_KAFRn
 -----------------------------------------------------------------------------
 
 It contains the options for deep and shallow convection parameterizations used by the model (CSCONV = "KAFR" or CDCONV = "KAFR" in :ref:`nam_paramn`).
