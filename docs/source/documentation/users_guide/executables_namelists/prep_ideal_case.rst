@@ -31,38 +31,45 @@ To initialize a simulation with a radiosounding and real terrain conditions, it 
 
 The following namelists can be used in the :file:`PRE_IDEA1.nam` file :
 
-* :ref:`nam_confio`
 * :ref:`nam_aero_pre`
 * :ref:`nam_blankn`
+* :ref:`nam_ch_emis_pgd`
 * :ref:`nam_ch_mnhcn_pre`
 * :ref:`nam_conf_pre`
 * :ref:`nam_confn`
 * :ref:`nam_confz`
+* :ref:`nam_cover`
+* :ref:`nam_confio`
 * :ref:`nam_dimn_pre`
+* :ref:`nam_dummy_pgd`
 * :ref:`nam_dynn_pre`
+* :ref:`ibm_gene`
 * :ref:`nam_grid_pre`
 * :ref:`nam_gridh_pre`
 * :ref:`nam_grn_pre`
-* :ref:`nam_ibm_lsf`
 * :ref:`ibm_idea`
-* :ref:`ibm_gene`
+* :ref:`nam_ibm_lsf`
+* :ref:`nam_isba`
 * :ref:`nam_lbcn_pre`
 * :ref:`nam_lunitn`
 * :ref:`nam_pert_pre`
+* :ref:`nam_pgd_schemes`
+* :ref:`nam_prep_garden_snow`
+* :ref:`nam_prep_greenroof_snow`
+* :ref:`nam_prep_isba`
+* :ref:`nam_prep_isba_carbon`
+* :ref:`nam_prep_isba_snow`
+* :ref:`nam_prep_teb`
+* :ref:`nam_prep_teb_garden`
+* :ref:`nam_prep_teb_greenroof`
+* :ref:`nam_prep_teb_snow`
+* :ref:`nam_prep_surf_atm`
+* :ref:`nam_prep_seaflux`
+* :ref:`nam_prep_watflux`
 * :ref:`nam_real_pgd`
 * :ref:`nam_sleve`
 * :ref:`nam_ver_grid`
 * :ref:`nam_vprof_pre`
-* :ref:`nam_pgd_schemes`
-* :ref:`nam_cover`
-* :ref:`nam_isba`
-* :ref:`nam_ch_emis_pgd`
-* :ref:`nam_dummy_pgd`
-* :ref:`nam_prep_surf_atm`
-* :ref:`nam_prep_seaflux`
-* :ref:`nam_prep_watflux`
-* :ref:`nam_prep_teb`
-* :ref:`nam_prep_isba`
 * :ref:`freeformat_prep_ideal_case`
 
 .. include:: namelists/nam_confio.rst
@@ -95,6 +102,13 @@ The following namelists can be used in the :file:`PRE_IDEA1.nam` file :
 .. include:: namelists/nam_prep_surf_atm.rst
 .. include:: namelists/nam_prep_seaflux.rst
 .. include:: namelists/nam_prep_watflux.rst
+.. include:: namelists/nam_prep_greenroof_snow.rst
+.. include:: namelists/nam_prep_garden_snow.rst
 .. include:: namelists/nam_prep_teb.rst
+.. include:: namelists/nam_prep_teb_garden.rst
+.. include:: namelists/nam_prep_teb_greenroof.rst
+.. include:: namelists/nam_prep_teb_snow.rst
 .. include:: namelists/nam_prep_isba.rst
+.. include:: namelists/nam_prep_isba_carbon.rst
+.. include:: namelists/nam_prep_isba_snow.rst
 .. include:: namelists/freeformat_prep_ideal_case.rst

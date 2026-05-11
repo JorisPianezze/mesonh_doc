@@ -40,6 +40,7 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 * :ref:`nam_bu_ru`
 * :ref:`nam_bu_rv`
 * :ref:`nam_bu_rw`
+* :ref:`nam_ch_flaken`
 * :ref:`nam_ch_mnhcn`
 * :ref:`nam_ch_orilam`
 * :ref:`nam_ch_solvern`
@@ -48,6 +49,7 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 * :ref:`nam_confio`
 * :ref:`nam_confn`
 * :ref:`nam_confz`
+* :ref:`nam_deepsoil`
 * :ref:`nam_dragn`
 * :ref:`nam_dragtreen`
 * :ref:`nam_dragbldgn`
@@ -94,18 +96,10 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 * :ref:`nam_stationn`
 * :ref:`nam_turbn`
 * :ref:`nam_visc`
-* :ref:`nam_sson`
-* :ref:`nam_surf_csts`
-* :ref:`nam_surf_atm`
-* :ref:`nam_write_surf_atm`
-* :ref:`nam_seafluxn`
-* :ref:`nam_surf_slt`
-* :ref:`nam_watfluxn`
-* :ref:`nam_flaken`
-* :ref:`nam_isban`
-* :ref:`nam_surf_dust`
-* :ref:`nam_ideal_flux`
-* :ref:`nam_tebn`
+
+SURFEX
+
+* :ref:`nam_agri`
 * :ref:`nam_ch_controln`
 * :ref:`nam_ch_surfn`
 * :ref:`nam_ch_seafluxn`
@@ -114,13 +108,35 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 * :ref:`nam_ch_isban`
 * :ref:`nam_chs_orilam`
 * :ref:`nam_diag_surf_atmn`
-* :ref:`nam_write_diag_surfn`
 * :ref:`nam_diag_surfn`
 * :ref:`nam_diag_isban`
 * :ref:`nam_diag_tebn`
 * :ref:`nam_diag_flaken`
 * :ref:`nam_diag_oceann`
- 
+* :ref:`nam_flaken`
+* :ref:`nam_ideal_flux`
+* :ref:`nam_isban`
+* :ref:`nam_isba_agsn`
+* :ref:`nam_isba_ccn`
+* :ref:`nam_isba_nudgingn`
+* :ref:`nam_isba_snown`
+* :ref:`nam_seafluxn`
+* :ref:`nam_seaicen`
+* :ref:`nam_sgh_isban`
+* :ref:`nam_sson`
+* :ref:`nam_spartacus`
+* :ref:`nam_surf_atm`
+* :ref:`nam_surf_csts`
+* :ref:`nam_surf_dust`
+* :ref:`nam_surf_slt`
+* :ref:`nam_surf_snow_csts`
+* :ref:`nam_tebn`
+* :ref:`nam_teb_paneln`
+* :ref:`nam_treedrag`
+* :ref:`nam_watfluxn`
+* :ref:`nam_write_cover_tex`
+* :ref:`nam_write_diag_surfn`
+* :ref:`nam_write_surf_atm`
 
 .. include:: namelists/nam_2d_frc.rst
 .. include:: namelists/nam_advn.rst
@@ -198,13 +214,6 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 .. include:: namelists/nam_stationn.rst
 .. include:: namelists/nam_turbn.rst
 .. include:: namelists/nam_visc.rst
-.. include:: namelists/nam_sson.rst
-.. include:: namelists/nam_surf_csts.rst
-.. include:: namelists/nam_surf_atm.rst
-.. include:: namelists/nam_write_surf_atm.rst
-.. include:: namelists/nam_seafluxn.rst
-.. include:: namelists/nam_surf_slt.rst
-.. include:: namelists/nam_watfluxn.rst
 .. include:: namelists/nam_flaken.rst
 .. include:: namelists/nam_isban.rst
 .. include:: namelists/nam_surf_dust.rst
@@ -214,15 +223,36 @@ The following namelists can be used in the :file:`EXSEG1.nam` file :
 .. include:: namelists/nam_ch_surfn.rst
 .. include:: namelists/nam_ch_seafluxn.rst
 .. include:: namelists/nam_ch_watfluxn.rst
+.. include:: namelists/nam_ch_flaken.rst
 .. include:: namelists/nam_ch_tebn.rst
 .. include:: namelists/nam_ch_isban.rst
 .. include:: namelists/nam_chs_orilam.rst
+.. include:: namelists/nam_deepsoil.rst
 .. include:: namelists/nam_diag_surf_atmn.rst
-.. include:: namelists/nam_write_diag_surfn.rst
 .. include:: namelists/nam_diag_surfn.rst
 .. include:: namelists/nam_diag_isban.rst
 .. include:: namelists/nam_diag_tebn.rst
 .. include:: namelists/nam_diag_flaken.rst
 .. include:: namelists/nam_diag_oceann.rst
+.. include:: namelists/nam_agri.rst
+.. include:: namelists/nam_isba_agsn.rst
+.. include:: namelists/nam_isba_ccn.rst
+.. include:: namelists/nam_isba_nudgingn.rst
+.. include:: namelists/nam_isba_snown.rst
+.. include:: namelists/nam_seaicen.rst
+.. include:: namelists/nam_sgh_isban.rst
+.. include:: namelists/nam_sson.rst
+.. include:: namelists/nam_spartacus.rst
+.. include:: namelists/nam_surf_csts.rst
+.. include:: namelists/nam_surf_atm.rst
+.. include:: namelists/nam_seafluxn.rst
+.. include:: namelists/nam_surf_slt.rst
+.. include:: namelists/nam_watfluxn.rst
+.. include:: namelists/nam_surf_snow_csts.rst
+.. include:: namelists/nam_teb_paneln.rst
+.. include:: namelists/nam_treedrag.rst
+.. include:: namelists/nam_write_cover_tex.rst
+.. include:: namelists/nam_write_diag_surfn.rst
+.. include:: namelists/nam_write_surf_atm.rst
 
 

@@ -17,10 +17,12 @@ NAM_ISBAn
    "CDIFSFCOND", "CHARACTER(LEN=4)", "'DEF'"
    "CSNOWRES", "CHARACTER(LEN=3)", "'DEF'"
    "CCPSURF", "CHARACTER(LEN=3)", "'DRY'"
+   "CZ0HEAT", "CHARACTER(LEN=3)", "'DEF'"
    "XTSTEP", "REAL", "none"
    "XCVHEATF", "REAL", "0.20"
    "XCGMAX", "REAL", "2.E-5"
    "XCDRAG", "REAL", "0.15"
+   "XZ0HEAT","REAL","0.0"
    "LGLACIER", "LOGICAL", ".FALSE."
    "LCANOPY_DRAG", "LOGICAL", ".FALSE."
    "LVEGUPD", "LOGICAL", ".TRUE."
@@ -51,7 +53,9 @@ NAM_ISBAn
   * 'DEF' : Louis
   * 'RIL' : Maximum Richardson number limit for stable conditions ISBA-SNOW3L turbulent exchange option
   * 'M98' : Martin et Lejeune 1998: older computation for turbulent fluxes coefficents in Crocus
-  
+
+* :code:`CZ0HEAT` : roughness length for heat
+
 * :code:`CCPSURF` : type of specific heat at surface. The following options are currently available:
 
   * 'DRY' : specific heat does not depend on humidity at surface
@@ -64,6 +68,8 @@ NAM_ISBAn
 * :code:`XCGMAX` : maximum value for soil heat capacity.
 
 * :code:`XCDRAG` : drag coefficient in canopy.
+
+* :code:`XZ0HEAT` : factor to calculate Z0H when CZ0HEAT="Z95"
 
 * :code:`LGLACIER` : If activated, specific treatment (as in Arpege) over permanent snow/ice regions. Snow depth initialised to 10m and soil ice to porosity. During the run, snow albedo ranges from 0.8 to 0.85
 
