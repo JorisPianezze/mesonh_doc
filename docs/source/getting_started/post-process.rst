@@ -26,7 +26,7 @@ ncview (https://cirrus.ucsd.edu/ncview/) can be used to quickly preview the cont
 Panoply
 ------------------------------------------------
 
-panopy (https://www.giss.nasa.gov/tools/panoply/) can be used to quickly preview the contents of a Meso-NH file.
+panoply (https://www.giss.nasa.gov/tools/panoply/) can be used to quickly preview the contents of a Meso-NH file.
 
 .. warning::
 
