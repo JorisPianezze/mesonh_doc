@@ -17,11 +17,18 @@ ncview (https://cirrus.ucsd.edu/ncview/) can be used to quickly preview the cont
 
 .. warning::
 
-   If your netCDF files are compressed with the Zstandard compression library (by default since Meso-NH 6.0), your environment must be adapted to support them.
-   The easiest way is to load the MesoNH environment in the shell used to start :file:`ncview`. You can do this by running the command: :code:`. MY_MESONH_DIRECTORY/conf/profile_mesonh`.
+   * If your netCDF files are compressed with the Zstandard compression library (by default since Meso-NH 6.0), your environment must be adapted to support them. The easiest way is to load the Meso-NH environment in the shell used to start :file:`ncview`. You can do this by running the command: 
+   
+     .. code-block:: bash
+        :substitutions:
 
-   If you do not want to load the MesoNH environment or if MesoNH is not installed on your computer, you can install the :code:`hdf5plugin` (available from conda)
-   and set the :code:`HDF5_PLUGIN_PATH` environment variable with the following command: :code:`export HDF5_PLUGIN_PATH=$(python -c "import hdf5plugin; print(hdf5plugin.PLUGIN_PATH)")`.
+        . YOUR_PATH/|MNH_directory_extract_current|/conf/profile_mesonh
+
+   * If you do not want to load the Meso-NH environment or if Meso-NH is not installed on your computer, you can install the :code:`hdf5plugin` (available from conda) and set the :code:`HDF5_PLUGIN_PATH` environment variable with the following command:
+     
+     .. code-block:: bash
+
+        export HDF5_PLUGIN_PATH=$(python -c "import hdf5plugin; print(hdf5plugin.PLUGIN_PATH)")
 
 Panoply
 ------------------------------------------------
