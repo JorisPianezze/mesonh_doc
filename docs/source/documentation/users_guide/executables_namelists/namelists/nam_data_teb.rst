@@ -365,7 +365,7 @@ NAM_DATA_TEB
 
   * 'MAJ': majoritary building in grid mesh is chosen
   * 'ARI': characteristics are linearly averaged
-* :code:`CCSVFILEARCHI` : name of the .csv file containing information on building construction materials. The following parameters can be initialised via the MApUCE architectural tables (CCSVFILEARCHI ). Most of these parameters did already exist in previous versions of TEB. In the case one of these parameters is specified via the namelist (XUNIF_…), this entry is prioritised with respect to the entries in the architectural tables. Care is therefore needed during namelist construction.
+* :code:`CCSVFILEARCHI` : name of the .csv file containing information on building construction materials. The following parameters can be initialised via the MApUCE architectural tables (CCSVFILEARCHI ). Most of these parameters did already exist in previous versions of TEB. In the case one of these parameters is specified via the namelist (:code:`XUNIF_...`), this entry is prioritised with respect to the entries in the architectural tables. Care is therefore needed during namelist construction.
 
   * Road properties (ALB_ROAD; EMIS_ROAD; HC_ROAD; TC_ROAD; D_ROAD)
   * Roof properties (ALB_ROOF; EMIS_ROOF; HC_ROOF; TC_ROOF; D_ROOF)
@@ -380,13 +380,13 @@ NAM_DATA_TEB
   * Flag for presence of mechanical ventilation (ISMECH)
   * Air exchange rate due to mechanical ventilation (MECHRATE)
   * Fraction of green roofs (GREENROOF)
-* :code:`CCSVFILECOMPO` : name of the .csv file containing information on human behaviours as a function of building use. The following parameters can be initialised via the MApUCE behavioural table (CCSVFILECOMPO ). If one of these parameters is specified via the namelist (XUNIF_…), this entry is prioritised with respect to the entries in the behavioural table. Care is therefore needed during namelist construction.
+* :code:`CCSVFILECOMPO` : name of the .csv file containing information on human behaviours as a function of building use. The following parameters can be initialised via the MApUCE behavioural table (CCSVFILECOMPO ). If one of these parameters is specified via the namelist (:code:`XUNIF_...`), this entry is prioritised with respect to the entries in the behavioural table. Care is therefore needed during namelist construction.
 
   * Schedules of building occupation (DAYWBEG_SCHED ; HOURBEG_SCHED)
   * Probability of building occupation (PROBOCC)
   * Holiday periods (BEG_HOLIDAY ; END_HOLIDAY ; MOD_HOLIDAY)
-  * Design temperature for heating (THEAT_…)
-  * Design temperature and relative humidity for air conditioning (TCOOL_ ; HR_TARGET)
+  * Design temperature for heating (:code:`THEAT...`)
+  * Design temperature and relative humidity for air conditioning (:code:`TCOOL...` ; HR_TARGET)
   * Fraction of evaporative air conditioning systems (F_WATER_COND)
   * Fraction of waste heat to the street canyon (F_WASTE_CAN)
   * Rated COP of air conditioning system (COP_RAT)

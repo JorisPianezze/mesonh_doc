@@ -1,6 +1,8 @@
 Extract ECMWF data
 ============================================
 
+Meso-NH can be initialized and forced at its lateral boundary conditions by ECMWF data (operational data, ERAI and/or ERA5). Hereafter you will find the procedure to extract these data.
+
 Operational data (analysis, forecast or ensemble)
 --------------------------------------------------
 

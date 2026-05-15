@@ -89,6 +89,6 @@ rst_prolog = """
 .. |NCOMPRPARAMNOTSET| replace:: -888
 .. |NNEGUNDEF| replace:: -999
 .. |NUNDEF| replace:: 999
-.. |XNEGUNDEF| replace:: -999.
-.. |XUNDEF| replace:: 999.
+.. |XNEGUNDEF| replace:: -999.0
+.. |XUNDEF| replace:: 999.0
 """

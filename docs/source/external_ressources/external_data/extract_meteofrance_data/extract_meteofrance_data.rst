@@ -3,26 +3,20 @@
 Extract Meteo-France data
 =============================================================================
 
-Historically, at the start of AROME, we only had surface data from the AROME coupler model (ALADIN then ARPEGE), which are still available in the AROME analysis file. However, with the introduction of SURFEX in AROME, and in particular of a surface analysis performed by AROME, it became essential to be able to use data from AROME's surface analysis rather than that of its coupler model.
-
-To initialize Meso-NH as close as possible to AROME, we need to run a PREP_REAL_CASE with two files input files:
-
-* the atmospheric grib file
-
-* the AROME surface analysis file: lfi file + its associated PGD file.
-
-.. note::
-
-   The namelist NAM_PREP_SURF_ATM must be added to PRE REAL1.nam. This namelist will contain the files to be used by SURFEX: the AROME surface analysis and the associated AROME PGD file.
+Meso-NH can be initialized and forced at its lateral boundary conditions by Météo-France operationnal data (ARPEGE, ALADIN and/or AROME). Hereafter you will find the procedure to extract these data. 
 
 .. warning::
 
    AROME forecasts are only available for a moving 3-year period.
 
-Non-belenos user
+.. note::
+
+   For Meteo-France data, the namelist :ref:`nam_prep_surf_atm` must be added to PRE_REAL1.nam (namelist of :ref:`prep_real_case` program). This namelist will contain the files to be used by SURFEX: the surface analysis and the associated PGD file.
+
+Non-Belenos user
 *****************************************************************************
 
-For security reasons, it is not possible to extract Météo-France operational data from outside Météo-France (belenos). To obtain them, please send an e-mail to mesonhsupport .at. utoulouse.fr containing :
+For security reasons, it is not possible to extract Météo-France operational data from outside Météo-France (belenos). If you don't have access to belenos, data extraction from Météo-France files can be performed upon request, within reasonable limits. For that please send an e-mail to `Meso-NH's support <mailto:mesonhsupport@utoulouse.fr>`_ containing :
 
 * the desired model and type of data :
 
@@ -33,56 +27,60 @@ For security reasons, it is not possible to extract Météo-France operational d
   * MOCAGE : please indicate the directories where SM and HM data are stored 
 
 * dates (start and end dates, step, ...)
-        
-belenos user
+
+Belenos user
 *****************************************************************************
 
-To extract ARPEGE or AROME data, we now use belenos or taranis with the extractMF procedure. Its use is limited to ARPEGE and AROME-France. For Aladin-Reunion and Forecast-Olive, continue with extarome at CNRM. For AROME-OM, the procedure is under development. Extractions are available on request. For Mocage and Arpege-Climat, there is currently no way of extracting these data automatically. Using extractMF A reference extractMFrc file is available on belenos in $MESONH/procedures/. Copy this file into the directory from which you will launch extractMF, in order to insert the desired extraction parameters.
+If you have access to belenos, you can extract data by yourself. For that you need to use extractMF procedure.
 
-.. code-block:: bash
+.. warning::
 
-   OUTDIR="EXTRACT/"
-   DATE=20120924 TIME=12 STEP=00
-   LOOPTIME=03
-   LOOPSTEP=00
-   NBLOOP=7
+   * Its use is limited to ARPEGE and AROME-France.
+   * For Aladin-Reunion and Forecast-Olive, continue with extarome at CNRM.
+   * For AROME-OM, the procedure is under development, extractions are available on request.
+   * For Mocage and Arpege-Climat, there is currently no way of extracting these data automatically.
    
-The MODEL variable can take the values arome or arpifs,
+To extract ARPEGE or AROME-France data by yourself you need to copy the $MESONH/procedures/extractMFrc in the directory from which you will launch extractMF. You need to insert in this file the desired extraction parameters, they are documented in the extractMFrc file and the main parameters are presented hereafter :
+   
+* The MODEL variable can take the values arome or arpifs,
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   MODEL=arome
+     MODEL=arome
   
-or
+  or
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   MODEL=arpifs
+     MODEL=arpifs
 
-In the case of AROME extraction, surface files are automatically renamed with the date (see extractMF return for exact names). The TYPE variable can take the values AN for analyses (every 1h for arome) or FC for forecasts.
+  In the case of AROME extraction, surface files are automatically renamed with the date (see extractMF return for exact names).
+  
+* The TYPE variable can take the values AN for analyses (every 1h for arome) or FC for forecasts.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   TYPE = AN
+     TYPE = AN
    
+  or
 
-or
+  .. code-block:: bash
 
-.. code-block:: bash
+     TYPE = FC
 
-   TYPE = FC
+* AROME can zoom in to extract a sub-domain of the AROME-FRANCE domain with the LZOOM=T flag. You then need to enter the edges of the domain, for example :
 
-AROME can zoom in to extract a sub-domain of the AROME-FRANCE domain with the LZOOM=T flag. You then need to enter the edges of the domain, for example :
+  .. code-block:: bash
 
-.. code-block:: bash
+     LZOOM=T
+     LATMIN=45.5
+     LATMAX=48.5
+     LONMIN=3.0
+     LONMAX=7.9
 
-   LZOOM=T
-   LATMIN=45.5
-   LATMAX=48.5
-   LONMIN=3.0
-   LONMAX=7.9
+  The use of zoom is highly recommended in order to reduce memory requirements at the stage of interpolating AROME fields onto the Meso_NH grid at the :ref:`prep_real_case` step. 
 
-The use of zoom is highly recommended in order to reduce memory requirements at the stage of interpolating AROME fields onto the MesoNH grid at the PREP REAL CASE stage. The various variables are documented in the reference extractMFrc file.
+* OUTDIR corresponds to the directory where the data will be extracted (in your $WORKDIR if you keep HOST=tosupc).
 
 Then you can launch the extraction with :
 
@@ -99,9 +97,12 @@ A slurm job is launch and you can follow the extraction with :
 
 .. tip::
 
-   In the extractMF return file, you can find at the end a message indicating the namelist NAM_PREP_SURF_ATM to be transferred to your PRE REAL1.nam file.
+   * In the extractMF return file, you can find at the end a message indicating the namelist :ref:`nam_prep_surf_atm` to be transferred to your PRE REAL1.nam file.
+   * Your data will be stored in the OUTDIR directory.
 
 .. note::
+
+   Historically, at the start of AROME, we only had surface data from the AROME coupler model (ALADIN then ARPEGE), which are still available in the AROME analysis file. However, with the introduction of SURFEX in AROME, and in particular of a surface analysis performed by AROME, it became essential to be able to use data from AROME's surface analysis rather than that of its coupler model.
 
    * Arome operational, ExtractMF get following files :
 
@@ -124,10 +125,10 @@ A slurm job is launch and you can follow the extraction with :
 Use of extracted GRIB files
 *****************************************************************************
 
-Depending on the simulated date, the NAM_PREP_SURF_ATM changes. The changes are described in the following table :
+Depending on the simulated date, the :ref:`nam_prep_surf_atm` changes which are described in the following table :
 
 .. csv-table:: NAM_PREP_SURF_ATM options
-   :header: "Start date", "Arome cycle", "SURFEX version", "Namelist NAM_PREP_SURF_ATM"
+   :header: "Start date", "Arome cycle", "SURFEX version", "Namelist :ref:`nam_prep_surf_atm`"
    :widths: 20, 20, 20, 20
    
    "before juillet 2013", "cy37 and after", "6", "CFILE='INIT_SURF.20120924.12'"
@@ -165,9 +166,7 @@ Depending on the simulated date, the NAM_PREP_SURF_ATM changes. The changes are 
    
    * PGD files are available under $MESONH/PGD (don't forget to create the empty .des file). By default, the operational PGD associated with the date of your extraction is not available. If you wish to retrieve it, you must add the line LGET_PGD_AROME=T in your extaromerc.
 
-   * From arome cycle 40 onwards (April 2015), Meso-NH version 5-1-4 or higher must be used.
-
-   * Starting with aroma cycle 41 (December 2015), AROME analyses are available every hour. However, surface analyses are only available on the main cycles (03 06 09 12 15 18 21). Therefore, if a loop is requested with an hourly frequency for analyses, no surface analysis will be extracted by extarome. In this case, you need to request the first file (from a main cycle) separately to obtain the AROME surface analysis.
+   * Starting with AROME cycle 41 (December 2015), AROME analyses are available every hour. However, surface analyses are only available on the main cycles (03 06 09 12 15 18 21). Therefore, if a loop is requested with an hourly frequency for analyses, no surface analysis will be extracted by extarome. In this case, you need to request the first file (from a main cycle) separately to obtain the AROME surface analysis.
 
    * From MESO-NH version 5-4-0 onwards, add &NAM_CONFIO NIO_ABORT_LEVEL=1 NGEN_ABORT_LEVEL=1. Since this version we can have Meso-NH PGD files in NetCDF and AROME surface files (+AROME PGD) in lfi.
 
@@ -184,11 +183,7 @@ Example of PRE REAL1.nam namelist with AROME surface analysis :
      HATMFILE     = 'arome.FC.2026013000.12',
      HATMFILETYPE = 'GRIBEX',
      HPGDFILE     = 'PGD_AZF',
-     CINIFILE     = 'couplage_arome'
-   /
-   &NAM_REAL_CONF
-     NVERB   = 5,
-     CEQNSYS = 'DUR'
+     CINIFILE     = 'AROME_COUPLING'
    /
    &NAM_VER_GRID
      NKMAX        = 50,
