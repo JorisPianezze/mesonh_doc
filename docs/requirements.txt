@@ -4,3 +4,4 @@ sphinxcontrib-bibtex
 sphinx_substitution_extensions
 sphinx-treeview
 sphinx-togglebutton
+sphinx_design
