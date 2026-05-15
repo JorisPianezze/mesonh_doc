@@ -13,7 +13,7 @@ Meso-NH can be initialized and forced at its lateral boundary conditions by Mét
 
    For Meteo-France data, the namelist :ref:`nam_prep_surf_atm` must be added to PRE_REAL1.nam (namelist of :ref:`prep_real_case` program). This namelist will contain the files to be used by SURFEX: the surface analysis and the associated PGD file.
 
-Non-Belenos user
+For non-Belenos user
 *****************************************************************************
 
 For security reasons, it is not possible to extract Météo-France operational data from outside Météo-France (belenos). If you don't have access to belenos, data extraction from Météo-France files can be performed upon request, within reasonable limits. For that please send an e-mail to `Meso-NH's support <mailto:mesonhsupport@utoulouse.fr>`_ containing :
@@ -28,7 +28,7 @@ For security reasons, it is not possible to extract Météo-France operational d
 
 * dates (start and end dates, step, ...)
 
-Belenos user
+For Belenos user
 *****************************************************************************
 
 If you have access to belenos, you can extract data by yourself. For that you need to use extractMF procedure.
