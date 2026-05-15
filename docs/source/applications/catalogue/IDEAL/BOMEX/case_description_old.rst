@@ -1,5 +1,5 @@
-BOMEX shallow cumulus
-===================
+BOMEX shallow cumulus (1)
+==============================
 
 Case description
 ----------------

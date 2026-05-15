@@ -23,7 +23,9 @@ Boundary-layer cases
    IDEAL/FIRE/case_description.rst
    IDEAL/GABLS1/case_description.rst
    IDEAL/ARMCU/case_description.rst
-   IDEAL/BOMEX/case_description.rst
+   IDEAL/BOMEX/case_description_old.rst
+   IDEAL/BOMEX/case_description_prop1.rst
+   IDEAL/BOMEX/case_description_prop2.rst
 
 .. csv-table:: Boundary-layer idealized cases
    :header: "Name", "Dim.", "Nb pts", "Dx", "Dz","Dt","LBC","Duration"

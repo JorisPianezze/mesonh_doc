@@ -22,7 +22,7 @@ To initialize Meso-NH as close as possible to AROME, we need to run a PREP_REAL_
 Non-belenos user
 *****************************************************************************
 
-For security reasons, it is not possible to extract Météo-France operational data from outside Météo-France (belenos). To obtain them, please send an e-mail to mesonhsupport .at. obs-mip.fr containing :
+For security reasons, it is not possible to extract Météo-France operational data from outside Météo-France (belenos). To obtain them, please send an e-mail to mesonhsupport .at. utoulouse.fr containing :
 
 * the desired model and type of data :
 
@@ -83,6 +83,19 @@ AROME can zoom in to extract a sub-domain of the AROME-FRANCE domain with the LZ
    LONMAX=7.9
 
 The use of zoom is highly recommended in order to reduce memory requirements at the stage of interpolating AROME fields onto the MesoNH grid at the PREP REAL CASE stage. The various variables are documented in the reference extractMFrc file.
+
+Then you can launch the extraction with :
+
+.. code-block:: bash
+
+   . ~rodierq/SAVE/mesonh/profile_mnhp
+   extractMF
+
+A slurm job is launch and you can follow the extraction with :
+
+.. code-block:: bash
+
+   squeue --me
 
 .. tip::
 

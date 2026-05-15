@@ -33,7 +33,8 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx_substitution_extensions',
     'sphinx_treeview',
-    'sphinx_togglebutton'
+    'sphinx_togglebutton',
+    'sphinx_design'
 ]
 
 bibtex_bibfiles        = ['references.bib']
