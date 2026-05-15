@@ -66,7 +66,7 @@ For developpment & modification done for GPUs port you could look at :
    Avancement du portage de Méso-NH sur GPU :
    https://mesonh.cnrs.fr/wp-content/uploads/2025/10/20251015_0915_escobar.pdf
 
-Two type of GPUs vendors are supported: Nvidia and AMD.
+Two types of GPUs vendors are supported: Nvidia and AMD.
 
 * For Nvidia GPUs, the *nvhpc* compiler suite is used. It is free to download on the |nvhpc_link|.
   The code has been tested on different supercomputers (Jean-Zay, Belenos, Irene, Turpan, Nuwa, Romeo, Kairos) with different GPU types, such as **V100, A100, H100** and **GH200**.
