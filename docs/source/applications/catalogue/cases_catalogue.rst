@@ -55,6 +55,87 @@ Boundary-layer cases
    "ARMCU_3D", "CEN4TH", "ideal Flux", "None", "3D-DEAR", "None", "ICE3", "None"
    "BOMEX", "", "ideal Flux", "None","1D-BL89", "EDKF", "ICE3","None"
 
+.. tab-set::
+
+   .. tab-item:: Grids
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 20 20 20 20 20
+
+         * - Name
+           - Dim.
+           - Nb pts
+           - Dx
+           - Dz
+
+         * - IHOP_1D
+           - 1D
+           - 1x1x100
+           - 100m
+           - 40m
+
+         * - IHOP_3D
+           - 3D
+           - 256x256x90
+           - 50m
+           - 10m
+
+   .. tab-item:: Dynamics
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 20 20 20 20 20
+         
+         * - Name
+           - Wind Advection
+           - Dt
+           - LBC
+           - Duration
+           
+         * - IHOP_1D
+           - NONE
+           - 10s
+           - CYCL
+           - 7h
+
+         * - IHOP_3D
+           - CEN4TH
+           - 1s
+           - CYCL
+           - 14h           
+           
+   .. tab-item:: Physics
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 20 20 20 20 20 20 20
+
+         * - Name
+           - Surface
+           - Rad.
+           - Turb.
+           - Shallow conv.
+           - Micro.
+           - Deep conv.
+           
+         * - IHOP_1D
+           - ideal flux
+           - NONE
+           - 1D-BL89/RM17
+           - EDKF
+           - REVE
+           - NONE
+
+         * - IHOP_3D
+           - ideal flux
+           - NONE
+           - 3D-DEAR
+           - NONE
+           - NONE
+           - NONE           
+
+
 Academic cases
 *************************
 .. toctree::

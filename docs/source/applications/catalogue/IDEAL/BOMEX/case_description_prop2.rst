@@ -4,7 +4,7 @@ Shallow cumulus convection (BOMEX) (3)
 Case description
 ----------------
 
-The BOMEX (BOundary Layer EXperiment) case simulates shallow cumulus convection over tropical ocean and is commonly used to evaluate shallow
+The Barbados Oceanographic and Meteorological Experiment (BOMEX) case simulates shallow cumulus convection over tropical ocean and is commonly used to evaluate shallow
 convection parameterizations and Large Eddy Simulation configurations. It is based on :cite:t:`siebesma_large_2003`.
 
 .. warning::
@@ -13,7 +13,7 @@ convection parameterizations and Large Eddy Simulation configurations. It is bas
 
 .. note::
 
-   You can find the workflow as well as the namelists and the scripts to launch this case study here :
+   You can find the workflow as well as the namelists and the scripts to launch this case here :
 
    .. treeview::
 
