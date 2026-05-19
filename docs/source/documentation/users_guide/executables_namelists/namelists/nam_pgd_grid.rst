@@ -20,14 +20,8 @@ This namelist defines the grid type, either specified or from an existing surfac
   
 * :code:`CGRID` : type of grid and projection. It is used only if a file is not prescribed (see below). The different grid possibilities are:
 
-  * "GAUSS ": this grid is a gaussian grid (global grid, that may be stretched, rotated, ...).
   * "CONF PROJ ": this grid is a regular grid (in meters in x and y perpendicular directions) on conformal projection plan (Mercator, Lambert or polar stereographic).
   * "CARTESIAN ": this grid is a regular grid (in meters in x and y perpendicular directions), with no reference to real geographical coordinates.
-  * "LONLAT REG": this grid is defined as a regular latitude - longitude grid.
-  * "LONLATVAL ": this grid is defined as a not regular latitude - longitude grid (all points and mesh sizes are defined).
-  * "LONLAT ROT": rotated lonlat (from Hirlam).
-  * "IGN ": this grid type contains all IGN (French National Geographical Institute) possible Lambert projections
-  * "NONE ": this grid is not regular. Only the number of points and the size of each grid mesh is prescribed. There is no positioning of each point compared to any other.
 
   .. note::
   
@@ -37,7 +31,6 @@ This namelist defines the grid type, either specified or from an existing surfac
 
 * :code:`YINIFILETYPE` : type of the YINIFILE file, if the latter is provided. YFILETYPE must be given. The following values are currently usable:
 
-  * "MESONH": the file type is a MESONH file.
-  * "LFI"/"ASCII": the file type is a PREP LFI or ASCII file.
+  * "MESONH": the file type is a MESONH file or (even if it is a LFI file from AROME).
   
 * :code:`NOVMX` : number of points that can overlap each other in the user grid, for the calculation of physiographic fields.
