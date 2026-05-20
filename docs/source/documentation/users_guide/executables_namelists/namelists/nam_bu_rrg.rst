@@ -26,7 +26,7 @@ Source terms (except water microphysical schemes)
    :widths: 30, 30, 30
    
    "ALL","all available source terms (separated, water microphysics included)","no condition"
-   "ASSE","time filter (Asselin)","no condition"
+   "ASSE","time filter (Asselin)","CUVW_ADV_SCHEME(1:3)='CEN' and CTEMP_SCHEME='LEFR'"
    "NEST","nesting","NMODEL>1"
    "VTURB","vertical turbulent diffusion","CTURB='TKEL'"
    "HTURB","horizontal turbulent diffusion","CTURB='TKEL' and CTURBDIM='3DIM'"

@@ -23,7 +23,7 @@ NAM_BU_RTKE
    :widths: 30, 30, 30
    
    "ALL","all available source terms (separated)","no condition"
-   "ASSE","time filter (Asselin)","no condition"
+   "ASSE","time filter (Asselin)","CUVW_ADV_SCHEME(1:3)='CEN' and CTEMP_SCHEME='LEFR'"
    "ADV","total advection","no condition"
    "FRC","forcing","LFORCING=T"
    "DIF","numerical diffusion","LNUMDIFTH=T"

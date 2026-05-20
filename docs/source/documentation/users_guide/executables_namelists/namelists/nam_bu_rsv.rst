@@ -26,7 +26,7 @@ General source terms
    :widths: 30, 30, 30
    
    "ALL","all available source terms (separated, water microphysics included)","no condition"
-   "ASSE","time filter (Asselin)","no condition"
+   "ASSE","time filter (Asselin)","CUVW_ADV_SCHEME(1:3)='CEN' and CTEMP_SCHEME='LEFR'"
    "NEST","nesting","NMODEL>1"
    "VISC","viscosity","LVISC=T and LVISC_SV=T"
    "ADV","total advection","no condition"

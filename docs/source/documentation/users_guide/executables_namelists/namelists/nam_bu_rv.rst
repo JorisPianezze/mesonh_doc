@@ -23,7 +23,7 @@ NAM_BU_RV
    :widths: 30, 30, 30
    
    "ALL","all available source terms (separated)","no condition"
-   "ASSE","time filter (Asselin)","no condition"
+   "ASSE","time filter (Asselin)","CUVW_ADV_SCHEME(1:3)='CEN' and CTEMP_SCHEME='LEFR'"
    "NEST","nesting","NMODEL>1"
    "VISC","viscosity","LVISC=T and LVISC_UVW=T"
    "ADV","total advection","no condition"
