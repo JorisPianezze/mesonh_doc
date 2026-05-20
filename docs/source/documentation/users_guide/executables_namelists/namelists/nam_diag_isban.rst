@@ -1,6 +1,6 @@
 .. _nam_diag_isban:
 
-NAM_DIAG_ISBAN
+NAM_DIAG_ISBAn
 -----------------------------------------------------------------------------
 
 .. warning::
@@ -9,7 +9,7 @@ NAM_DIAG_ISBAN
    
 ISBA diagnostics.
 
-.. csv-table:: NAM_DIAG_ISBAN content
+.. csv-table:: NAM_DIAG_ISBAn content
    :header: "Fortran name", "Fortran type", "Default value"
    :widths: 30, 30, 30
    

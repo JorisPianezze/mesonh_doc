@@ -1,6 +1,6 @@
 .. _nam_write_diag_surfn:
 
-NAM_WRITE_DIAG_SURFN
+NAM_WRITE_DIAG_SURFn
 -----------------------------------------------------------------------------
 
 .. warning::
@@ -9,7 +9,7 @@ NAM_WRITE_DIAG_SURFN
 
 Diagnostics for to each grid cell and each tile.
 
-.. csv-table:: NAM_WRITE_DIAG_SURFN content
+.. csv-table:: NAM_WRITE_DIAG_SURFn content
    :header: "Fortran name", "Fortran type", "Default value"
    :widths: 30, 30, 30
    

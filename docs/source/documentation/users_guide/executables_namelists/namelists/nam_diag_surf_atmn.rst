@@ -1,6 +1,6 @@
 .. _nam_diag_surf_atmn:
 
-NAM_DIAG_SURF_ATMN
+NAM_DIAG_SURF_ATMn
 -----------------------------------------------------------------------------
 
 .. warning::
@@ -9,7 +9,7 @@ NAM_DIAG_SURF_ATMN
 
 Diagnostics relative to each grid cell.
 
-.. csv-table:: NAM_DIAG_SURF_ATMN content
+.. csv-table:: NAM_DIAG_SURF_ATMn content
    :header: "Fortran name", "Fortran type", "Default value"
    :widths: 30, 30, 30
    

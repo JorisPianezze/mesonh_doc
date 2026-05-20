@@ -1,6 +1,6 @@
 .. _nam_diag_tebn:
 
-NAM_DIAG_TEBN
+NAM_DIAG_TEBn
 -----------------------------------------------------------------------------
 
 .. warning::
@@ -9,7 +9,7 @@ NAM_DIAG_TEBN
 
 TEB diagnostics.
 
-.. csv-table:: NAM_DIAG_TEBN content
+.. csv-table:: NAM_DIAG_TEBn content
    :header: "Fortran name", "Fortran type", "Default value"
    :widths: 30, 30, 30
    
