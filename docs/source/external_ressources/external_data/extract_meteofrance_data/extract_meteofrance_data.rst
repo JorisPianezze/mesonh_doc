@@ -23,7 +23,7 @@ For security reasons, it is not possible to extract Météo-France operational d
   * AROME (operational since December 2008) : analysis, forecast, first guess 
   * ARPEGE : analysis, forecast, first guess, initialized analysis, short-cycle forecast 
   * ALADIN (before 26/03/2012) : analysis, analysis with digital filters, forecast, first guess, initialized analysis 
-  * ALADIN-REUNION : analysis, analysis with digital filters, forecast, first guess, initialized analysis 
+  * AROME or ALADIN-REUNION : analysis, analysis with digital filters, forecast, first guess, initialized analysis
   * MOCAGE : please indicate the directories where SM and HM data are stored 
 
 * dates (start and end dates, step, ...)

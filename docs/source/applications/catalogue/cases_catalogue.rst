@@ -23,37 +23,7 @@ Boundary-layer cases
    IDEAL/FIRE/case_description.rst
    IDEAL/GABLS1/case_description.rst
    IDEAL/ARMCU/case_description.rst
-   IDEAL/BOMEX/case_description_old.rst
-   IDEAL/BOMEX/case_description_prop1.rst
-   IDEAL/BOMEX/case_description_prop2.rst
-
-.. csv-table:: Boundary-layer idealized cases
-   :header: "Name", "Dim.", "Nb pts", "Dx", "Dz","Dt","LBC","Duration"
-   :widths: 5, 3, 3, 3, 3,5, 5,5
-
-   "IHOP_1D", "1D", "1x1x100", "100m", "40m", "10s", "CYCL", "7h"
-   "IHOP_3D", "3D", "256x256x90", "50m", "10m", "1s",  "CYCL", "14h"
-   "FIRE_1D", "1D", "1x1x120", "2500m","10m","120s", "CYCL", "25h"
-   "FIRE_3D", "3D", "50x50x120", "50m","10m","1s / 5s", "CYCL","25h"
-   "GABLS1_1D", "1D", "1x1x155", "2m","2m","10s", "CYCL","9h"
-   "GABLS1_3D", "3D", "100x100x155", "2m","2m","0.2s", "CYCL","9h"
-   "ARMCU_1D", "1D", "1x1x100", "40km", "40m", "100s", "CYCL","15h"
-   "ARMCU_3D", "3D", "64x64x100", "100m", "40m", "2s", "CYCL","12h"
-   "BOMEX", "1D", "1x1x75", "40km","40m", "120s", "CYCL","8h"
-
-.. csv-table:: Boundary-layer idealized cases
-   :header: "Name", "Wind Advection", "Surface", "Rad", "Turb", "Shallow conv.", "Micro.", "Deep conv."
-   :widths: 5, 3, 3, 3, 5, 5, 5, 5
-
-   "IHOP_1D", "", "ideal Flux", "None", "1D-BL89/RM17","EDKF", "REVE", "None"
-   "IHOP_3D", "CEN4TH", "ideal Flux", "None", "3D-DEAR","None", "None","None"
-   "FIRE_1D", "", "ideal Flux", "ECMW/ECRAD","1D-BL89","EDKF", "KHKO/LIMA","None"
-   "FIRE_3D", "CEN4TH / WENO5", "ideal Flux", "ECMW","3D-DEAR","None", "KHKO","None"
-   "GABLS1_1D", "", "ideal TSZ0", "None","1D-BL89/RM17","None", "None", "None"
-   "GABLS1_3D", "CEN4TH", "ideal TSZ0", "None","3D-DEAR","None", "None","None"
-   "ARMCU_1D", "", "ideal Flux", "None", "1D-BL89", "EDKF", "ICE3","None"
-   "ARMCU_3D", "CEN4TH", "ideal Flux", "None", "3D-DEAR", "None", "ICE3", "None"
-   "BOMEX", "", "ideal Flux", "None","1D-BL89", "EDKF", "ICE3","None"
+   IDEAL/BOMEX/case_description.rst
 
 .. tab-set::
 
@@ -81,6 +51,48 @@ Boundary-layer cases
            - 50m
            - 10m
 
+         * - FIRE_1D
+           - 1D
+           - 1x1x120
+           - 2500m
+           - 10m
+
+         * - FIRE_3D
+           - 3D
+           - 50x50x120
+           - 50m
+           - 10m
+           
+         * - GABLS1_1D
+           - 1D
+           - 1x1x155
+           - 2m
+           - 2m
+           
+         * - GABLS1_3D
+           - 3D
+           - 100x100x155
+           - 2m
+           - 2m
+           
+         * - ARMCU_1D
+           - 1D
+           - 1x1x100
+           - 40km
+           - 10m
+           
+         * - ARMCU_3D
+           - 3D
+           - 64x64x100
+           - 100m
+           - 10m
+
+         * - BOMEX
+           - 1D
+           - 1x1x75
+           - 40km
+           - 40m                                                        
+
    .. tab-item:: Dynamics
 
       .. list-table::
@@ -104,6 +116,48 @@ Boundary-layer cases
            - 1s
            - CYCL
            - 14h           
+
+         * - FIRE_1D
+           - NONE
+           - 120s
+           - CYCL
+           - 25h
+
+         * - FIRE_3D
+           - CEN4TH / WENO5
+           - 1s / 5s
+           - CYCL
+           - 25h
+           
+         * - GABLS1_1D
+           - NONE
+           - 10s
+           - CYCL
+           - 9h
+           
+         * - GABLS1_3D
+           - CEN4TH
+           - 0.2s
+           - CYCL
+           - 9h
+           
+         * - ARMCU_1D
+           - NONE
+           - 100s
+           - CYCL
+           - 15h
+           
+         * - ARMCU_3D
+           - CEN4TH
+           - 2s
+           - CYCL
+           - 12h
+
+         * - BOMEX
+           - NONE
+           - 120s
+           - CYCL
+           - 8h  
            
    .. tab-item:: Physics
 
@@ -134,6 +188,62 @@ Boundary-layer cases
            - NONE
            - NONE
            - NONE           
+
+         * - FIRE_1D
+           - ideal flux
+           - ECMW / ECRA
+           - 1D-BL89
+           - EDKF
+           - KHKO / LIMA
+           - NONE
+
+         * - FIRE_3D
+           - ideal flux
+           - ECMW
+           - 3D-DEAR
+           - NONE
+           - KHKO
+           - NONE
+           
+         * - GABLS1_1D
+           - ideal TSZ0
+           - NONE
+           - 1D-BL89/RM17
+           - NONE
+           - NONE
+           - NONE
+           
+         * - GABLS1_3D
+           - ideal TSZ0
+           - NONE
+           - 3D-DEAR
+           - NONE
+           - NONE
+           - NONE
+           
+         * - ARMCU_1D
+           - ideal flux
+           - NONE
+           - 1D-BL89
+           - EDKF
+           - ICE3
+           - NONE
+           
+         * - ARMCU_3D
+           - ideal flux
+           - NONE
+           - 3D-DEAR
+           - NONE
+           - ICE3
+           - NONE
+
+         * - BOMEX
+           - ideal flux
+           - NONE
+           - 1D-BL89
+           - EDKF
+           - ICE3
+           - NONE
 
 
 Academic cases
