@@ -1,6 +1,16 @@
 Scientific & References
 =============================================================================
 
+.. note::
+
+   **Citation:** please cite Meso-NH with :cite:t:`lac_overview_2018` (for Meso-NH version >= 5.4)
+
+   **Acknowledgments:** since 2025, Meso-NH has been part of the CLIMERI-France research infrastructure and you are requested to add the following sentence in the acknowledgments section of your paper:
+
+   .. epigraph::
+
+      We acknowledge the French National Research Infrastructure CLIMERI-France (https://climeri-france.fr/) which provides national label for the code Meso-NH.
+   
 Scientific
 *****************************************************************************
 
