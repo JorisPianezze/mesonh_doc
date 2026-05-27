@@ -2,30 +2,6 @@
 
 *Version 1.0 — 2026-05-22*
 
-***
-
-## Table of contents
-
-1. [General principles](#1-general-principles)
-
-2. [Permanent branches](#2-permanent-branches)
-
-3. [Temporary branches](#3-temporary-branches)
-
-4. [Naming convention — summary](#4-naming-convention--summary)
-
-5. [Development workflow](#5-development-workflow)
-
-6. [Bug fix workflow](#6-bug-fix-workflow)
-
-7. [Tags and version numbering](#7-tags-and-version-numbering)
-
-8. [Branch protection rules](#8-branch-protection-rules)
-   * [Continuous integration policy](#continuous-integration-policy)
-
-9. [Schematic overview](#9-schematic-overview)
-
-***
 
 ## 1. General principles
 

@@ -11,6 +11,13 @@ urllib.request.urlretrieve(url_branching, "documentation/branching.md")
 with open("documentation/branching.md", "r") as f:
     content = f.read()
 
+content = re.sub(
+    r"\*\*\*\s*\n+##\s*Table of contents.*?(?=\n##\s)",
+    "",
+    content,
+    flags=re.DOTALL
+)
+
 # Remplace ```mermaid par ```{mermaid}
 content = re.sub(r"^```mermaid$", "```{mermaid}", content, flags=re.MULTILINE)
 
