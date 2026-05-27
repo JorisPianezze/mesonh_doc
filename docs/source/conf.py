@@ -12,7 +12,7 @@ url_branching = "https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BR
 urllib.request.urlretrieve(url_branching, "documentation/branching.md")
 
 try:
-    print(f"[conf.py] Tentative de récupération : {url}")
+    print(f"[conf.py] Tentative de récupération : {url_branching}")
     urllib.request.urlretrieve(url_branching, "documentation/branching.md")
     print(f"[conf.py] Fichier récupéré avec succès ({os.path.getsize(dest)} octets)")
 except urllib.error.HTTPError as e:
