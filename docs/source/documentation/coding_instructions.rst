@@ -7,6 +7,9 @@ Meso-NH is build upon many contribution since 30 years. As the code is growing a
    :local:
    :depth: 2
 
+.. include:: branching.md
+   :parser: myst_parser.sphinx_
+
 Coding best practices
 *****************************************************************************
 

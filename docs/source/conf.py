@@ -1,6 +1,21 @@
 # Adapt this configuration file to new READTHEDOCS
 
+import urllib.request
 import os
+import re
+
+# Get branching.md
+url_branching = "https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BRANCHING.md"
+urllib.request.urlretrieve(url_branching, "documentation/branching.md")
+
+with open("documentation/branching.md", "r") as f:
+    content = f.read()
+
+# Remplace ```mermaid par ```{mermaid}
+content = re.sub(r"^```mermaid$", "```{mermaid}", content, flags=re.MULTILINE)
+
+with open("documentation/branching.md", "w") as f:
+    f.write(content)
 
 # Define the canonical URL if you are using a custom domain on Read the Docs
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
@@ -31,11 +46,18 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.bibtex',
+    'sphinxcontrib.mermaid',
     'sphinx_substitution_extensions',
     'sphinx_treeview',
     'sphinx_togglebutton',
-    'sphinx_design'
+    'sphinx_design',
+    'myst_parser'
 ]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 
 bibtex_bibfiles        = ['references.bib']
 bibtex_default_style   = 'unsrt'
