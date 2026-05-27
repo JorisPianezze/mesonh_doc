@@ -4,9 +4,23 @@ import urllib.request
 import os
 import re
 
-# Get branching.md
+# --------------------------------------------------------
+#   Get and modify branching.md
+# --------------------------------------------------------
+
 url_branching = "https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BRANCHING.md"
 urllib.request.urlretrieve(url_branching, "documentation/branching.md")
+
+try:
+    print(f"[conf.py] Tentative de récupération : {url}")
+    urllib.request.urlretrieve(url_branching, "documentation/branching.md")
+    print(f"[conf.py] Fichier récupéré avec succès ({os.path.getsize(dest)} octets)")
+except urllib.error.HTTPError as e:
+    print(f"[conf.py] Erreur HTTP {e.code} : {e.reason}")
+except urllib.error.URLError as e:
+    print(f"[conf.py] Erreur URL : {e.reason}")
+except Exception as e:
+    print(f"[conf.py] Erreur inattendue : {e}")
 
 with open("documentation/branching.md", "r") as f:
     content = f.read()
@@ -18,13 +32,14 @@ content = re.sub(
     flags=re.DOTALL
 )
 
-# Remplace ```mermaid par ```{mermaid}
 content = re.sub(r"^```mermaid$", "```{mermaid}", content, flags=re.MULTILINE)
 
 with open("documentation/branching.md", "w") as f:
     f.write(content)
 
-# Define the canonical URL if you are using a custom domain on Read the Docs
+# --------------------------------------------------------
+#   Define the canonical URL if you are using a custom domain on Read the Docs
+# --------------------------------------------------------
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
 
 # Tell Jinja2 templates the build is running on Read the Docs
