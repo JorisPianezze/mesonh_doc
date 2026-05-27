@@ -14,7 +14,7 @@ urllib.request.urlretrieve(url_branching, "documentation/branching.md")
 try:
     print(f"[conf.py] Tentative de récupération : {url_branching}")
     urllib.request.urlretrieve(url_branching, "documentation/branching.md")
-    print(f"[conf.py] Fichier récupéré avec succès ({os.path.getsize(documentation/branching.md)} octets)")
+    print(f"[conf.py] Fichier branching.md récupéré avec succès")
 except urllib.error.HTTPError as e:
     print(f"[conf.py] Erreur HTTP {e.code} : {e.reason}")
 except urllib.error.URLError as e:
