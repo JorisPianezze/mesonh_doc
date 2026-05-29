@@ -1,7 +1,7 @@
 Infolettre #08
 ================================================
 
-**8 janvier 2025.** Version française, English version `here <newsletter_03_english.html>`_.
+**8 janvier 2025.** Version française, English version `here <newsletter_08_english.html>`_.
 
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
