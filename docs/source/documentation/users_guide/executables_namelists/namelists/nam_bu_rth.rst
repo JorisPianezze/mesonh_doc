@@ -8,7 +8,7 @@ NAM_BU_RTH
    :widths: 30, 30, 30
 
    "LBU_RTH", "LOGICAL", ".FALSE."
-   "CBULIST_RTH", "ARRAY(CHARACTER)", ""
+   "CBULIST_RTH", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RTH` : flag to activate budget for potential temperature
 

@@ -8,7 +8,7 @@ NAM_BU_RV
    :widths: 30, 30, 30
 
    "LBU_RV", "LOGICAL", ".FALSE."
-   "CBULIST_RV", "ARRAY(CHARACTER)", ""
+   "CBULIST_RV", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RV` : flag to activate budget for v-wind
 

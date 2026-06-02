@@ -8,7 +8,7 @@ NAM_BU_RW
    :widths: 30, 30, 30
 
    "LBU_RW", "LOGICAL", ".FALSE."
-   "CBULIST_RW", "ARRAY(CHARACTER)", ""
+   "CBULIST_RW", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RW` : flag to activate budget for w-wind
 

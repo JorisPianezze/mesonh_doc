@@ -8,7 +8,7 @@ NAM_BU_RTKE
    :widths: 30, 30, 30
 
    "LBU_RTKE", "LOGICAL", ".FALSE."
-   "CBULIST_RTKE", "ARRAY(CHARACTER)", ""
+   "CBULIST_RTKE", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RTKE` : flag to activate budget for turbulent kinetic energy
 

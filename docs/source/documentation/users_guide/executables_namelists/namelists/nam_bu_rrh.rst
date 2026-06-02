@@ -8,7 +8,7 @@ NAM_BU_RRH
    :widths: 30, 30, 30
 
    "LBU_RRH", "LOGICAL", ".FALSE."
-   "CBULIST_RRH", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRH", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRH` : flag to activate budget for hail
 

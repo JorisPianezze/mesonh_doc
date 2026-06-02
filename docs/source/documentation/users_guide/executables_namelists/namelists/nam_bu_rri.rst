@@ -8,7 +8,7 @@ NAM_BU_RRI
    :widths: 30, 30, 30
 
    "LBU_RRI", "LOGICAL", ".FALSE."
-   "CBULIST_RRI", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRI", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRI` : flag to activate budget for non-precipitating ice
 

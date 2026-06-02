@@ -8,7 +8,7 @@ NAM_BU_RRV
    :widths: 30, 30, 30
 
    "LBU_RRV", "LOGICAL", ".FALSE."
-   "CBULIST_RRV", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRV", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRV` : flag to activate budget for vapor
 

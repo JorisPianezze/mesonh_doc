@@ -8,7 +8,7 @@ NAM_BU_RRC
    :widths: 30, 30, 30
 
    "LBU_RRC", "LOGICAL", ".FALSE."
-   "CBULIST_RRC", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRC", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRC` : flag to activate budget for cloud
 

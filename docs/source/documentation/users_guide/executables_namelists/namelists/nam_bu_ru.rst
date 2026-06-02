@@ -8,7 +8,7 @@ NAM_BU_RU
    :widths: 30, 30, 30
 
    "LBU_RU", "LOGICAL", ".FALSE."
-   "CBULIST_RU", "ARRAY(CHARACTER)", ""
+   "CBULIST_RU", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RU` : flag to activate budget for u-wind
 

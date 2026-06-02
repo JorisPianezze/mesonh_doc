@@ -8,7 +8,7 @@ NAM_BU_RSV
    :widths: 30, 30, 30
 
    "LBU_RSV", "LOGICAL", ".FALSE."
-   "CBULIST_RSV", "ARRAY(CHARACTER)", ""
+   "CBULIST_RSV", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RSV` : flag to activate budget for scalar variable
 

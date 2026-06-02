@@ -8,7 +8,7 @@ NAM_BU_RRG
    :widths: 30, 30, 30
 
    "LBU_RRG", "LOGICAL", ".FALSE."
-   "CBULIST_RRG", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRG", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRG` : flag to activate budget for graupel
 

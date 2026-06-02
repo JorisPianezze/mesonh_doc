@@ -8,7 +8,7 @@ NAM_BU_RRS
    :widths: 30, 30, 30
 
    "LBU_RRS", "LOGICAL", ".FALSE."
-   "CBULIST_RRS", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRS", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRS` : flag to activate budget for snow
 

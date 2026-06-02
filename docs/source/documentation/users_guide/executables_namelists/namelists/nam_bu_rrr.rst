@@ -8,7 +8,7 @@ NAM_BU_RRR
    :widths: 30, 30, 30
 
    "LBU_RRR", "LOGICAL", ".FALSE."
-   "CBULIST_RRR", "ARRAY(CHARACTER)", ""
+   "CBULIST_RRR", "CHARACTER(LEN=128)(:)", ""
 
 * :code:`LBU_RRR` : flag to activate budget for rain water
 
