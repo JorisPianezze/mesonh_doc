@@ -1,64 +1,141 @@
-IHOP
-=====
+Moist convective boundary layer (IHOP)
+============================================================
 
 Case description
 ----------------
-The IHOP (International H2O Observing Phase) case simulates a moist convective boundary layer based on the IHOP field campaign. This case tests the boundary layer parameterization with realistic large-scale forcing.
 
-Configuration
+The International H2O Project (IHOP) case simulates a moist convective boundary layer based on the IHOP_2002 field campaign :cite:t:`weckwerth_overview_2004`.
+This case is used to evaluate boundary layer parameterizations under realistic large-scale forcing conditions, including
+geostrophic wind and large-scale vertical motion. It exists in two configurations: a 1D single-column mode and a 3D Large Eddy Simulation.
+
+.. warning::
+
+   The 3D configuration requires MPI parallelization and the 1D configuration can only be run on a single core.
+
+.. note::
+
+   You can find the workflow as well as the namelists and the scripts to launch this case here :
+
+   .. treeview::
+
+      - :dir:`folder` |MNH_directory_extract_current|/examples/integration_cases/hpc/IHOP
+
+        - :dir:`folder` 1D : directory to prepare and run the 1D configuration
+        - :dir:`folder` 3D : directory to prepare and run the 3D configuration
+        - :dir:`folder` PYTHON : directory to plot the figure
+
+   The different steps must be performed in the order indicated by the directory numbers.
+
+Numerical set-up
 ----------------
-.. csv-table::
-   :header: Parameter, 1D, 3D
-   :widths: 30, 30, 30
 
-   Category, HPC cases, HPC cases
-   Dynamics, 3D with 1D turbulence, 3D LES
-   Horizontal grid spacing, 1000 m (1x1), 50 m (256x256)
-   Vertical levels, 90, 90
-   Integration length, 43200 s (12 hours), 43200 s (12 hours)
-   Time step, 60 s, 1 s
-   Coriolis effect, enabled, enabled
-   Turbulence, TKEL (1D), TKEL (3D)
-   Cloud scheme, LIMA, LIMA
-   Deep convection, NONE, NONE
-   Shallow convection, EDKF, NONE
-   Radiation, NONE, NONE
+.. tab-set::
 
-Declination
-----------
-.. csv-table::
-   :header: Configuration, Description
-   :widths: 30, 30
+   .. tab-item:: Grids
 
-   IHOP/1D, Single column with 1D turbulence
-   IHOP/3D, Large-eddy simulation with 3D turbulence
+      .. list-table::
+         :header-rows: 1
+         :widths: 40 30 30
 
-Steps
-----------------
-.. csv-table::
-   :header: Step, Script
-   :widths: 30, 30
+         * - Parameter
+           - 1D
+           - 3D
 
-   001_prep_ideal, run_prep_ideal_case_xyz
-   002_mesonh, run_mesonh
+         * - Domain
+           - Cartesian flat domain
+           - Cartesian flat domain
 
-Specificities
-----------------
-**Scientific specificities**
+         * - Horizontal grid
+           - 1 x 1 pt (1D)
+           - 256 x 256 pt
 
-- Moist convective boundary layer
-- Large-scale forcing from IHOP campaign
-- Geostrophic forcing with vertical motion
-- Cloud microphysics (LIMA)
-- Shallow convection (EDKF for 1D)
+         * - Horizontal resolution
+           - 1000 m
+           - 50 m
 
-**Technical specificities**
+         * - Vertical levels
+           - 90
+           - 90
 
-- 1D: single point domain
-- 3D: 256x256 horizontal grid (12.8km x 12.8km)
-- 90 vertical levels
-- Cyclic boundary conditions for 3D
-- High vertical resolution near surface
+   .. tab-item:: Dynamics
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 40 30 30
+
+         * - Parameter
+           - 1D
+           - 3D
+
+         * - Integration length
+           - 43200 s (12 h)
+           - 43200 s (12 h)
+
+         * - Time step
+           - 60 s
+           - 1 s
+
+         * - Coriolis force
+           - Enabled
+           - Enabled
+
+         * - Lateral boundary condition
+           - Cyclic
+           - Cyclic
+
+   .. tab-item:: Physics
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 40 30 30
+
+         * - Scheme
+           - 1D
+           - 3D
+
+         * - Turbulence
+           - TKEL (1D, BL89)
+           - TKEL (3D)
+
+         * - Cloud microphysics
+           - LIMA
+           - LIMA
+
+         * - Shallow convection
+           - EDKF
+           - NONE
+
+         * - Deep convection
+           - NONE
+           - NONE
+
+         * - Radiation
+           - NONE
+           - NONE
+
+   .. tab-item:: Forcings
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 50 50
+
+         * - Parameter
+           - Value
+
+         * - Large-scale forcing
+           - Geostrophic forcing + large-scale vertical motion
+
+   .. tab-item:: Diagnostics
+
+      .. list-table::
+         :header-rows: 1
+         :widths: 50 50
+
+         * - Parameter
+           - Value
+
+         * - LES diagnostics
+           - Enabled
 
 Validation
 ----------------
@@ -66,12 +143,3 @@ Validation
 - Heat and moisture budgets
 - Cloud fraction
 - Vertical velocity profiles
-
-Numerical ressources
-----------------
-1D: Single CPU (1 node, 1 core)
-3D: 20 nodes, 2560 cores (MPI parallel)
-
-References
-----------------
-- IHOP_2002 field campaign (Weckwerth et al., 2004)

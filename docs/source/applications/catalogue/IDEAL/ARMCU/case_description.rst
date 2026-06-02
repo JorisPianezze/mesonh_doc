@@ -1,9 +1,13 @@
-ARM Cumulus
-===========
+Land shallow cumulus convection (ARM)
+================================================
 
 Case description
 ----------------
 The ARM Cumulus (ARMCU) case simulates a diurnal cycle of shallow cumulus convection over the ARM (Atmospheric Radiation Measurement) Southern Great Plains site. This is a classic case for testing cumulus parameterization and LES modeling of continental shallow convection. The case exists in two configurations: 1D (single column) and 3D (LES).
+
+.. warning::
+
+   The 3D configuration requires MPI parallelization and the 1D configuration can only be run on a single core.
 
 Configuration
 ----------------
@@ -25,7 +29,7 @@ Configuration
    LES diagnostics, enabled, enabled
 
 Declination
-----------
+-------------
 .. csv-table::
    :header: Configuration, Turbulence, Grid
    :widths: 30, 30, 30
@@ -69,7 +73,7 @@ Validation
 - Cloud fraction validation at different levels
 
 Numerical ressources
-----------------
+----------------------------
 1D: Single CPU (1 node, 1 core)
 3D: 2 nodes, 128 cores (MPI parallel)
 

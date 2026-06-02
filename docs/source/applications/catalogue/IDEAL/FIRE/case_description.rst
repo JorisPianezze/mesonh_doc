@@ -1,9 +1,13 @@
-FIRE Stratocumulus
-=================
+Marine stratocumulus clouds (FIRE)
+===================================
 
 Case description
 ----------------
 The FIRE (First ISCCP Regional Experiment) case simulates marine stratocumulus clouds off the coast of California. This is a classic case for testing cloud-radiation interactions and LES modeling of marine boundary layer clouds. The case exists in two configurations: 1D (single column) and 3D (LES).
+
+.. warning::
+
+   The 3D configuration requires MPI parallelization and the 1D configuration can only be run on a single core.
 
 Configuration
 ----------------
@@ -24,7 +28,7 @@ Configuration
    LES diagnostics, enabled, enabled
 
 Declination
-----------
+-------------
 .. csv-table::
    :header: Configuration, Cloud scheme, Radiation
    :widths: 30, 30, 30
@@ -73,7 +77,7 @@ Validation
 - Turbulent fluxes
 
 Numerical ressources
-----------------
+-----------------------------
 1D: Single CPU (1 node, 1 core)
 3D: 4 nodes, 256 cores (MPI parallel)
 

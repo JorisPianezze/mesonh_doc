@@ -1,9 +1,13 @@
-GABLS1
-========
+Stable nocturnal boundary layer (GABLS1)
+=========================================
 
 Case description
 ----------------
 The GABLS1 (GEWEX Atmospheric Boundary Layer Study) case simulates a stable boundary layer over Arctic land during winter. This case tests the model ability to reproduce nocturnal boundary layer turbulence and low-level jets.
+
+.. warning::
+
+   The 3D configuration requires MPI parallelization and the 1D configuration can only be run on a single core.
 
 Configuration
 ----------------
@@ -23,7 +27,7 @@ Configuration
    LES diagnostics, enabled, enabled
 
 Declination
-----------
+-------------
 .. csv-table::
    :header: Configuration, Turbulence, Description
    :widths: 30, 30, 30
@@ -67,7 +71,7 @@ Validation
 - Boundary layer height
 
 Numerical ressources
-----------------
+----------------------------
 1D: Single CPU (1 node, 1 core)
 3D: 4 nodes, 256 cores (MPI parallel)
 

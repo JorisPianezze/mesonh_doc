@@ -1,4 +1,4 @@
-Shallow cumulus convection (BOMEX)
+Marine shallow cumulus convection (BOMEX)
 =============================================================
 
 Case description
