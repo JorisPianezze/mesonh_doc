@@ -24,6 +24,9 @@ ncview (https://cirrus.ucsd.edu/ncview/) can be used to quickly preview the cont
 
         . YOUR_PATH/|MNH_directory_extract_current|/conf/profile_mesonh
 
+   Remark: as the loading of the Meso-NH environment do a :code:`module purge` on most systems, you may need to load again the
+   :file:`ncview` module after this operation (if :file:`ncview` is provided this way).
+
    * If you do not want to load the Meso-NH environment or if Meso-NH is not installed on your computer, you can install the :code:`hdf5plugin` (available from conda) and set the :code:`HDF5_PLUGIN_PATH` environment variable with the following command:
      
      .. code-block:: bash
