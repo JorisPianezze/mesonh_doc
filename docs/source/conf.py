@@ -123,7 +123,7 @@ html_theme_options = {
 epub_show_urls = 'footnote'
 
 rst_prolog = """
-.. |MNH_branch_current| replace:: MNH-60-branch
+.. |MNH_branch_current| replace:: MNH-6-0
 .. |MNH_pack_current| replace:: PACK-MNH-V6-0-0
 .. |MNH_x_version_current| replace:: 6
 .. |MNH_xy_version_current| replace:: 6.0
