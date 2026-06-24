@@ -366,7 +366,7 @@ On Belenos (Meteo-France)
    :widths: 30, 30, 30, 30, 30
 
    "Location", "$HOME", "$WORKDIR", ":math:`\emptyset`", "ftp/telnet hendrix"
-   "Disk space", "50 Go / user", "Unlimited", ":math:`\emptyset`", "Unlimited"
+   "Disk space", "100 Go / user", "Unlimited", ":math:`\emptyset`", "Unlimited"
    "Data lifetime", "Saved", "Few days", ":math:`\emptyset`", "Saved on disk/band"
 
 .. tip::

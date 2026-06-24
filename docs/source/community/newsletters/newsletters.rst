@@ -2,7 +2,6 @@ Newsletters
 ================================================
 
 .. toctree::
-   :caption: Newsletters
    :maxdepth: 2
 
    newsletter_01.rst
@@ -34,3 +33,9 @@ Newsletters
    newsletter_07_english.rst
 
    newsletter_08.rst
+
+   newsletter_08_english.rst
+
+   newsletter_09.rst
+
+   newsletter_09_english.rst
