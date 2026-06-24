@@ -8,6 +8,11 @@
 Meso-NH website
 =============================
 
+.. warning::
+
+   You are viewing the documentation for the Meso-NH development branch.
+   Please go to the documentation for a release branch if you need stable informations.
+
 .. note::
 
    * For Meso-NH version lower than 6.0.0, please go to the |old_mesonh_website|.
