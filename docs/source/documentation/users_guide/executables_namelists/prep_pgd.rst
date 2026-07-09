@@ -25,6 +25,7 @@ The following namelists can be used in the :file:`PRE_PGD1.nam` file :
 * :ref:`nam_ch_emissions`
 * :ref:`nam_ch_snap_emis_pgd`
 * :ref:`nam_confio`
+* :ref:`nam_confz`
 * :ref:`nam_conf_pgd`
 * :ref:`nam_conf_proj`
 * :ref:`nam_conf_proj_grid`
@@ -55,6 +56,7 @@ The following namelists can be used in the :file:`PRE_PGD1.nam` file :
    For additional SURFEX namelists (:code:`NAM_CARTESIAN`, ...) , please go to SURFEX documentation https://www.umr-cnrm.fr/surfex/IMG/pdf/surfex_tecdoc.pdf.
 
 .. include:: namelists/nam_confio.rst
+.. include:: namelists/nam_confz.rst
 .. include:: namelists/nam_conf_pgd.rst
 .. include:: namelists/nam_pgdfile.rst
 .. include:: namelists/nam_pgd_grid.rst

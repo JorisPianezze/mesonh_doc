@@ -13,11 +13,15 @@ After running the model, you can compute spectra with the program :program:`SPEC
 
 The following namelists can be used in the :file:`SPEC1.nam` file :
 
+* :ref:`nam_confio`
+* :ref:`nam_confz`
 * :ref:`nam_spectre_file`
 * :ref:`nam_spectre`
 * :ref:`nam_zoom_spectre`
 * :ref:`nam_domain_arome`
 
+.. include:: namelists/nam_confio.rst
+.. include:: namelists/nam_confz.rst
 .. include:: namelists/nam_spectre_file.rst
 .. include:: namelists/nam_spectre.rst
 .. include:: namelists/nam_zoom_spectre.rst

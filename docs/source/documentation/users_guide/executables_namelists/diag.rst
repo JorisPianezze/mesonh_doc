@@ -14,6 +14,7 @@ After running the model, useful quantities can be diagnosed from prognostic vari
 The following namelists can be used in the :file:`DIAG1.nam` file :
 
 * :ref:`nam_confio`
+* :ref:`nam_confz`
 * :ref:`nam_diag_default`
 * :ref:`nam_diag_general`
 * :ref:`nam_diag_deep_convection`
@@ -51,6 +52,7 @@ The following namelists can be used in the :file:`DIAG1.nam` file :
    For additional SURFEX namelists, please go to SURFEX documentation https://www.umr-cnrm.fr/surfex/IMG/pdf/surfex_tecdoc.pdf.
 
 .. include:: namelists/nam_confio.rst
+.. include:: namelists/nam_confz.rst
 .. include:: namelists/nam_diag_default.rst
 .. include:: namelists/nam_diag_general.rst
 .. include:: namelists/nam_diag_deep_convection.rst
