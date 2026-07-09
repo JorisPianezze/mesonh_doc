@@ -51,20 +51,13 @@ The AMSU-B coefficient files can be found in directories rttov13pred54L and hydr
 
 The MSG-2 coefficient files are aliased following:
 
-* for IR only calculation, do:
-
-.. code-block:: bash
-
-   ln -sf $(SRC_MESONH)/src/LIB/RTTOV_14.1/rtcoef_rttov14/rttov13pred54L/rtcoef_msg_2_seviri_7gas_ironly.dat rtcoef_msg_2_seviri.dat
-   ln -sf $(SRC_MESONH)/src/LIB/RTTOV_14.1/cldaer_ir/sccldcoef_msg_2_seviri_ironly.dat sccldcoef_msg_2_seviri.dat
-
 * for visible and IR calculation, do:
 
 .. code-block:: bash
 
    ln -sf $(SRC_MESONH)/src/LIB/RTTOV_14.1/rttov13pred54L/rtcoef_msg_2_seviri_o3co2.dat rtcoef_msg_2_seviri.dat
-   ln -sf $(SRC_MESONH)/src/LIB/RTTOV_14.1/cldaer_visir/sccldcoef_msg_2_seviri.dat .
-   
+   ln -sf $(SRC_MESONH)/src/LIB/RTTOV_14.1/hydrotable_visir/rttov_hydrotable_msg_2_seviri.dat .
+
 In addition, download the brdf_data file and set NRTTOVinfo(4,1) to 1.
    
 .. csv-table:: List of Plt and Sat variables
