@@ -24,10 +24,14 @@ The :program:`SPAWNING` program performs horizontal interpolation from one Meso-
 The following namelists can be used in the :file:`SPAWN1.nam` file :
 
 * :ref:`nam_blankn`
+* :ref:`nam_confio`
+* :ref:`nam_confz`
 * :ref:`nam_grid2_spa`
 * :ref:`nam_lunit2_spa`
 * :ref:`nam_spawn_surf`  
  
+.. include:: namelists/nam_confio.rst
+.. include:: namelists/nam_confz.rst
 .. include:: namelists/nam_blankn.rst
 .. include:: namelists/nam_grid2_spa.rst
 .. include:: namelists/nam_lunit2_spa.rst
