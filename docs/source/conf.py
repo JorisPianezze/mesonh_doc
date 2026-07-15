@@ -124,12 +124,12 @@ epub_show_urls = 'footnote'
 
 rst_prolog = """
 .. |MNH_branch_current| replace:: MNH-6-0
-.. |MNH_pack_current| replace:: PACK-MNH-V6-0-0
+.. |MNH_pack_current| replace:: PACK-MNH-V6-0-1
 .. |MNH_x_version_current| replace:: 6
 .. |MNH_xy_version_current| replace:: 6.0
-.. |MNH_xyz_version_current| replace:: 6.0.0
-.. |MNH_xyz_version_hyphen_current| replace:: 6-0-0
-.. |MNH_directory_extract_current| replace:: MNH-V6-0-0
+.. |MNH_xyz_version_current| replace:: 6.0.1
+.. |MNH_xyz_version_hyphen_current| replace:: 6-0-1
+.. |MNH_directory_extract_current| replace:: MNH-V6-0-1
 .. |NCOMPRPARAMNOTSET| replace:: -888
 .. |NNEGUNDEF| replace:: -999
 .. |NUNDEF| replace:: 999
