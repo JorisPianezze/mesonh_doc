@@ -6,7 +6,7 @@ Infolettre #10
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
 
-Voici ci-dessous la 10ème infolettre de notre communauté. Vous y trouverez un entretien avec le développeur d'un outil qui peut vous être bien utile, les dernières nouvelles de l’équipe support et la liste des dernières publications utilisant Méso-NH.
+Voici ci-dessous la 10ème infolettre de notre communauté. Vous y trouverez un entretien avec le développeur d'un outil qui peut vous être bien utile, les **nombreuses** nouvelles de l’équipe support et la liste des dernières publications utilisant Méso-NH.
 
 Entretien avec `Clément Soufflet <mailto:clement.soufflet@univ-reunion.fr>`_ (LACy)
 ******************************************************************************************************************
@@ -57,11 +57,20 @@ Les nouvelles de l’équipe support
 ************************************
 
 Forum 1 des Utilisateur.ices de Méso-NH
-  - Quatre nouveautés ont été présentées et discutées avec 33 participant.es autant sur place qu'à distance. De nombreuses questions et deux gâteaux à la fin du pot pour fêter la nouvelle version de Méso-NH ! Les présentations ont porté sur :
+  - Le 3 juin 2026 le premier forum a été organisé à l'Observatoire Midi-Pyrénées. Quatre nouveautés ont été présentées et discutées avec 33 participant.es autant sur place qu'à distance. De nombreuses questions et deux gâteaux à la fin du pot pour fêter la nouvelle version de Méso-NH ! Les présentations ont porté sur :
   - La nouvelle organisation autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
   - La version 6 et de toutes ses nouveautés !
   - Les deux nouveaux sites web : un `site vitrine <https://mesonh.cnrs.fr/>`_ pour découvrir Méso-NH et donner envie de l'utiliser, et un `site technique <https://mesonh.readthedocs.io>`_ pour être guidé.e dans la prise en main du modèle et y retrouver toute la documentation, notamment le guide de l'utilisateur.
   - Une interface graphique pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations
+
+Comité Scientifique 1
+  Le premier comité scientifique a eu lieu le 1er juillet 2026. Animé par Christelle Barthe et Didier Ricard, il regroupe de nombreux.ses développeur.euses du code et le service. Après un temps sur les actualités, la discussion a porté sur la microphysique nuageuse dans Méso-NH. Céline Planche (LaMP) était invitée en tant que spécialiste de cette thématique.
+
+Méso-Challenge Kairos (CALMIP)
+  Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicanne Ianos ont été réalisées avec les modèles couplés CROCO - WW3 - Méso-NH, un sacré challenge technique !
+
+Documentation
+  La documentation sur le site technique fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier pdf et les ctrl-F, nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des namlistes.
 
 Version 6
   xx Les efforts de l'équipe se sont concentrés sur la parution de cette nouvelle `version 6 <https://mesonh.readthedocs.io/en/latest/getting_started/releases/release_note_600.html>`_ et des nouveaux sites web : `site vitrine <www.mesonh.cnrs.fr>`_ et `site technique <https://mesonh.readthedocs.io>`_ .
