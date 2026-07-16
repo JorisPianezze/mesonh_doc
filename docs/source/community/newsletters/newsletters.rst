@@ -39,3 +39,7 @@ Newsletters
    newsletter_09.rst
 
    newsletter_09_english.rst
+
+   newsletter_10.rst
+
+   newsletter_10_english.rst
