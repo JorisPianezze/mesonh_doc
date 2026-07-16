@@ -13,7 +13,7 @@ Entretien avec `Clément Soufflet <mailto:clement.soufflet@univ-reunion.fr>`_ (L
 
 |pic1|
 
-.. |pic1| image:: photo_cs.png
+.. |pic1| image:: photo_cs.jpg
   :width: 400
 
 Clément, tu as développé FrameIt pour faciliter l’analyse de simulations de cyclones. FrameIt est particulièrement adapté pour les utilisateur.ices de Méso-NH. Pourrais-tu résumer ce que fait cet outil ?
