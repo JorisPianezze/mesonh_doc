@@ -56,6 +56,13 @@ Quelles sont les limites actuelles ? As-tu des perspectives de développements f
 Les nouvelles de l’équipe support
 ************************************
 
+Forum 1 des Utilisateur.ices de Méso-NH
+  - Quatre nouveautés ont été présentées et discutées avec 33 participant.es autant sur place qu'à distance. De nombreuses questions et deux gâteaux à la fin du pot pour fêter la nouvelle version de Méso-NH ! Les présentations ont porté sur :
+  - La nouvelle organisation autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
+  - La version 6 et de toutes ses nouveautés !
+  - Les deux nouveaux sites web : un `site vitrine <https://mesonh.cnrs.fr/>`_ pour découvrir Méso-NH et donner envie de l'utiliser, et un `site technique <https://mesonh.readthedocs.io>`_ pour être guidé.e dans la prise en main du modèle et y retrouver toute la documentation, notamment le guide de l'utilisateur.
+  - Une interface graphique pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations
+
 Version 6
   xx Les efforts de l'équipe se sont concentrés sur la parution de cette nouvelle `version 6 <https://mesonh.readthedocs.io/en/latest/getting_started/releases/release_note_600.html>`_ et des nouveaux sites web : `site vitrine <www.mesonh.cnrs.fr>`_ et `site technique <https://mesonh.readthedocs.io>`_ .
 
