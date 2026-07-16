@@ -69,7 +69,7 @@ Gestion et nommage des branches
 Forum 1 des Utilisateur.ices de Méso-NH
   - Le 3 juin 2026 le premier forum a été organisé à l'Observatoire Midi-Pyrénées. Quatre nouveautés ont été présentées et discutées avec 33 participant.es autant sur place qu'à distance. De nombreuses questions et deux gâteaux à la fin du pot pour fêter la nouvelle version de Méso-NH ! Les présentations ont porté sur :
   - La **nouvelle organisation** autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
-  - La **version 6** et toutes ses fonctionnalités nouvelles !
+  - La **version 6** et toutes ses nouvelles fonctionnalités !
   - Les **deux nouveaux sites web** : un `site vitrine <https://mesonh.cnrs.fr/>`_ pour découvrir Méso-NH et donner envie de l'utiliser, et un `site technique <https://mesonh.readthedocs.io>`_ pour être guidé.e dans la prise en main du modèle et y retrouver toute la documentation, notamment le guide de l'utilisateur.
   - Une **interface graphique** de Méso-NH (en béta) pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations. Elle est utilisable en ligne `ici <https://mesonh.streamlit.app/>`_ (sauf pour Workspace) ou en local `là <https://github.com/QuentinRodier/mesonh-interface>`_ (uniquement testé sur PC et Belenos).
 
