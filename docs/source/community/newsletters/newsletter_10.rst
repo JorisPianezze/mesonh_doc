@@ -77,7 +77,7 @@ Comité Scientifique 1
   Le premier comité scientifique a eu lieu le 1er juillet 2026. Animé par Christelle Barthe et Didier Ricard, il regroupe de nombreux.ses développeur.euses du code et le service. Après un temps sur les actualités, la discussion a porté sur la microphysique nuageuse dans Méso-NH. Céline Planche (LaMP) était invitée en tant que spécialiste de cette thématique.
 
 Méso-Challenge Kairos (CALMIP)
-  Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicanne Ianos ont été réalisées avec les modèles couplés CROCO - Méso-NH, un sacré challenge technique !
+  Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicanne Ianos ont été réalisées avec les modèles couplés CROCO - Méso-NH, un sacré challenge technique sur cette nouvelle machine !
 
 Documentation
   La documentation sur le site technique fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier pdf et les ctrl-F (à vrai dire encore possible pour les nostalgiques), nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des namlistes.
@@ -87,28 +87,6 @@ Autres développements et informations
   - Les séries multiples seont possibles pour les sorties fréquentes. Cette fonctionnalité permet de créer plusieurs séries distinctes de fichiers de sorties fréquentes. Ces séries sont entièrement indépendantes (choix des champs, instants de sortie, boîtes sélectionnées, paramètres de compression...). Elles seront disponibles dès la version 6.1 de Méso-NH (avant la fin de l'année).
   - L'inscription au **stage Méso-NH** est ouverte pour la session du 2 au 5 novembre en français et présentiel `ici <https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html>`_.
   - Philippe Wautelet est en train de collecter, avec l'aide de toute l'équipe Méso-NH, la liste de tous les défis et problèmes techniques auxquels nous sommes ou allons être confrontés. Le but est d'avoir une image la plus complète et fidèle de la situation afin de pouvoir déterminer nos priorités de développements techniques. **N'hésitez pas à nous contacter si vous souhaitez nous rapporter des besoins ou difficultés techniques**.
-
-
-
-
-
-
-
-
-Version 6
-  xx Les efforts de l'équipe se sont concentrés sur la parution de cette nouvelle `version 6 <https://mesonh.readthedocs.io/en/latest/getting_started/releases/release_note_600.html>`_ et des nouveaux sites web : `site vitrine <www.mesonh.cnrs.fr>`_ et `site technique <https://mesonh.readthedocs.io>`_ .
-
-Lancement du Forum des Utilisateur.ices de Méso-NH
-  xx Le premier forum des utilisateur.ices de Méso-NH aura lieu le **matin du mercredi 3 juin en salle Coriolis** de l'OMP (14 avenue Edouard Belin, Toulouse). Un pot sera organisé sur place à cette occasion ! Si vous comptez venir sur site, pouvez-vous s'il-vous-plaît m'envoyer `un email <mailto:thibaut.dauhut@utoulouse.fr>`_ pour que j'estime au plus proche le nombre de participant.es ? Merci !
-
-Stage Méso-NH
-  xx Le stage Méso-NH du 10 au 13 mars 2026, en hybride et en anglais, s'est très bien passé. Pour cette session nous avions 23 participants (15 dans la salle et 8 ligne) : stagiaires, doctorant.es, postdocs et CDD (LAERO, CNRM GMME, CERFACS, LMD, Université de Reims, Universités d'Evora et de Lisbonne au Portugal, Institut Néel du CNRS à Grenoble) mais aussi chercheur.euses et ingénieur.es (Université de Varsovie en Pologne,  Université de Reims, CNAM - Laboratoire Géomatique et Foncier du Mans, Institut de recherche RISE de l'Université de Uppsala en Suède).
-
-Autres nouvelles
-  - xx
-  - Le pôle technique du Service Méso-NH est animé à présent par Philippe Wautelet et Quentin Rodier.
-  - Une politique de durée de vie des branches et des versions de MésoNH va être expérimentée pour assurer une certaine stabilité aux utilisateur.ices qui ont besoin de conserver une même version de MésoNH pendant plusieurs années tout en ayant accès à des améliorations. La numérotation sera la même qu'actuellement en X-Y-Z avec X le numéro de version majeure, Y de version mineure et Z de bugfix. Chaque nouvelle version mineure sera maintenue pendant au moins 2 ans à partir de la sortie de la suivante  (ex : une version 5.7.3 est en cours de préparation). Les correctifs (*bugfix*) avec des numéros de Z croissants ne contiendront que des corrections et devraient garantir d'obtenir les mêmes résultats pour une version mineure donnée (dans le même environnement de travail) aux corrections de bugs près. Les nouvelles fonctionnalités ne pourront être intégrées que dans de nouvelles versions mineures, qui devraient être un peu plus fréquentes qu'actuellement.
-  - Une réflexion sur la gestion des branches du code est en cours au sein du pôle technique dans le but de la rendre plus rigoureuse, organisée et compréhensible.
 
 .. note::
   Si vous avez des besoins, idées, améliorations à apporter, bugs à corriger ou suggestions concernant les entrées/sorties, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ est toujours preneur.
