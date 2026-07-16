@@ -56,6 +56,16 @@ Quelles sont les limites actuelles ? As-tu des perspectives de développements f
 Les nouvelles de l’équipe support
 ************************************
 
+Nouvelles versions
+- message de quentin dans ses mails
+- Sortie de la version 5.7.3 le 4 mai 2026, voici la `note <https://mesonh.readthedocs.io/en/mnh-master/getting_started/releases/release_note_573.html#release-note-573>`_ associée à cette version.
+- Sortie de la version 6.0.1 le 10 juillet 2026, dont voici la `note <https://mesonh.readthedocs.io/en/mnh-6-0/getting_started/releases/release_note_601.html>`_.
+
+Gestion et nommage des branches de développement
+  Une nouvelle politique de gestion et de nommage des branches a été mise en place. Elle est détaillée `ici <https://mesonh.readthedocs.io/en/mnh-6-0/documentation/coding_instructions.html#branch-management-strategy>`_ et également sur le dépôt Git dans le fichier ```BRANCHING.md```. Des règles précises pour la gestion des branches de versions publiées, de développement et de bugs ont été établies. Des branches spécifiques pour les chercheur.euses sont également proposées. Ce schéma n'est pas définitif et des ajustements seront effectués selon les besoins et retours de toutes et tous.
+  La conséquence immédiate de cette nouvelle approche est un ménage important en grande partie achevé. De nombreuses branches obsolètes ont été supprimées, tandis que la plupart de celles restantes ont changé de nom. Si vous utilisez le dépôt, il faudra probablement au minimum rétablir le lien entre vos branches locales et les branches distantes du dépôt. Pour cela, la commande ```git branch -u origin/nouveau_nom_branche``` (lancée depuis la branche locale concernée) vous sera utile pour **restaurer le suivi**.
+
+
 Forum 1 des Utilisateur.ices de Méso-NH
   - Le 3 juin 2026 le premier forum a été organisé à l'Observatoire Midi-Pyrénées. Quatre nouveautés ont été présentées et discutées avec 33 participant.es autant sur place qu'à distance. De nombreuses questions et deux gâteaux à la fin du pot pour fêter la nouvelle version de Méso-NH ! Les présentations ont porté sur :
   - La nouvelle organisation autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
@@ -71,6 +81,24 @@ Méso-Challenge Kairos (CALMIP)
 
 Documentation
   La documentation sur le site technique fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier pdf et les ctrl-F, nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des namlistes.
+
+
+
+Nouveaux développements
+- Travail de développement sur l'implicitation des flux de surface et la turbulence ainsi que la fusion de la résolution des matrices tridiagonales entre la convection peu profonde et la turbulence en vue de gagner en stabilité numérique sur la verticale par rapport au pas de temps modèle.
+- Interface graphique de Méso-NH (en béta) utilisable en ligne https://mesonh.streamlit.app/ (sauf pour Workspace) ou en local (PC ou sur Belenos uniquement testé) : https://github.com/QuentinRodier/mesonh-interface
+- Inscription au stage Méso-NH ouverte pour la session du 2 au 5 novembre en français et présentiel : https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html
+- Premiers tests d'intégration continue sur gitlab
+
+Défis techniques
+  Philippe Wautelet est en train de collecter, avec l'aide de toute l'équipe Méso-NH, la liste de tous les défis et problèmes techniques auxquels nous sommes ou allons être confrontés. Le but est d'avoir une image la plus complète et fidèle de la situation afin de pouvoir déterminer nos priorités de développements techniques. **N'hésitez pas à nous contacter si vous souhaitez nous rapporter des besoins ou difficultés techniques**.
+
+Séries multiples pour les sorties fréquentes
+  Cette fonctionnalité permet de créer plusieurs séries distinctes de fichiers de sorties fréquentes. Ces séries sont entièrement indépendantes (choix des champs, instants de sortie, boîtes sélectionnées, paramètres de compression...). Elles seront disponibles dès la version 6.1 de Méso-NH (avant la fin de l'année).
+
+
+
+
 
 Version 6
   xx Les efforts de l'équipe se sont concentrés sur la parution de cette nouvelle `version 6 <https://mesonh.readthedocs.io/en/latest/getting_started/releases/release_note_600.html>`_ et des nouveaux sites web : `site vitrine <www.mesonh.cnrs.fr>`_ et `site technique <https://mesonh.readthedocs.io>`_ .
