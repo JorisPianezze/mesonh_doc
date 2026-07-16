@@ -82,7 +82,7 @@ Model development and parametrisations
   - An update of shallow cloud parameterization in the AROME NWP model [`Marcel et al. <https://doi.org/10.5194/acp-26-3901-2026>`_, 2026]
 
 Surface-atmosphere interactions
-  - PANAME-Urban campaign: investigating multiscale surface-atmosphere interactions and thermal-contrasts in the Paris region (France) [Lemonsu et al., *in press* 2026]
+  - PANAME-Urban campaign: investigating multiscale surface-atmosphere interactions and thermal-contrasts in the Paris region (France) [`Lemonsu et al. <https://doi.org/10.1175/BAMS-D-23-0293.1>`_, *in press* 2026]
   - Impact of surface interactivity on the initiation of deep convection in the Sahel: A cloud-resolving model study [`Tomasini and Couvreux <https://doi.org/10.1016/j.atmosres.2026.108941>`_, 2026]
 
 PhD thesis
