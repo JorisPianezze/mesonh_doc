@@ -71,7 +71,7 @@ Forum 1 des Utilisateur.ices de Méso-NH
   - La **nouvelle organisation** autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
   - La **version 6** et toutes ses nouvelles fonctionnalités !
   - Les **deux nouveaux sites web** : un `site vitrine <https://mesonh.cnrs.fr/>`_ pour découvrir Méso-NH et donner envie de l'utiliser, et un `site technique <https://mesonh.readthedocs.io>`_ pour être guidé.e dans la prise en main du modèle et y retrouver toute la documentation, notamment le guide de l'utilisateur.
-  - Une **interface graphique** de Méso-NH (en béta) pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations. Elle est utilisable en ligne `ici <https://mesonh.streamlit.app/>`_ (sauf pour Workspace) ou en local `là <https://github.com/QuentinRodier/mesonh-interface>`_ (uniquement testé sur PC et Belenos).
+  - Une **interface graphique** de Méso-NH pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations. Elle est utilisable (version béta) en ligne `ici <https://mesonh.streamlit.app/>`_ (sauf pour Workspace) ou en local `là <https://github.com/QuentinRodier/mesonh-interface>`_ (uniquement testé sur PC et Belenos).
 
 Comité Scientifique 1
   Le premier comité scientifique a eu lieu le 1er juillet 2026. Animé par Christelle Barthe et Didier Ricard, il regroupe de nombreux.ses développeur.euses du code et le service. Après un temps sur les actualités, la discussion a porté sur la microphysique nuageuse dans Méso-NH. Céline Planche (LaMP) était invitée en tant que spécialiste de cette thématique.
