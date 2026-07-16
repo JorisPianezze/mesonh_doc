@@ -78,8 +78,10 @@ Autres nouvelles
 Dernières publications utilisant Méso-NH
 ****************************************************************************************
 
-Convection, equatorial waves and extreme precipitation
+Convection
+  - Dataset of a Kilometer-Scale Meso-NH Simulation for C2OMODO: The RCElarge300 Collection of MesoNHforC2OMODO [`Chaboureau <https://doi.org/10.1016/j.dib.2026.112954>`_, 2026]
   - Exploring the influence of equatorial waves on a record‐breaking extreme precipitation event in Central Sahel: Insights from convection permitting simulations [`Diakhaté et al. <https://doi.org/10.1029/2026GL122000>`_, 2026]
+  - A parametrization of the convective boundary layer with subgrid orography [`Philippot et al. <https://doi.org/10.1175/JAS-D-25-0192.1>`_, 2026]
 
 Urban meteorology
   - The Paris 2024 Olympics Research Demonstration Project [`Masson et al. <https://doi.org/10.1175/BAMS-D-25-0008.1>`_, 2026]
