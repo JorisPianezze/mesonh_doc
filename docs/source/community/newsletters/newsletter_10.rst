@@ -17,38 +17,38 @@ Entretien avec `Clément Soufflet <mailto:clement.soufflet@univ-reunion.fr>`_ (L
   :width: 400
 
 Clément, tu as développé FrameIt pour faciliter l’analyse de simulations de cyclones. FrameIt est particulièrement adapté pour les utilisateur.ices de Méso-NH. Pourrais-tu résumer ce que fait cet outil ?
-  **FrameIt** est un outil développé au LACy par l'équipe Cyclone et Météorologie Tropicale, plus particulièrement par Kevin Hoarau, Adrien Colomb, Rémi Laxenaire et moi-même. Dans sa première version cet outil est orienté comme un outil de gestion de données de sortie modèle entièrement codé en Python et basé sur la librairie *xarray*. L'idée du développement de **FrameIt** vient de l’analyse de simulations de cyclone pour lesquelles un grand domaine est nécessaire mais seul une petite partie (le cyclone) nous intéresse vraiment.
+  **FrameIt** est un outil développé au LACy par l'équipe Cyclone et Météorologie Tropicale, plus particulièrement par Kevin Hoarau, Adrien Colomb, Rémi Laxenaire et moi-même. Dans sa première version, cet outil est orienté comme un outil de gestion de données de sorties modèles entièrement codé en Python et basé sur la librairie *xarray*. L'idée du développement de **FrameIt** vient de l’analyse de simulations de cyclone pour lesquelles un grand domaine est nécessaire, mais seul une petite partie (le cyclone) nous intéresse vraiment.
 
-  **FrameIt** permet d’extraire un sous domaine mobile (ou fixe) dans le temps, centré sur un objet météorologique, tout en sélectionnant les variables et les niveaux verticaux d’intérêt. Ce sous domaine est aussi disponible en coordonnée polaire centré sur l’objet étudié. En sortie on obtient une série de fichiers *netcdf* très légers, triés par système de coordonnées et par dimension, sur le sous-domaine voulu, contenant tous les pas de temps de la simulation.
+  **FrameIt** permet d’extraire un sous-domaine mobile (ou fixe) dans le temps, centré sur un objet météorologique, tout en sélectionnant les variables et les niveaux verticaux d’intérêt. Ce sous-domaine est aussi disponible en coordonnées polaires centré sur l’objet étudié. En sortie, on obtient une série de fichiers *netCDF* très légers, triés par système de coordonnées et par dimension, sur le sous-domaine voulu, contenant tous les pas de temps de la simulation.
 
-  À noter que **FrameIt** peut aussi bien traiter des fichiers *netcdf* venant de Méso-NH que des fichiers *grib* issue du modèle AROME.
+  À noter que **FrameIt** peut aussi bien traiter des fichiers *netCDF* venant de Méso-NH que des fichiers *grib* issue du modèle AROME.
 
 En quoi est-ce que cela facilite la vie aux modélisateur.ices ?
-  **FrameIt** ne remplace pas l’analyse des fichiers de sortie modèle, mais il permet une prise en main rapide de ces fichiers en s’affranchissant des problématiques de gestion de donnée ou de traitement de gros fichiers de données. En d’autres termes c’est un outil qui va faciliter l’analyse en réduisant la taille des fichiers et en les normalisant par rapport à l’objet météorologique étudié.
+  **FrameIt** ne remplace pas l’analyse des fichiers de sorties modèles, mais il permet une prise en main rapide de ces fichiers en s’affranchissant des problématiques de gestion de donnée ou de traitement de gros fichiers de données. En d’autres termes, c’est un outil qui va faciliter l’analyse en réduisant la taille des fichiers et en les normalisant par rapport à l’objet météorologique étudié.
 
   En plus de ça, **FrameIt** permet l’analyse des données dans un système de coordonnées polaires, utile pour les objets météorologiques à symétrie azimutale.
 
-  Enfin, les sorties étant des fichiers *netcdf* relativement légers, **FrameIt** contribue à faciliter le partage de données de simulations notamment dans le cadre de collaboration avec des chercheurs non-modélisateur (et contribuera ainsi au rayonnement de Méso-NH).
+  Enfin, les sorties étant des fichiers *netCDF* relativement légers, **FrameIt** contribue à faciliter le partage de données de simulations notamment dans le cadre de collaborations avec des chercheurs non-modélisateurs (et contribue ainsi au rayonnement de Méso-NH).
 
-Y a-t-il d'autres situations, non-cycloniques, pour lesquels FrameIt serait également utile ?
-  Pour le moment **FrameIt** est utilisé majoritairement pour des simulations de cyclones mais cet outil n’est pas limité à ça. Selon moi, **FrameIt** possède un vrai intérêt pour les cas où le domaine d’une simulation numérique est bien plus grand que l’objet météorologique étudié, mais aussi les cas où un système de coordonnées polaires permet de faciliter l’analyse de l’objet météorologique en question.
+Y a-t-il d'autres situations, non-cycloniques, pour lesquelles **FrameIt** serait également utile ?
+  Pour le moment **FrameIt** est utilisé majoritairement pour des simulations de cyclones, mais cet outil n’est pas limité à cela. Selon moi, **FrameIt** possède un vrai intérêt pour les cas où le domaine d’une simulation numérique est bien plus grand que l’objet météorologique étudié, mais aussi les cas où un système de coordonnées polaires permet de faciliter l’analyse de l’objet météorologique en question.
 
 Quelles recommandations ferais-tu aux utilisateurs.rices de Méso-NH qui voudrait commencer à l’utiliser ?
-  Évidemment je ne peux que recommander, en premier lieu, d'aller voir la documentation, assez fournie, associée au projet sur le `GitHub de Météo France <https://meteofrance.github.io/frameit/>`_. L'installation et l'utilisation de **FrameIt** nécessite un environnement virtuel conda spécifique dont l'installation est décrite dans cette documentation.
+  Évidemment, je ne peux que recommander, en premier lieu, d'aller voir la documentation, assez fournie, associée au projet sur le `GitHub de Météo France <https://meteofrance.github.io/frameit/>`_. L'installation et l'utilisation de **FrameIt** nécessite un environnement virtuel conda spécifique dont l'installation est décrite dans cette documentation.
 
-  Ensuite il faut s'approprier la syntaxe de l’unique fichier de configuration de l’outil dont un exemple est disponible dans le projet. Et enfin, bien sûr, commencer par un cas simple que vous connaissez déjà, avec peu de fichiers, pour vous faire la main.
+  Ensuite il faut s'approprier la syntaxe de l’unique fichier de configuration de l’outil, dont un exemple est disponible dans le projet. Et enfin, bien sûr, commencer par un cas simple que vous connaissez déjà, avec peu de fichiers, pour vous faire la main.
 
 Quelles sont les limites actuelles ? As-tu des perspectives de développements futurs ? 
-  Un aspect de **FrameIt** qui peut, au premier abord, paraître limitant c’est l’orientation vers l’étude des cyclones. En effet la méthode de suivi d’objet est construite pour les cyclones tropicaux et n’est pas applicable à tous les autres objets météorologiques. Cependant pour palier cette limitation, l’utilisateur.ice à la possibilité de fournir une trajectoire a priori pour guider l’extraction sur l’objet météorologique de son choix. Ceci étant dit, **FrameIt** a été pensé modulable (Git) notamment pour permettre aux utilisateur.ices intéressé.es de développer à leur tour des fonctionnalités utiles pour la communauté. Il est donc tout à fait envisageable d’implémenter une nouvelle méthode de suivi associée à un autre type d’objet météorologique (cellule convective, orage…), une rubrique est d’ailleurs dédiée à l’implémentation de nouvelles méthode de suivie dans la documentation.
+  Un aspect de **FrameIt** qui peut, au premier abord, paraître limitant, c’est l’orientation vers l’étude des cyclones. En effet, la méthode de suivi d’objet est construite pour les cyclones tropicaux et n’est pas applicable à tous les autres objets météorologiques. Cependant, pour palier cette limitation, l’utilisateur.ice à la possibilité de fournir une trajectoire a priori pour guider l’extraction sur l’objet météorologique de son choix. Ceci étant dit, **FrameIt** a été pensé modulable (Git) notamment pour permettre aux utilisateur.ices intéressé.es de développer à leur tour des fonctionnalités utiles pour la communauté. Il est donc tout à fait envisageable de développer une nouvelle méthode de suivi associée à un autre type d’objet météorologique (cellule convective, orage…). Une rubrique est d’ailleurs dédiée à l’intégration de nouvelles méthode de suivi dans la documentation.
 
   Cette première version va servir de base à de nombreux développements futurs, notamment le calcul de diagnostics dédiés aux cyclones qui seront accessibles dans les fichiers de sortie de l'outil.
 
-  Enfin, comme un des axes de recherche au LACy porte sur les interactions océan-atmosphère, l’idée est de pouvoir à terme appliquer cet outil sur les sorties de modèle d’océan et de vagues issue de simulations couplées afin d’avoir une vue d’ensemble des interactions de ces trois compartiments.
+  Enfin, comme un des axes de recherche au LACy porte sur les interactions océan-atmosphère, l’idée est de pouvoir à terme appliquer cet outil sur les sorties de modèles d’océan et de vagues issues de simulations couplées afin d’avoir une vue d’ensemble des interactions de ces trois compartiments.
 
 
 .. note::
 
-  Si vous aussi vous souhaitez expliquer un développement que vous avez mis en place dans Méso-NH, ou une méthode d’analyse que vous partagez à la communauté, n’hésitez pas à me le signaler par `mail <mailto:thibaut.dauhut@utoulouse.fr>`_.
+  Si vous aussi vous souhaitez expliquer un développement que vous avez mis en place dans Méso-NH, ou une méthode d’analyse à partager avec la communauté, n’hésitez pas à me le signaler par `mail <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
 
     
@@ -71,25 +71,25 @@ Forum 1 des Utilisateur.ices de Méso-NH
   - La **nouvelle organisation** autour du code et du service Méso-NH avec, entre autres, la création du Comité Scientifique et du Comité des tutelles
   - La **version 6** et toutes ses nouvelles fonctionnalités !
   - Les **deux nouveaux sites web** : un `site vitrine <https://mesonh.cnrs.fr/>`_ pour découvrir Méso-NH et donner envie de l'utiliser, et un `site technique <https://mesonh.readthedocs.io>`_ pour être guidé.e dans la prise en main du modèle et y retrouver toute la documentation, notamment le guide de l'utilisateur.
-  - Une **interface graphique** de Méso-NH pour assister les utilisateur.ices dans la création de leurs namlistes, domaines et forçages, ainsi pour la pévisualisation des simulations. Elle est utilisable (version béta) en ligne `ici <https://mesonh.streamlit.app/>`_ (sauf pour Workspace) ou en local `là <https://github.com/QuentinRodier/mesonh-interface>`_ (uniquement testé sur PC et Belenos).
+  - Une **interface graphique** de Méso-NH pour assister les utilisateur.ices dans la création de leurs *namelistes*, domaines et forçages, ainsi que pour la visualisation des simulations. Elle est utilisable (version béta) en ligne `ici <https://mesonh.streamlit.app/>`_ (sauf pour Workspace) ou en local `là <https://github.com/QuentinRodier/mesonh-interface>`_ (uniquement testé sur PC et Belenos).
 
 Comité Scientifique 1
   Le premier comité scientifique a eu lieu le 1er juillet 2026. Animé par Christelle Barthe et Didier Ricard, il regroupe de nombreux.ses développeur.euses du code et le service. Après un temps sur les actualités, la discussion a porté sur la microphysique nuageuse dans Méso-NH. Céline Planche (LaMP) était invitée en tant que spécialiste de cette thématique.
 
 Méso-Challenge Kairos (CALMIP)
-  Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicanne Ianos ont été réalisées avec les modèles couplés CROCO - Méso-NH, un sacré challenge technique sur cette nouvelle machine !
+  Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicane Ianos ont été réalisées avec les modèles couplés CROCO - Méso-NH, un sacré challenge technique sur cette nouvelle machine !
 
 Documentation
-  La documentation sur le site technique fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier pdf et les ctrl-F (à vrai dire encore possible pour les nostalgiques), nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des namlistes.
+  La documentation sur le site technique fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier PDF et les ctrl-F (à vrai dire encore possible pour les nostalgiques). Nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des *namelistes*.
 
 Autres développements et informations
-  - Un travail de développement est mené sur l'implicitation des flux de surface et de la turbulence ainsi que la fusion de la résolution des matrices tridiagonales entre la convection peu profonde et la turbulence en vue de gagner en stabilité numérique sur la verticale par rapport au pas de temps du modèle.
-  - Les séries multiples seont possibles pour les sorties fréquentes. Cette fonctionnalité permet de créer plusieurs séries distinctes de fichiers de sorties fréquentes. Ces séries sont entièrement indépendantes (choix des champs, instants de sortie, boîtes sélectionnées, paramètres de compression...). Elles seront disponibles dès la version 6.1 de Méso-NH (avant la fin de l'année).
+  - Un travail de développement est mené sur l'implicitation des flux de surface et de la turbulence, ainsi que la fusion de la résolution des matrices tridiagonales entre la convection peu profonde et la turbulence en vue de gagner en stabilité numérique sur la verticale par rapport au pas de temps du modèle.
+  - Les séries multiples seront possibles pour les sorties fréquentes. Cette fonctionnalité permet de créer plusieurs séries distinctes de fichiers de sorties fréquentes. Ces séries sont entièrement indépendantes (choix des champs, instants de sortie, boîtes sélectionnées, paramètres de compression...). Elles seront disponibles dès la version 6.1 de Méso-NH (avant la fin de l'année).
   - L'inscription au **stage Méso-NH** est ouverte pour la session du 2 au 5 novembre en français et présentiel `ici <https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html>`_.
   - Philippe Wautelet est en train de collecter, avec l'aide de toute l'équipe Méso-NH, la liste de tous les défis et problèmes techniques auxquels nous sommes ou allons être confrontés. Le but est d'avoir une image la plus complète et fidèle de la situation afin de pouvoir déterminer nos priorités de développements techniques. **N'hésitez pas à nous contacter si vous souhaitez nous rapporter des besoins ou difficultés techniques**.
 
 .. note::
-  Si vous avez des besoins, idées, améliorations à apporter, bugs à corriger ou suggestions concernant les entrées/sorties, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ est toujours preneur.
+  Si vous avez des besoins, idées, améliorations à apporter, bugs à corriger ou suggestions concernant Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ et toute l'équipe sommes toujours preneurs.
 
 
 Dernières publications utilisant Méso-NH
