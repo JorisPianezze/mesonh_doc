@@ -115,5 +115,5 @@ Have a lovely summer and enjoy your simulations with Méso-NH!
 
 See you soon,
 
-Thibaut Dauhut et the entire Meso-NH team : Philippe Wautelet, Quentin Rodier, Didier Ricard, Joris Pianezze, Juan Escobar et Jean-Pierre Chaboureau
+Thibaut Dauhut et the whole Meso-NH team : Philippe Wautelet, Quentin Rodier, Didier Ricard, Joris Pianezze, Juan Escobar et Jean-Pierre Chaboureau
 
