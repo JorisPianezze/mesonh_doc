@@ -78,3 +78,20 @@ Scientific Committee 1
 Kairos Meso-Challenge (CALMIP)
   Part of the department was involved in the Kairos Meso-Challenge, named after the new supercomputer commissioned at the CALMIP (Calcul en Midi-Pyrénées) mesocentre, located at the Espace Clément Ader in Toulouse. Simulations of Tropical Storm Ianos were carried out using the coupled CROCO–Meso-NH models – quite a technical challenge on this new machine!
 
+Documentation
+  The documentation on the `technical website <https://mesonh.readthedocs.io>`_ is the result of a long-term effort to maintain and update it. Gone are the days of PDF files and Ctrl+F searches (though, to be fair, this is still possible for those who are nostalgic). We invite you to browse this site to find all the important information, for example on installing the model, setting up simulations and all the possible parameters for *namelists*.
+
+Further developments and information
+  - Development work is underway on the **implementation of surface fluxes and turbulence**, as well as the merging of tridiagonal matrix solutions between shallow convection and turbulence, with a view to improving vertical numerical stability relative to the model’s time step.
+  - **Multiple time series** will be possible for **frequent outputs**. 
+This feature allows you to create several separate sets of frequently generated output files. These sets are entirely independent (choice of fields, output times, selected boxes, compression settings, etc.). They will be available from version 6.1 of Méso-NH (before the end of the year).
+  - Registration for the **Meso-NH training course** is now open for the session from 2 to 5 November, delivered in French and in person `here <https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html>`_.
+
+  - Philippe Wautelet is currently compiling, with the help of the entire Méso-NH team, a list of all the challenges and technical issues we are facing or are likely to face. The aim is to gain as comprehensive and accurate a picture of the situation as possible, so that we can determine our technical development priorities. **Please do not hesitate to contact us if you wish to report any technical requirements or difficulties**.
+
+.. note::
+  If you have any requirements, ideas, suggestions for improvements, bugs to fix or suggestions regarding Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ and the whole team would be delighted to hear from you.
+
+
+
+
