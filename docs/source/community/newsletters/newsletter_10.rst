@@ -1,7 +1,7 @@
 Infolettre #10
 ================================================
 
-**17 juillet 2026.** Version française, English version `here <newsletter_10_english.html>`_.
+**22 juillet 2026.** Version française, English version `here <newsletter_10_english.html>`_.
 
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
