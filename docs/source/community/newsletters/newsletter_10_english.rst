@@ -67,7 +67,7 @@ Meso-NH Users’ Forum 1
   - On 3 June 2026, the first forum was held at the Midi-Pyrénées Observatory. Four new developments were presented and discussed with 33 participants, both in person and online. There were plenty of questions and two cakes at the end of the drinks reception to celebrate the new version of Meso-NH! The presentations focused on:
   - The **new organisational structure** centred on the Meso-NH code and service, including, amongst other things, the creation of the Scientific Committee and the Supervisory Committee
   - **Version 6** and all its new features!
-  - The **two new websites**: a `showcase site <https://mesonh.cnrs.fr/ >`_ to discover Meso-NH and encourage people to use it, and a `technical site <https://mesonh.readthedocs.io>`_ to guide you through getting started with the model and to find all the documentation, including the user guide.
+  - The **two new websites**: a `showcase site <https://mesonh.cnrs.fr/>`_ to discover Meso-NH and encourage people to use it, and a `technical site <https://mesonh.readthedocs.io>`_ to guide you through getting started with the model and to find all the documentation, including the user guide.
   - A **graphical user interface** for Meso-NH to assist users in creating their *namelists*, domains and forcings, as well as for visualising simulations. It is available (beta version) online `here <https://mesonh.streamlit.app/>`_ (except for Workspace) or locally `here <https://github.com/QuentinRodier/mesonh-interface>`_ (tested only on PC and Belenos).
 
 Scientific Committee 1
