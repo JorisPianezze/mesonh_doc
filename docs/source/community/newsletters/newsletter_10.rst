@@ -80,7 +80,7 @@ Méso-Challenge Kairos (CALMIP)
   Une partie du service était investie dans le méso-challenge Kairos, du nom du nouveau calculateur inauguré dans le mésocentre CALMIP (Calcul en Midi-Pyrénées) situé à l'Espace Clément Ader de Toulouse. Des simulations du médicane Ianos ont été réalisées avec les modèles couplés CROCO - Méso-NH, un sacré challenge technique sur cette nouvelle machine !
 
 Documentation
-  La documentation sur le `site technique <https://mesonh.readthedocs.io>`_ fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier PDF et les ctrl-F (à vrai dire encore possible pour les nostalgiques). Nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par ex. sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des *namelistes*.
+  La documentation sur le `site technique <https://mesonh.readthedocs.io>`_ fait l'objet d'un long travail de maintenance et de mise à jour. Finis le fichier PDF et les ctrl-F (à vrai dire encore possible pour les nostalgiques). Nous vous invitons à naviguer sur ce site pour y retrouver toutes les infos importantes, par exemple sur l'installation du modèle, la mise en place des simulations et l'ensemble des paramètres possibles des *namelistes*.
 
 Autres développements et informations
   - Un travail de développement est mené sur l'**implicitation des flux de surface et de la turbulence**, ainsi que la fusion de la résolution des matrices tridiagonales entre la convection peu profonde et la turbulence en vue de gagner en stabilité numérique sur la verticale par rapport au pas de temps du modèle.
