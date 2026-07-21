@@ -30,4 +30,25 @@ How does this make life easier for modellers?
 
   In addition, **FrameIt** allows data to be analysed in a polar coordinate system, which is useful for meteorological objects with azimuthal symmetry.
 
-  Finally, as the output consists of relatively small *netCDF* files, **FrameIt** helps to facilitate the sharing of simulation data, particularly in the context of collaborations with non-modelling researchers (and thus contributes to raising the profile of Méso-NH).
+  Finally, as the output consists of relatively small *netCDF* files, **FrameIt** helps to facilitate the sharing of simulation data, particularly in the context of collaborations with non-modelling researchers (and thus contributes to raising the profile of Meso-NH).
+
+Are there any other, non-cyclonic situations in which **FrameIt** would also be useful?
+  At present, **FrameIt** is mainly used for cyclone simulations, but this tool is not limited to that. In my view, **FrameIt** is particularly useful in cases where the domain of a numerical simulation is much larger than the meteorological phenomenon under study, but also in cases where a polar coordinate system facilitates the analysis of the meteorological phenomenon in question.
+
+What advice would you give to Méso-NH users who’d like to start using it?
+  Naturally, my first recommendation would be to consult the fairly comprehensive documentation for the project on `Météo France’s GitHub <https://meteofrance.github.io/frameit/>`_. Installing and using **FrameIt** requires a specific conda virtual environment, the installation of which is described in this documentation.
+
+  Next, you’ll need to familiarise yourself with the syntax of the tool’s single configuration file, an example of which is available in the project. And finally, of course, start with a simple case that you’re already familiar with, involving just a few files, to get the hang of it.
+
+What are the current limitations? Do you have any plans for future developments? 
+  One aspect of **FrameIt** that may, at first glance, seem limiting is its focus on the study of cyclones. In fact, the object-tracking method is designed for tropical cyclones and is not applicable to all other meteorological objects. However, to overcome this limitation, users have the option of providing a predefined trajectory to guide the extraction for the meteorological object of their choice. That said, **FrameIt** has been designed to be modular (Git), specifically to enable interested users to develop useful features for the community themselves. It is therefore entirely feasible to develop a new tracking method associated with another type of meteorological feature (convective cell, thunderstorm, etc.). Indeed, there is a section in the documentation dedicated to the integration of new tracking methods.
+
+  This initial version will serve as the basis for numerous future developments, notably the calculation of diagnostics specific to cyclones, which will be available in the tool’s output files.
+
+  Finally, as one of the research areas at LACy focuses on ocean–atmosphere interactions, the aim is eventually to be able to apply this tool to ocean and wave model outputs from coupled simulations in order to gain an overview of the interactions between these three compartments.
+
+
+.. note::
+
+  If you’d also like to explain a feature you’ve implemented in Méso-NH, or an analytical method you’d like to share with the community, please do let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
+
