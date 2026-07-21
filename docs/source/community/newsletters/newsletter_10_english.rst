@@ -17,7 +17,6 @@ Interview with `Clément Soufflet <mailto:clement.soufflet@univ-reunion.fr>`_ (L
   :width: 400
 
 Clément, you developed FrameIt to make it easier to analyse cyclone simulations. FrameIt is particularly well suited to Méso-NH users. Could you summarise what this tool does?
-
   **FrameIt** is a tool developed at LACy by the Cyclones and Tropical Meteorology team, specifically by Kevin Hoarau, Adrien Colomb, Rémi Laxenaire and myself. In its first version, this tool is designed as a model output data management tool, written entirely in Python and based on the *xarray* library. The idea behind the development of **FrameIt** stems from the analysis of cyclone simulations, which require a large domain, but where only a small part (the cyclone) is of real interest to us.
 
   **FrameIt** allows you to extract a time-varying mobile (or fixed) subdomain centred on a meteorological object, whilst selecting the variables and vertical levels of interest. This subdomain is also available in polar coordinates centred on the object under study. The output consists of a series of very lightweight *netCDF* files, sorted by coordinate system and dimension, covering the desired subdomain and containing all time steps of the simulation.
@@ -25,7 +24,6 @@ Clément, you developed FrameIt to make it easier to analyse cyclone simulations
   It is worth noting that **FrameIt** can process both *netCDF* files from Méso-NH and *grib* files from the AROME model.
 
 How does this make life easier for modellers?
-
   **FrameIt** does not replace the analysis of standard output files, but it enables users to get to grips with these files quickly by eliminating the issues associated with data management and the processing of large data files. In other words, it is a tool that facilitates analysis by reducing the size of the files and standardising them in relation to the meteorological phenomenon under study.
 
   In addition, **FrameIt** allows data to be analysed in a polar coordinate system, which is useful for meteorological objects with azimuthal symmetry.
