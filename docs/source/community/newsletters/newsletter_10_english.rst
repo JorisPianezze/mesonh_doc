@@ -55,7 +55,7 @@ News from the support team
 
 New versions
   - Version 5.7.3 was released on 4 May 2026; here is the `release note <https://mesonh.readthedocs.io/en/mnh-master/getting_started/releases/release_note_573.html#release-note-573>`_ for this version.
-  - Version 6.0.1 was released on 10 July 2026; here is the `release notes <https://mesonh.readthedocs.io/en/mnh-6-0/getting_started/releases/release_note_601.html>`_. We strongly recommend that you upgrade to this new version, particularly users of AROME files (for initialisation and pairing) dated 15 October 2024 or later (cy48).
+  - Version 6.0.1 was released on 10 July 2026; here is the `release note <https://mesonh.readthedocs.io/en/mnh-6-0/getting_started/releases/release_note_601.html>`_. We strongly recommend that you upgrade to this new version, particularly users of AROME files (for initialisation and pairing) dated 15 October 2024 or later (cy48).
   - Following the new branch management and naming policy (see below), minor versions (the X.Y part of the X.Y.Z version numbering scheme) will be supported for two years from the release date of the next minor version. Maintenance means that we will continue to release versions containing only bug fixes (the letter Z in the X.Y.Z version numbering scheme).
   - Finally, we are launching a continuous integration trial on GitLab: as soon as a development change is ready for integration, you can send it to us (it must be merged with at least the latest published minor version, which is currently 6.0). Note to developers: **There will be no further calls for contributions**.
 
