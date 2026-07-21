@@ -4,7 +4,7 @@ Newsletter #10
 **22 July 2026.** English version, version française `ici <newsletter_10.html>`_.
 
 
-Dear Méso-NH users,
+Dear Meso-NH users,
 
 Below is the 10th newsletter from our community. In it, you’ll find an interview with the developer of a tool that may prove very useful to you, **plenty** of news from the support team, and a list of the latest publications using Meso-NH.
 
@@ -16,12 +16,12 @@ Interview with `Clément Soufflet <mailto:clement.soufflet@univ-reunion.fr>`_ (L
 .. |pic1| image:: photo_cs.jpg
   :width: 400
 
-Clément, you developed FrameIt to make it easier to analyse cyclone simulations. FrameIt is particularly well suited to Méso-NH users. Could you summarise what this tool does?
+Clément, you developed FrameIt to make it easier to analyse cyclone simulations. FrameIt is particularly well suited to Meso-NH users. Could you summarise what this tool does?
   **FrameIt** is a tool developed at LACy by the Cyclones and Tropical Meteorology team, specifically by Kevin Hoarau, Adrien Colomb, Rémi Laxenaire and myself. In its first version, this tool is designed as a model output data management tool, written entirely in Python and based on the *xarray* library. The idea behind the development of **FrameIt** stems from the analysis of cyclone simulations, which require a large domain, but where only a small part (the cyclone) is of real interest to us.
 
   **FrameIt** allows you to extract a time-varying mobile (or fixed) subdomain centred on a meteorological object, whilst selecting the variables and vertical levels of interest. This subdomain is also available in polar coordinates centred on the object under study. The output consists of a series of very lightweight *netCDF* files, sorted by coordinate system and dimension, covering the desired subdomain and containing all time steps of the simulation.
 
-  It is worth noting that **FrameIt** can process both *netCDF* files from Méso-NH and *grib* files from the AROME model.
+  It is worth noting that **FrameIt** can process both *netCDF* files from Meso-NH and *grib* files from the AROME model.
 
 How does this make life easier for modellers?
   **FrameIt** does not replace the analysis of standard output files, but it enables users to get to grips with these files quickly by eliminating the issues associated with data management and the processing of large data files. In other words, it is a tool that facilitates analysis by reducing the size of the files and standardising them in relation to the meteorological phenomenon under study.
@@ -33,7 +33,7 @@ How does this make life easier for modellers?
 Are there any other, non-cyclonic situations in which **FrameIt** would also be useful?
   At present, **FrameIt** is mainly used for cyclone simulations, but this tool is not limited to that. In my view, **FrameIt** is particularly useful in cases where the domain of a numerical simulation is much larger than the meteorological phenomenon under study, but also in cases where a polar coordinate system facilitates the analysis of the meteorological phenomenon in question.
 
-What advice would you give to Méso-NH users who’d like to start using it?
+What advice would you give to Meso-NH users who’d like to start using it?
   Naturally, my first recommendation would be to consult the fairly comprehensive documentation for the project on `Météo France’s GitHub <https://meteofrance.github.io/frameit/>`_. Installing and using **FrameIt** requires a specific conda virtual environment, the installation of which is described in this documentation.
 
   Next, you’ll need to familiarise yourself with the syntax of the tool’s single configuration file, an example of which is available in the project. And finally, of course, start with a simple case that you’re already familiar with, involving just a few files, to get the hang of it.
@@ -48,7 +48,7 @@ What are the current limitations? Do you have any plans for future developments?
 
 .. note::
 
-  If you’d also like to explain a feature you’ve implemented in Méso-NH, or an analytical method you’d like to share with the community, please do let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
+  If you’d also like to explain a feature you’ve implemented in Meso-NH, or an analytical method you’d like to share with the community, please do let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
 News from the support team
 ************************************
@@ -64,14 +64,14 @@ Branch management and naming
   - The immediate result of this new approach is a major overhaul, which is largely complete. Many obsolete courses have been removed, whilst most of the remaining ones have been renamed. If you are using the repository, you will probably need, at the very least, to re-establish the link between your local branches and the remote branches in the repository. To do this, the command ``git branch -u origin/new_branch_name`` (run from the relevant local branch) will help you to **restore tracking**.
 
 Meso-NH Users’ Forum 1
-  - On 3 June 2026, the first forum was held at the Midi-Pyrénées Observatory. Four new developments were presented and discussed with 33 participants, both in person and online. There were plenty of questions and two cakes at the end of the drinks reception to celebrate the new version of Méso-NH! The presentations focused on:
-  - The **new organisational structure** centred on the Méso-NH code and service, including, amongst other things, the creation of the Scientific Committee and the Supervisory Committee
+  - On 3 June 2026, the first forum was held at the Midi-Pyrénées Observatory. Four new developments were presented and discussed with 33 participants, both in person and online. There were plenty of questions and two cakes at the end of the drinks reception to celebrate the new version of Meso-NH! The presentations focused on:
+  - The **new organisational structure** centred on the Meso-NH code and service, including, amongst other things, the creation of the Scientific Committee and the Supervisory Committee
   - **Version 6** and all its new features!
-  - The **two new websites**: a `showcase site <https://mesonh.cnrs.fr/ >`_ to discover Méso-NH and encourage people to use it, and a `technical site <https://mesonh.readthedocs.io>`_ to guide you through getting started with the model and to find all the documentation, including the user guide.
-  - A **graphical user interface** for Méso-NH to assist users in creating their *namelists*, domains and forcings, as well as for visualising simulations. It is available (beta version) online `here <https://mesonh.streamlit.app/>`_ (except for Workspace) or locally `here <https://github.com/QuentinRodier/mesonh-interface>`_ (tested only on PC and Belenos).
+  - The **two new websites**: a `showcase site <https://mesonh.cnrs.fr/ >`_ to discover Meso-NH and encourage people to use it, and a `technical site <https://mesonh.readthedocs.io>`_ to guide you through getting started with the model and to find all the documentation, including the user guide.
+  - A **graphical user interface** for Meso-NH to assist users in creating their *namelists*, domains and forcings, as well as for visualising simulations. It is available (beta version) online `here <https://mesonh.streamlit.app/>`_ (except for Workspace) or locally `here <https://github.com/QuentinRodier/mesonh-interface>`_ (tested only on PC and Belenos).
 
 Scientific Committee 1
-  The first scientific committee meeting took place on 1 July 2026. Chaired by Christelle Barthe and Didier Ricard, it brought together numerous code developers and members of the department. After a brief update on recent developments, the discussion focused on cloud microphysics in Méso-NH. Céline Planche (LaMP) was invited as an expert on this topic.
+  The first scientific committee meeting took place on 1 July 2026. Chaired by Christelle Barthe and Didier Ricard, it brought together numerous code developers and members of the department. After a brief update on recent developments, the discussion focused on cloud microphysics in Meso-NH. Céline Planche (LaMP) was invited as an expert on this topic.
 
 Kairos Meso-Challenge (CALMIP)
   Part of the department was involved in the Kairos Meso-Challenge, named after the new supercomputer commissioned at the CALMIP (Calcul en Midi-Pyrénées) mesocentre, located at the Espace Clément Ader in Toulouse. Simulations of Tropical Storm Ianos were carried out using the coupled CROCO–Meso-NH models – quite a technical challenge on this new machine!
@@ -82,15 +82,15 @@ Documentation
 Further developments and information
   - Development work is underway on the **implementation of surface fluxes and turbulence**, as well as the merging of tridiagonal matrix solutions between shallow convection and turbulence, with a view to improving vertical numerical stability relative to the model’s time step.
   - **Multiple time series** will be possible for **frequent outputs**. 
-This feature allows you to create several separate sets of frequently generated output files. These sets are entirely independent (choice of fields, output times, selected boxes, compression settings, etc.). They will be available from version 6.1 of Méso-NH (before the end of the year).
+This feature allows you to create several separate sets of frequently generated output files. These sets are entirely independent (choice of fields, output times, selected boxes, compression settings, etc.). They will be available from version 6.1 of Meso-NH (before the end of the year).
   - Registration for the **Meso-NH training course** is now open for the session from 2 to 5 November, delivered in French and in person `here <https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html>`_.
 
-  - Philippe Wautelet is currently compiling, with the help of the entire Méso-NH team, a list of all the challenges and technical issues we are facing or are likely to face. The aim is to gain as comprehensive and accurate a picture of the situation as possible, so that we can determine our technical development priorities. **Please do not hesitate to contact us if you wish to report any technical requirements or difficulties**.
+  - Philippe Wautelet is currently compiling, with the help of the entire Meso-NH team, a list of all the challenges and technical issues we are facing or are likely to face. The aim is to gain as comprehensive and accurate a picture of the situation as possible, so that we can determine our technical development priorities. **Please do not hesitate to contact us if you wish to report any technical requirements or difficulties**.
 
 .. note::
-  If you have any requirements, ideas, suggestions for improvements, bugs to fix or suggestions regarding Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ and the whole team would be delighted to hear from you.
+  If you have any requirements, ideas, suggestions for improvements, bugs to fix or suggestions regarding Meso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ and the whole team would be delighted to hear from you.
 
-Latest publications using Méso-NH
+Latest publications using Meso-NH
 ****************************************************************************************
 
 Convection
@@ -107,9 +107,9 @@ Wind energy
 
 .. note::
 
-   If you’d like to share with the community the news that one of your projects using Méso-NH has received funding, or any other updates on your work (including posters and presentations *available online*), please feel free to `email me <mailto:thibaut.dauhut@utoulouse.fr>`_. I’m also always keen to hear your feedback on the newsletters.
+   If you’d like to share with the community the news that one of your projects using Meso-NH has received funding, or any other updates on your work (including posters and presentations *available online*), please feel free to `email me <mailto:thibaut.dauhut@utoulouse.fr>`_. I’m also always keen to hear your feedback on the newsletters.
 
-Have a lovely summer and enjoy your simulations with Méso-NH!
+Have a lovely summer and enjoy your simulations with Meso-NH!
 
 See you soon,
 
