@@ -81,10 +81,8 @@ Documentation
 
 Further developments and information
   - Development work is underway on the **implementation of surface fluxes and turbulence**, as well as the merging of tridiagonal matrix solutions between shallow convection and turbulence, with a view to improving vertical numerical stability relative to the model’s time step.
-  - **Multiple time series** will be possible for **frequent outputs**. 
-This feature allows you to create several separate sets of frequently generated output files. These sets are entirely independent (choice of fields, output times, selected boxes, compression settings, etc.). They will be available from version 6.1 of Meso-NH (before the end of the year).
+  - **Multiple time series** will be possible for **frequent outputs**. This feature allows you to create several separate sets of frequently generated output files. These sets are entirely independent (choice of fields, output times, selected boxes, compression settings, etc.). They will be available from version 6.1 of Meso-NH (before the end of the year).
   - Registration for the **Meso-NH training course** is now open for the session from 2 to 5 November, delivered in French and in person `here <https://mesonh.readthedocs.io/en/mnh-master/documentation/tutorial_material.html>`_.
-
   - Philippe Wautelet is currently compiling, with the help of the entire Meso-NH team, a list of all the challenges and technical issues we are facing or are likely to face. The aim is to gain as comprehensive and accurate a picture of the situation as possible, so that we can determine our technical development priorities. **Please do not hesitate to contact us if you wish to report any technical requirements or difficulties**.
 
 .. note::
