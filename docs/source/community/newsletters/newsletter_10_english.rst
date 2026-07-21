@@ -92,6 +92,28 @@ This feature allows you to create several separate sets of frequently generated 
 .. note::
   If you have any requirements, ideas, suggestions for improvements, bugs to fix or suggestions regarding Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ and the whole team would be delighted to hear from you.
 
+Latest publications using Méso-NH
+****************************************************************************************
 
+Convection
+  - Dataset of a Kilometer-Scale Meso-NH Simulation for C2OMODO: The RCElarge300 Collection of MesoNHforC2OMODO [`Chaboureau <https://doi.org/10.1016/j.dib.2026.112954>`_, 2026]
+  - Exploring the influence of equatorial waves on a record‐breaking extreme precipitation event in Central Sahel: Insights from convection permitting simulations [`Diakhaté et al. <https://doi.org/10.1029/2026GL122000>`_, 2026]
+  - A parametrization of the convective boundary layer with subgrid orography [`Philippot et al. <https://doi.org/10.1175/JAS-D-25-0192.1>`_, 2026]
 
+Urban meteorology
+  - The Paris 2024 Olympics Research Demonstration Project [`Masson et al. <https://doi.org/10.1175/BAMS-D-25-0008.1>`_, 2026]
+  - Coupling the atmospheric model Meso-NH-v5.5 with the Monte-Carlo solver of conductive-radiative-convective heat exchanges stardis-v0.11.1 to calculate the surface energy balance of complex geometries [`Schoetter et al. <https://doi.org/10.5194/egusphere-2026-2061>`_, *in discuss.* 2026]
+
+Wind energy
+  - Multi-scale simulations of wind farm impacts on nighttime near-surface temperature in complex terrain [`Boumendil et al. <https://doi.org/10.5194/wes-2026-84>`_, *in discuss.* 2026]
+
+.. note::
+
+   If you’d like to share with the community the news that one of your projects using Méso-NH has received funding, or any other updates on your work (including posters and presentations *available online*), please feel free to `email me <mailto:thibaut.dauhut@utoulouse.fr>`_. I’m also always keen to hear your feedback on the newsletters.
+
+Have a lovely summer and enjoy your simulations with Méso-NH!
+
+See you soon,
+
+Thibaut Dauhut et the entire Meso-NH team : Philippe Wautelet, Quentin Rodier, Didier Ricard, Joris Pianezze, Juan Escobar et Jean-Pierre Chaboureau
 
