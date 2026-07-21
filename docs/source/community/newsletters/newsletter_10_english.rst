@@ -52,3 +52,29 @@ What are the current limitations? Do you have any plans for future developments?
 
   If you’d also like to explain a feature you’ve implemented in Méso-NH, or an analytical method you’d like to share with the community, please do let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
+News from the support team
+************************************
+
+New versions
+  - Version 5.7.3 was released on 4 May 2026; here is the `release note <https://mesonh.readthedocs.io/en/mnh-master/getting_started/releases/release_note_573.html#release-note-573>`_ for this version.
+  - Version 6.0.1 was released on 10 July 2026; here is the `release notes <https://mesonh.readthedocs.io/en/mnh-6-0/getting_started/releases/release_note_601.html>`_. We strongly recommend that you upgrade to this new version, particularly users of AROME files (for initialisation and pairing) dated 15 October 2024 or later (cy48).
+  - Following the new branch management and naming policy (see below), minor versions (the X.Y part of the X.Y.Z version numbering scheme) will be supported for two years from the release date of the next minor version. Maintenance means that we will continue to release versions containing only bug fixes (the letter Z in the X.Y.Z version numbering scheme).
+  - Finally, we are launching a continuous integration trial on GitLab: as soon as a development change is ready for integration, you can send it to us (it must be merged with at least the latest published minor version, which is currently 6.0). Note to developers: **There will be no further calls for contributions**.
+
+Branch management and naming
+  - A new policy for branch management and naming has been introduced. It is set out in detail `here <https://mesonh.readthedocs.io/en/mnh-6-0/documentation/coding_instructions.html#branch-management-strategy>`_ and also in the Git repository in the ``BRANCHING.md`` file. Specific rules have been established for managing release, development and bug branches. Specific courses for researchers are also on offer. This structure is not final, and adjustments will be made as required and in response to feedback from everyone.
+  - The immediate result of this new approach is a major overhaul, which is largely complete. Many obsolete courses have been removed, whilst most of the remaining ones have been renamed. If you are using the repository, you will probably need, at the very least, to re-establish the link between your local branches and the remote branches in the repository. To do this, the command ``git branch -u origin/new_branch_name`` (run from the relevant local branch) will help you to **restore tracking**.
+
+Meso-NH Users’ Forum 1
+  - On 3 June 2026, the first forum was held at the Midi-Pyrénées Observatory. Four new developments were presented and discussed with 33 participants, both in person and online. There were plenty of questions and two cakes at the end of the drinks reception to celebrate the new version of Méso-NH! The presentations focused on:
+  - The **new organisational structure** centred on the Méso-NH code and service, including, amongst other things, the creation of the Scientific Committee and the Supervisory Committee
+  - **Version 6** and all its new features!
+  - The **two new websites**: a `showcase site <https://mesonh.cnrs.fr/ >`_ to discover Méso-NH and encourage people to use it, and a `technical site <https://mesonh.readthedocs.io>`_ to guide you through getting started with the model and to find all the documentation, including the user guide.
+  - A **graphical user interface** for Méso-NH to assist users in creating their *namelists*, domains and forcings, as well as for visualising simulations. It is available (beta version) online `here <https://mesonh.streamlit.app/>`_ (except for Workspace) or locally `here <https://github.com/QuentinRodier/mesonh-interface>`_ (tested only on PC and Belenos).
+
+Scientific Committee 1
+  The first scientific committee meeting took place on 1 July 2026. Chaired by Christelle Barthe and Didier Ricard, it brought together numerous code developers and members of the department. After a brief update on recent developments, the discussion focused on cloud microphysics in Méso-NH. Céline Planche (LaMP) was invited as an expert on this topic.
+
+Kairos Meso-Challenge (CALMIP)
+  Part of the department was involved in the Kairos Meso-Challenge, named after the new supercomputer commissioned at the CALMIP (Calcul en Midi-Pyrénées) mesocentre, located at the Espace Clément Ader in Toulouse. Simulations of Tropical Storm Ianos were carried out using the coupled CROCO–Meso-NH models – quite a technical challenge on this new machine!
+
