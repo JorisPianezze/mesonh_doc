@@ -237,6 +237,7 @@ Releases
    
    "19/03/2026", "`6-0-0 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/archive/PACK-MNH-V6-0-0/mesonh-code-PACK-MNH-V6-0-0.tar.gz>`_", "`PACK-MNH-V6-0-0 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tags/PACK-MNH-V6-0-0>`_", ":ref:`6-0-0 <release_note_600>`"
    "","","",""
+   "11/08/2026", "5-7-4 ", "`PACK-MNH-V5-7-4 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tags/PACK-MNH-V5-7-4>`_", ":ref:`5-7-4 <release_note_574>`"
    "04/05/2026", "`5-7-3 <https://zenodo.org/records/15698760/files/MNH-V5-7-3.tar.gz?download=1>`_", "`PACK-MNH-V5-7-3 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tags/PACK-MNH-V5-7-3>`_", ":ref:`5-7-3 <release_note_573>`"
    "16/05/2025", "`5-7-2 <https://zenodo.org/records/15698760/files/MNH-V5-7-2.tar.gz?download=1>`_", "`PACK-MNH-V5-7-2 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tags/PACK-MNH-V5-7-2>`_", ":ref:`5-7-2 <release_note_572>`"
    "04/09/2024", "`5-7-1 <https://zenodo.org/records/15095131/files/MNH-V5-7-1.tar.gz?download=1>`_", "`PACK-MNH-V5-7-1 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tags/PACK-MNH-V5-7-1>`_", "`5-7-1 <http://mesonh.aero.obs-mip.fr/mesonh57/Download?action=AttachFile&do=view&target=WHY_BUGFIX_571.pdf>`_"
