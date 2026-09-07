@@ -3,7 +3,10 @@
 NAM_OUTPUT
 -----------------------------------------------------------------------------
 
-This namelist allows to write selected fields in output files.
+This namelist allows to write selected fields in output files. It is possible to write the whole domain or only some subdomains (boxes). It is also possible to write the outputs at selected times, either at regular intervals or at irregular times. The output files can be compressed (lossless or lossy compression) and/or reduced in precision. It is also possible to apply thresholds and rounding factors to the output variables.
+
+.. Note::
+   From version 6.1.0, it is possible to define several output series with different times and variables. This option is used in conjunction with :code:`NOUT_NUMSERIES` (from :ref:`NAM_CONFIO` namelist).
 
 .. csv-table:: NAM_OUTPUT content
    :header: "Fortran name", "Fortran type", "Default value"
@@ -97,8 +100,8 @@ This namelist allows to write selected fields in output files.
 .. note::
 
    Most of the parameters of this namelist have several dimensions. The first one is for the series number (noted s in the description below).
-   It allows to define several output series with different times and variables. This dimension has been introduced in the 6.0.0 version of MesoNH and
-   is always of size 1 for the moment (the possibility to have several series is not yet available).
+   It allows to define several output series with different times and variables. This dimension has been introduced in the 6.0.0 version of MesoNH.
+   Multiple series are possible since version 6.1.0 (value of this dimension was always 1 before).
    The second dimension is for the model number (noted m in the description below, of size 1 if the simulation is not using grid-nesting).
    The other dimensions depends on the parameter (b for boxes, f for fields, i for irregular times)
 
@@ -243,7 +246,6 @@ This namelist allows to write selected fields in output files.
    * Not all fieldnames are possible. If a field is not (yet) known, it is possible to add a personalized one by modifying the IO_WRITE_FIELD_USER subroutine.
    * A choosen time must be a multiple of the timestep.
    * Different ways to choose the output times can be combined: a regular series (given with a frequency) + irregular times. Duplicate times will be automatically removed.
-   * In grid-nesting, output times are propagated from the parent model to its children (children are allowed to have other output times). Children regular series must be aligned with parent ones. A regular parent output must always be at the same time than a regular children output. However, children may have more frequent regular backups (parent time frequency must be a multiple of children frequencies).
    * Lossy compression is possible for output files. This kind of compression leads to a loss of data but allows high reduction in the size of the output files. The procedure to reduce filespace is a two-phase process. Firstly, the last bits of each array elements are all set to 0 or 1 (alternatively to try to keep the average value). And secondly, standard compression is applied. Three algorithms are available. They are provided by the netCDF library. For each of them, it is possible to choose the number of significants digits or bits to keep.
    * Data in boxes (if NOUT_BOXES>0) is not written in Z-split files even if NB_PROCIO_W > 1
    * Lossy compression is only available for float numbers.

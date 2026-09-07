@@ -8,6 +8,7 @@ NAM_CONFIO
    :widths: 30, 30, 30
    
    "CIO_DIR", "CHARACTER(LEN=512)", ""
+   "NOUT_NUMSERIES", "INTEGER", "1"
    "LVERB_OUTLST", "LOGICAL", ".TRUE."
    "LVERB_STDOUT", "LOGICAL", ".FALSE."
    "LVERB_ALLPRC", "LOGICAL", ".FALSE."
@@ -31,6 +32,8 @@ NAM_CONFIO
    * If a file is not found in the netCDF fileformat, Meso-NH will check if it exists in the LFI format and use it if found. This could be useful if you need to mix the reading of different files with different fileformats.
 
 * :code:`CIO_DIR` : directory used to write outputs, backups and diachronic files (current directory by default). It can be overridden by CBAK_DIR for backups and diachronic files and by COUT_DIR for outputs.
+
+* :code:`NOUT_NUMSERIES`: number of output series. This allows to have sequences of output files with different time steps and different contents. This option is used in conjunction with the :ref:`NAM_OUTPUT` namelist.
 
 * :code:`LVERB_OUTLST` : flag to write application messages in :file:`OUTPUT_LISTINGn` files (in current directory, n is for the current model)
 
