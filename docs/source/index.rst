@@ -49,6 +49,7 @@ Meso-NH website
    applications/explicit-building.rst
    applications/forest-fire.rst
    applications/wind-turbine.rst
+   applications/owa_coupling.rst
 
 .. toctree::
    :maxdepth: 2

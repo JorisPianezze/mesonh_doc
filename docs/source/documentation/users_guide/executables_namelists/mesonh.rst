@@ -120,8 +120,13 @@ SURFEX
 * :ref:`nam_isba_ccn`
 * :ref:`nam_isba_nudgingn`
 * :ref:`nam_isba_snown`
+* :ref:`nam_oasis`
 * :ref:`nam_seafluxn`
 * :ref:`nam_seaicen`
+* :ref:`nam_sfx_lake_cpl`
+* :ref:`nam_sfx_land_cpl`
+* :ref:`nam_sfx_sea_cpl`
+* :ref:`nam_sfx_wave_cpl`
 * :ref:`nam_sgh_isban`
 * :ref:`nam_sson`
 * :ref:`nam_spartacus`
@@ -239,7 +244,13 @@ SURFEX
 .. include:: namelists/nam_isba_ccn.rst
 .. include:: namelists/nam_isba_nudgingn.rst
 .. include:: namelists/nam_isba_snown.rst
+.. include:: namelists/nam_oasis.rst
+.. include:: namelists/nam_seafluxn.rst
 .. include:: namelists/nam_seaicen.rst
+.. include:: namelists/nam_sfx_lake_cpl.rst
+.. include:: namelists/nam_sfx_land_cpl.rst
+.. include:: namelists/nam_sfx_sea_cpl.rst
+.. include:: namelists/nam_sfx_wave_cpl.rst
 .. include:: namelists/nam_sgh_isban.rst
 .. include:: namelists/nam_sson.rst
 .. include:: namelists/nam_spartacus.rst
