@@ -58,4 +58,4 @@ panoply (https://www.giss.nasa.gov/tools/panoply/) can be used to quickly previe
            </Netcdf4Clibrary>
         </nj22Config>
 
-   * Finally, set the :code:`NETCDFC_LIB_PATH` to point to the installation of the netCDF-C library from Meso-NH (e.g. :code:`export NETCDFC_LIB_PATH=MY_MESONH_DIRECTORY/src/dir_obj$XYZ/MASTER/NETCDF-4.6.1/lib/`).
+   * Finally, set the :code:`NETCDFC_LIB_PATH` to point to the installation of the netCDF-C library from Meso-NH (e.g. :code:`export NETCDFC_LIB_PATH=MY_MESONH_DIRECTORY/src/dir_obj$XYZ/MASTER/IO_LIBS/lib/`).
