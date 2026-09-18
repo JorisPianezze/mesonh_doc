@@ -26,6 +26,8 @@ geostrophic wind and large-scale vertical motion. It exists in two configuration
 
    The different steps must be performed in the order indicated by the directory numbers.
 
+Namelist: url: https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tree/MNH-master/examples/integration_cases/hpc/IHOP
+
 Numerical set-up
 ----------------
 
@@ -75,10 +77,6 @@ Numerical set-up
            - 60 s
            - 1 s
 
-         * - Coriolis force
-           - Enabled
-           - Enabled
-
          * - Lateral boundary condition
            - Cyclic
            - Cyclic
@@ -98,8 +96,8 @@ Numerical set-up
            - TKEL (3D)
 
          * - Cloud microphysics
-           - LIMA
-           - LIMA
+           - REVE
+           - NONE
 
          * - Shallow convection
            - EDKF
@@ -137,9 +135,41 @@ Numerical set-up
          * - LES diagnostics
            - Enabled
 
+Specificities
+----------------
+**Scientific specificities**
+
+- Moist convective boundary layer
+- Large-scale forcing from IHOP campaign
+- Geostrophic forcing with vertical motion
+- Shallow convection (EDKF for 1D)
+
+**Technical specificities**
+
+- 1D: single column
+- 3D: 256x256 horizontal grid (12.8km x 12.8km)
+- 90 vertical levels
+- Cyclic boundary conditions for 3D
+- High vertical resolution near surface
+- Surface flux forced with NAM_IDEAL_FLUX
+- Conditional sampling (NAM_COND_SAMP)
+
 Validation
 ----------------
 - Boundary layer height evolution
 - Heat and moisture budgets
 - Cloud fraction
 - Vertical velocity profiles
+
+Numerical ressources
+----------------
+.. csv-table::
+   :header: Configuration, Ressources
+   :widths: 30, 30
+
+   IHOP/1D, 1 core
+   IHOP/3D, 2560 cores
+
+References
+----------------
+- Couvreux, F., F. Guichard, J.-L. Redelsperger, C. Kiemle, V. Masson, J.-P. Lafore and C. Flamant, 2005: Assessment of water vapour variability within a convective boundary layer over land using Large Eddy Simulations and IHOP observations. Quarterly Journal of the Royal Meteorological Society, 131(611), 2665-2693
