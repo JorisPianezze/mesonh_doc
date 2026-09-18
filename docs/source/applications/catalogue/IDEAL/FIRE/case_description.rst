@@ -3,7 +3,7 @@ FIRE Stratocumulus
 
 Case description
 ----------------
-The FIRE (First ISCCP Regional Experiment) case simulates marine stratocumulus clouds off the coast of California. This is a classic case for testing cloud-radiation interactions and LES modeling of marine boundary layer clouds. The case exists in two configurations: 1D (single column) and 3D (LES).
+The case referred to as FIRE/REF was developed along the European Project on Cloud Systems in Climate Models (EUROCS) to study the diurnal cycle of stratocumulus. The case is based on observations collected in July 1987 during the First International Satellite Cloud Climatology Project (ISCCP) Regional Experiment (FIRE), off the coast of California, more specifically during the FIRE-I observing period (see Duynkerke et al. 2004 and reference therein for details).
 
 Configuration
 ----------------
@@ -12,16 +12,19 @@ Configuration
    :widths: 30, 30, 30
 
    Category, Idealized cases, HPC cases
-   Dynamics, 3D with 1D turbulence, 3D LES
    Horizontal grid spacing, 2500 m (1x1), 50 m (50x50)
    Integration length, 90000 s (25 hours), 90000 s (25 hours)
    Time step, 120 s, 1 s
-   Coriolis effect, enabled, enabled
    Turbulence, TKEL (1D), TKEL (3D)
+   Shallow convection, EDKF, NONE
    Cloud scheme, KHKO, KHKO
    Deep convection, NONE, NONE
    Radiation, ECMWF, ECMW
    LES diagnostics, enabled, enabled
+
+Namelist: 1D: https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tree/MNH-master/examples/integration_cases/local/FIRE_1D
+
+3D: https://src.koda.cnrs.fr/mesonh/mesonh-code/-/tree/MNH-master/examples/integration_cases/hpc/FIRE
 
 Declination
 ----------
@@ -53,17 +56,18 @@ Specificities
 
 - Marine stratocumulus layer with cloud-top radiative cooling
 - Sea surface temperature: 289 K prescribed
-- July 14, 1987 initialization (25200s UTC)
 - Geostrophic forcing with vertical motion
-- Cloud-radiation interactions
-- Different turbulence length scales (BL89 for 1D, DEAR for 3D)
+- in LES, several advection scheme (WENO5, CEN4TH+RKC4 or CEN4TH+LEFR)
+- radiation: different LW and SW optical properties; ECMWF vs ECRAD
+- microphysics: KHKO vs LIMA
 
 **Technical specificities**
 
 - 1D: single point domain with 120 vertical levels
 - 3D: 50x50 horizontal grid (2.5km x 2.5km domain)
-- Cyclic boundary conditions for 3D
 - Initial perturbation (0.1 m/s vertical for 3D)
+- CSEA="SEAFLX" with prescribed SST XSST_UNIF
+- NAM_LES and diagnostics used and plots
 
 Validation
 ----------------
@@ -74,9 +78,15 @@ Validation
 
 Numerical ressources
 ----------------
-1D: Single CPU (1 node, 1 core)
-3D: 4 nodes, 256 cores (MPI parallel)
+.. csv-table::
+   :header: Configuration, Ressources
+   :widths: 30, 30
+
+   FIRE_1D, 1 core
+   FIRE (3D), 256 cores
 
 References
 ----------------
-- Randall, D.A., et al. (1996): Intercomparison of stratocumulus cloud fields during FIRE. Mon. Wea. Rev., 124, 137-156.
+- Chlond, A., F. Muller and I. Sednev, 2004: Numerical simulation of the diurnal cycle of marine stratocumulus during FIRE - An LES and SCM modelling study. Quarterly Journal of the Royal Meteorological Society, 130(604), pp. 3297-3321, link.
+
+- Duynkerke, P. G., S. R. de Roode, M. C. van Zanten, J. Calvo, J. Cuxart, S. Cheinet, A. Chlond, H. Grenier, P. J. Jonker, M. Köhler, G. Lenderink, D. Lewellen, C.-L. Lappen, A. P. Lock, C.-H. Moeng, F. Müller, D. Olmeda, J.-M. Piriou, E. Sanchez and I. Sednev, 2004: Observations and numerical simulations of the diurnal cycle of the EUROCS stratocumulus case. Quarterly Journal of the Royal Meteorological Society, 130(604), pp. 3269-3296, link.
