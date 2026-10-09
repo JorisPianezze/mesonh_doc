@@ -21,7 +21,8 @@ Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) e
 
 Christelle et Didier, vous êtes les animatrice et animateur du Conseil Scientifique de Méso-NH. Pourriez-vous nous expliquer ce que c'est, et qui y participe ?
   En lieu et place du comité de pilotage qui existait auparavant, quatre pôles ont été créés cette année : un Pôle Utilisateurs, un Pôle Technique, un Comité Scientifique et un Comité des Tutelles. 
-Le Comité Scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Meso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeurs ou les utilisateurs, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
+
+  Le Comité Scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Meso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeurs ou les utilisateurs, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
 
   Les membres du comité ont été choisis pour leur expertise sur les thématiques scientifiques au cœur du développement du code Meso-NH (schémas numériques, convection, turbulence, microphysique, rayonnement, électricité atmosphérique, aérosols, chimie, schémas urbains, océan et couplage, feux, éoliennes). Les membres du Pôle Technique et les responsables du SNO-CC (Service National d’Observation – Code Communautaire) sont invités à chaque Comité Scientifique. Pour chaque CS, un spécialiste de la thématique abordée, extérieur à Meso-NH, est invité pour nous apporter un regard neuf. 
 
