@@ -77,7 +77,7 @@ Fire meteorology
   - Numerical Investigation of Surface–Atmosphere Interaction and Fire Danger in Northern Portugal: Insights into the Wildfires on July 29, 2025 [`Couto et al. <https://doi.org/10.3390/fire9030111>`_, 2026]
 
 Model development and parametrisations
-  - Meso-NH-ISO v1.0: a water stable isotopes scheme in the non-hydrostatic mesoscale atmospheric model Meso-NH. Application to a 2D West African squall line [`Barthe et al. <https://doi.org/10.5194/egusphere-2026-548>`_, *in discuss.*]
+  - Meso-NH-ISO v1.0: a water stable isotopes scheme in the non-hydrostatic mesoscale atmospheric model Meso-NH. Application to a 2D West African squall line [`Barthe et al. <https://doi.org/10.5194/egusphere-2026-548>`_, *in press* 2026]
   - Atmosphere, ocean, and coupled ocean–atmosphere models in a single code [`Redelsperger <https://doi.org/10.1002/qj.70133>`_, 2026]
   - An update of shallow cloud parameterization in the AROME NWP model [`Marcel et al. <https://doi.org/10.5194/acp-26-3901-2026>`_, 2026]
 
