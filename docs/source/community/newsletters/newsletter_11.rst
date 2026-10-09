@@ -70,22 +70,22 @@ Dernières publications utilisant Méso-NH
 ****************************************************************************************
 
 Fire meteorology
-  - Assessing the impact of forest canopy drag on experimental fire behavior using coupled atmosphere-fire large-eddy simulations [`Antolin et al., 2026 <http://dx.doi.org/10.1007/s10546-026-01001-7>`_]
+  - Assessing the impact of forest canopy drag on experimental fire behavior using coupled atmosphere-fire large-eddy simulations [`Antolin et al. <http://dx.doi.org/10.1007/s10546-026-01001-7>`_, 2026]
   - From daily to hourly scale: improving fire weather index with high-resolution Meso-NH simulations [`Campos et al. <https://doi.org/10.1038/s41598-026-72729-y>`_, *in press*]
-  - Multi-Scale High-Resolution Mapping of Wildfire Hotspots and Fire-Prone Areas Using Earth Observation and Atmospheric Modeling [`Couto et al., 2026 <https://doi.org/10.3390/geographies6030086>`_]
+  - Multi-Scale High-Resolution Mapping of Wildfire Hotspots and Fire-Prone Areas Using Earth Observation and Atmospheric Modeling [`Couto et al. <https://doi.org/10.3390/geographies6030086>`_, 2026]
 
 Surface wind and temperature
   - Meso to sub-mesoscale origins of strong surface winds and influence of surface waves in an extra-tropical cyclone [`Brumer et al. <https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4453/>`_, *in discuss.*]
-  - A neural network-based downscaling method for near surface temperature in urban areas [`García Cristóbal et al., 2026 <https://doi.org/10.1016/j.uclim.2026.103076>`_]
+  - A neural network-based downscaling method for near surface temperature in urban areas [`García Cristóbal et al. <https://doi.org/10.1016/j.uclim.2026.103076>`_, 2026]
   - Complementarity between Large-Eddy Simulation and Synthetic-Aperture Radar observations to characterise surface wind in an extratropical cyclone [`Maury et al. <https://doi.org/10.5194/egusphere-2026-3679>`_, *in discuss.*]
 
 Tropical meteorology
-  - Characteristics of a multi-model ensemble of mock-Walker simulations [`O’Donnell et al., 2026 <https://doi.org/10.1029/2026MS005781>`_]
-  - Localized precipitation enhancement induced by orography and wind dynamics in southern Réunion Island during Tropical Cyclone Batsirai [`Ramanamahefa et al. <https://doi.org/10.2139/ssrn.5529525>, *submitted*]
+  - Characteristics of a multi-model ensemble of mock-Walker simulations [`O’Donnell et al. <https://doi.org/10.1029/2026MS005781>`_, 2026]
+  - Localized precipitation enhancement induced by orography and wind dynamics in southern Réunion Island during Tropical Cyclone Batsirai [`Ramanamahefa et al. <https://doi.org/10.2139/ssrn.5529525>`_, *submitted*]
   - Le projet OrgAmazon (2027-2032) a été financé par l'ANR et la FAPESP, agence de recherche de l'état de São Paulo. Des simulations Méso-NH seront réalisées dans le but de comprendre l'évolution de l'organisation de la convection en Amazonie, due au changement climatique et à la déforestation. Un déploiement instrumental autour du site d' `ATTO-Campina <https://doi.org/10.1175/BAMS-D-24-0092.1>`_ est prévu en 2030.
 
 PhD thesis
-  Interactions entre les éoliennes et la stratification de l'atmosphère : impacts sur la météorologie proche de la surface [`P. Boumendil, Univ. Toulouse, 2026 <https://theses.fr/s415518>`_]
+  Interactions entre les éoliennes et la stratification de l'atmosphère : impacts sur la météorologie proche de la surface [`P. Boumendil <https://theses.fr/s415518>`_, Univ. Toulouse, 2026]
 
 
 
