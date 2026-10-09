@@ -68,9 +68,9 @@ Convection and organisation
   - Sensitivity of flower trade-wind cloud organisation to mesoscale atmospheric heterogeneities [`Dauhut et al. <https://doi.org/10.1002/qj.70141>`_, 2026]
 
 Cyclones and waterspouts
-  - On the tropical nature of an intense Mediterranean cyclone in the ocean-atmosphere system [`Brumer et al. <https://hal.science/hal-05444958v1>`_, *submitted*]
+  - On the tropical nature of an intense Mediterranean cyclone in the ocean-atmosphere system [`Brumer et al. <https://doi.org/10.1029/2025JD046105>`_, 2026]
   - Can hot water discharged from industrial processes enhance the likelihood of waterspouts? [`Capecchi et al. <https://doi.org/10.48550/arXiv.2603.24233>`_, 2026]
-  - Orographic impacts of Réunion Island and Madagascar on heavy rainfall during Tropical Cyclone Batsirai (2022) [`Lee et al. <https://doi.org/10.5194/egusphere-2026-1893>`_, *in discuss.*]
+  - Orographic impacts of Réunion Island and Madagascar on heavy rainfall during Tropical Cyclone Batsirai (2022) [`Lee et al. <https://doi.org/10.5194/acp-26-12435-2026>`_, 2026]
 
 Fire meteorology
   - Wildfires in the Southern Amazon: Insights into Pyro-Convective Cloud Development from Two Case Studies in August 2021 [`Bezerra et al. <https://doi.org/10.3390/atmos17020173>`_, 2026]
@@ -82,7 +82,7 @@ Model development and parametrisations
   - An update of shallow cloud parameterization in the AROME NWP model [`Marcel et al. <https://doi.org/10.5194/acp-26-3901-2026>`_, 2026]
 
 Surface-atmosphere interactions
-  - PANAME-Urban campaign: investigating multiscale surface-atmosphere interactions and thermal-contrasts in the Paris region (France) [`Lemonsu et al. <https://doi.org/10.1175/BAMS-D-23-0293.1>`_, *in press* 2026]
+  - PANAME-Urban campaign: investigating multiscale surface-atmosphere interactions and thermal-contrasts in the Paris region (France) [`Lemonsu et al. <https://doi.org/10.1175/BAMS-D-23-0293.1>`_, 2026]
   - Impact of surface interactivity on the initiation of deep convection in the Sahel: A cloud-resolving model study [`Tomasini and Couvreux <https://doi.org/10.1016/j.atmosres.2026.108941>`_, 2026]
 
 PhD thesis
