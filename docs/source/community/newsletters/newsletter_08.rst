@@ -77,7 +77,7 @@ Fire meteorology
 
 Global model evaluation and improvement
   - Process-Level Evaluation of the Land-Atmosphere Interactions Within CNRM-CM6-1 Single-Column Model Configuration [`Bernard et al., 2025 <https://doi.org/10.1029/2025MS005090>`_]
-  - Prognostic modeling of total specific humidity variance induced by shallow convective clouds in a GCM [`d'Alençon et al. <https://doi.org/10.5194/acp-26-7949-2026>`_, 2026]
+  - Prognostic modeling of total specific humidity variance induced by shallow convective clouds in a GCM [`d'Alençon et al., 2026 <https://doi.org/10.5194/acp-26-7949-2026>`_]
   - Evaluation and improvement of a cold pool parameterization against Large Eddy Simulations [`Thiam et al., 2026 <https://doi.org/10.5194/egusphere-2025-5329>`_]
 
 Microphysics
