@@ -6,7 +6,7 @@ Infolettre #11
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
 
-Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout récent Comité scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications utilisant Méso-NH.
+Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout récent Comité scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
 
 Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) et `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
@@ -66,7 +66,7 @@ Prochaines sessions de la formation Méso-NH
   Si vous avez des besoins, idées, améliorations à apporter, bugs à corriger ou suggestions concernant Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ et toute l'équipe sommes toujours preneurs.
 
 
-Dernières publications utilisant Méso-NH
+Dernières publications et projet utilisant Méso-NH
 ****************************************************************************************
 
 Fire meteorology
