@@ -37,4 +37,14 @@ De quoi avez-vous pu discuter jusqu'à présent ?
 Quelles perspectives voyez-vous pour le Comité scientifique ?
   Les prochaines séances vont être dédiées à des problèmes ou des thèmes qui nécessitent un traitement assez rapide (diagnostics dans les fichiers de sortie, efficacité numérique, étapes de préparation des simulations…) et qui permettront d’améliorer l’ergonomie et l’efficacité du modèle. Nous souhaitons aussi aborder le rôle de l’IA dans la modélisation, toujours en s’entourant d’invités spécialistes du sujet.
 
+.. note::
+
+  Si vous aussi vous souhaitez expliquer un développement que vous avez mis en place dans Méso-NH, ou une méthode d’analyse à partager avec la communauté, n’hésitez pas à me le signaler par `mail <mailto:thibaut.dauhut@utoulouse.fr>`_.
+
+    
+Les nouvelles de l’équipe support
+************************************
+
+Nouvelles versions
+  - Sortie
 
