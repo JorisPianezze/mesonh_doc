@@ -62,4 +62,11 @@ Prochaines sessions de la formation Méso-NH
   - du 22 au 25 mars 2027 (en hybride et anglais)
   - du 15 au 18 novembre 2027 (en présentiel et français)
 
+.. note::
+  Si vous avez des besoins, idées, améliorations à apporter, bugs à corriger ou suggestions concernant Méso-NH, `Philippe Wautelet <mailto:philippe.wautelet@cnrs.fr>`_ et toute l'équipe sommes toujours preneurs.
 
+
+Dernières publications utilisant Méso-NH
+****************************************************************************************
+
+Convection
