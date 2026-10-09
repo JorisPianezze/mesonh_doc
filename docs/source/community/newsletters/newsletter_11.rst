@@ -22,7 +22,7 @@ Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) e
 Christelle et Didier, vous êtes les animatrice et animateur du Comité scientifique de Méso-NH. Pourriez-vous nous expliquer ce que c'est, et qui y participe ?
   L'organisation autour du code communautaire Méso-NH a été repensée en profondeur cette année. En lieu et place du comité de pilotage qui existait auparavant, deux instances ont été créées : un Comité scientifique et un Comité des tutelles, en interactions fortes avec le Service Méso-NH et ses deux pôles : le Pôle technique et le Pôle utilisateur.ices.
 
-  Le Comité scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Méso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeurs ou les utilisateurs, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
+  Le Comité scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Méso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeur.euses ou les utilisateur.ices, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
 
   Les membres du comité ont été choisis pour leur expertise sur les thématiques scientifiques au cœur du développement du code Méso-NH (schémas numériques, convection, turbulence, microphysique, rayonnement, électricité atmosphérique, aérosols, chimie, schémas urbains, océan et couplage, feux, éoliennes). Les membres du SNO-CC (Service National d’Observation – Code Communautaire) participent à chaque réunion du Comité scientifique pendant laquelle un.e spécialiste de la thématique abordée, extérieur.e à Méso-NH, est invité.e pour nous apporter un regard neuf. 
 
@@ -34,7 +34,7 @@ De quoi avez-vous pu discuter jusqu'à présent ?
 
   La deuxième réunion du CS s’est tenue le 23 septembre 2026. Nous avons d’abord fait un retour sur les actions en cours sur les schémas microphysiques qui avaient été décidées à la précédente réunion, puis nous avons débattu de la suite du portage de Méso-NH sur GPU, et les travaux récents sur l’implicitation des flux de surface ont été présentés. Un point sur les travaux et priorités du Pôle technique a également été présenté par Philippe Wautelet.
 
-Quelles perspectives voyez-vous pour le Conseil Scientifique ?
+Quelles perspectives voyez-vous pour le Comité scientifique ?
   Les prochaines séances vont être dédiées à des problèmes ou des thèmes qui nécessitent un traitement assez rapide (diagnostics dans les fichiers de sortie, efficacité numérique, étapes de préparation des simulations…) et qui permettront d’améliorer l’ergonomie et l’efficacité du modèle. Nous souhaitons aussi aborder le rôle de l’IA dans la modélisation, toujours en s’entourant d’invités spécialistes du sujet.
 
 
