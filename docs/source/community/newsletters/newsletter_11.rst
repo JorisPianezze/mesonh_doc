@@ -11,7 +11,10 @@ Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un 
 Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) et `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
 
-|pic1|
+|pic1|     |pic2|
 
-.. |pic1| image:: photo_cb.jpg
-  :width: 400
+.. |pic1| image:: photo_cb.png
+  :width: 250
+
+.. |pic2| image:: photo_dr.jpg
+  :width: 230
