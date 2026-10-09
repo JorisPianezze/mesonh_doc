@@ -81,7 +81,7 @@ Global model evaluation and improvement
   - Evaluation and improvement of a cold pool parameterization against Large Eddy Simulations [`Thiam et al., 2026 <https://doi.org/10.5194/egusphere-2025-5329>`_]
 
 Microphysics
-  - Evaluation of the vertical microphysical properties of fog as simulated by Meso-NH during the SOFOG3D experiment [`Mazoyer et al., 2026<https://doi.org/10.5194/acp-26-12837-2026>`_]
+  - Evaluation of the vertical microphysical properties of fog as simulated by Meso-NH during the SOFOG3D experiment [`Mazoyer et al., 2026 <https://doi.org/10.5194/acp-26-12837-2026>`_]
 
 Urban meteorology and Wind energy
   - Numerical study of dust plume impact on urban thermal comfort [`Bernard et al., 2026 <https://doi.org/10.5194/acp-26-12729-2026>`_]
