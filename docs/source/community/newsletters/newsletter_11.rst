@@ -70,3 +70,15 @@ Dernières publications utilisant Méso-NH
 ****************************************************************************************
 
 Convection
+  - Le projet OrgAmazon a été financé par l'ANR et la FAPESP, agence de recherche de l'état de São Paulo. Dans le but de comprendre 
+
+
+.. note::
+
+   Si vous souhaitez partager avec la communauté le fait qu’un de vos projets utilisant Méso-NH a été financé ou toute autre communication sur vos travaux (notamment posters et présentations *disponibles en ligne*), n’hésitez pas à `m’écrire <mailto:thibaut.dauhut@utoulouse.fr>`_. Je suis également toujours preneur de vos avis sur les infolettres.
+
+Bel été et bonnes simulations avec Méso-NH !
+
+A bientôt,
+
+Thibaut Dauhut et toute l’équipe Méso-NH : Philippe Wautelet, Quentin Rodier, Didier Ricard, Joris Pianezze, Juan Escobar et Jean-Pierre Chaboureau
