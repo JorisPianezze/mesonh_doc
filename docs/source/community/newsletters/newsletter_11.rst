@@ -49,7 +49,7 @@ Nouvelle version
   La version de Méso-NH `5.7.4 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/releases>`_ est sortie le 11 août 2026. Tout.e utilisateur.ice de la branche 5.7 est invité.e à télécharer et installer ce nouveau *bugfix*, en particulier si vous utilisez des fichiers AROME pour initialiser ou forcer le modèle. Toutes les infos dans la note de version disponible sur le lien.
 
 Développement en cours
-  - Mise en place des séries multiples de sorties fréquentes (séries temporelles indépendantes avec sélection fine des champs, sous-domaines, paramètres de compression, ...) dont l'implantation est maintenant effective et testée. Elles seront disponibles dans la future version 6.1 (sortie prévue fin 2026 / début 2027).
+  - Séries multiples de sorties fréquentes (séries temporelles indépendantes avec sélection fine des champs, sous-domaines, paramètres de compression, ...) : l'implantation est maintenant effective et testée. Elles seront disponibles dans la future version 6.1 (sortie prévue fin 2026 / début 2027).
   - Forge logicielle `Koda <https://src.koda.cnrs.fr/mesonh/mesonh-code>`_ (dépôt du code) : mise en place progressive de l’intégration continue avec de la vérification automatique de code (compilation, syntaxe, cas tests...).
 
 Priorisation des développements à venir
