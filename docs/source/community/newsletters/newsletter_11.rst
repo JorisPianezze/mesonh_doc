@@ -93,7 +93,7 @@ PhD thesis
 
    Si vous souhaitez partager avec la communauté le fait qu’un de vos projets utilisant Méso-NH a été financé ou toute autre communication sur vos travaux (notamment posters et présentations *disponibles en ligne*), n’hésitez pas à `m’écrire <mailto:thibaut.dauhut@utoulouse.fr>`_. Je suis également toujours preneur de vos avis sur les infolettres.
 
-Bel été et bonnes simulations avec Méso-NH !
+Bonnes simulations avec Méso-NH !
 
 A bientôt,
 
