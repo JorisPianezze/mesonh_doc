@@ -9,7 +9,7 @@ import re
 # --------------------------------------------------------
 
 url_branching = "https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BRANCHING.md"
-# urllib.request.urlretrieve(url_branching, "documentation/branching.md")
+urllib.request.urlretrieve(url_branching, "documentation/branching.md")
 
 try:
     print(f"[conf.py] Tentative de récupération : {url_branching}")
@@ -22,20 +22,33 @@ except urllib.error.URLError as e:
 except Exception as e:
     print(f"[conf.py] Erreur inattendue : {e}")
 
-with open("documentation/branching.md", "r") as f:
-    content = f.read()
+if os.path.exists("documentation/branching.md"):
+    with open("documentation/branching.md", "r") as f:
+        content = f.read()
 
-content = re.sub(
-    r"\*\*\*\s*\n+##\s*Table of contents.*?(?=\n##\s)",
-    "",
-    content,
-    flags=re.DOTALL
-)
+    content = re.sub(
+        r"\*\*\*\s*\n+##\s*Table of contents.*?(?=\n##\s)",
+        "",
+        content,
+        flags=re.DOTALL
+    )
 
-content = re.sub(r"^```mermaid$", "```{mermaid}", content, flags=re.MULTILINE)
+    content = re.sub(r"^```mermaid$", "```{mermaid}", content, flags=re.MULTILINE)
 
-with open("documentation/branching.md", "w") as f:
-    f.write(content)
+    with open("documentation/branching.md", "w") as f:
+        f.write(content)
+else:
+
+    with open("documentation/branching.md", "w") as f:
+        f.write(
+            "# Branch Management Strategy\n\n"
+            "```{warning}\n"
+            "The automatic retrieval of the `BRANCHING.md` file failed during the "
+            "build of this documentation.\n\n"
+            "You can read it directly on the repository: "
+            "<https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BRANCHING.md>\n"
+            "```\n"
+        )
 
 # --------------------------------------------------------
 #   Define the canonical URL if you are using a custom domain on Read the Docs
