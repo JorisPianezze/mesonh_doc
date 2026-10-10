@@ -9,7 +9,7 @@ import re
 # --------------------------------------------------------
 
 url_branching = "https://src.koda.cnrs.fr/mesonh/mesonh-code/-/raw/MNH-master/BRANCHING.md"
-urllib.request.urlretrieve(url_branching, "documentation/branching.md")
+# urllib.request.urlretrieve(url_branching, "documentation/branching.md")
 
 try:
     print(f"[conf.py] Tentative de récupération : {url_branching}")
