@@ -17,7 +17,7 @@ Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) e
   :width: 250
 
 .. |pic2| image:: photo_dr.jpg
-  :width: 230
+  :width: 250
 
 Christelle et Didier, vous êtes les animatrice et animateur du Comité scientifique de Méso-NH. Pourriez-vous nous expliquer ce que c'est, et qui y participe ?
   L'organisation autour du code communautaire Méso-NH a été repensée en profondeur cette année. En lieu et place du Comité de pilotage qui existait auparavant, deux instances ont été créées : un Comité scientifique et un Comité des tutelles, en interactions fortes avec le Service Méso-NH et ses deux pôles : le Pôle technique et le Pôle utilisateur.ices.
