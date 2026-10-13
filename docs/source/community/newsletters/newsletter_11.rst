@@ -56,7 +56,7 @@ Priorisation des développements à venir
   Un état des lieux des “Défis et difficultés techniques” a été établi afin d'avoir une vision globale de ceux-ci et de prioriser les actions du Pôle Technique en collaboration avec le Comité Scientifique de Méso-NH. Le `Pôle technique <mailto:mesonhsupport@obs-mip.fr>`_ reste ouvert à toute nouvelle suggestion.
 
 Forum des utilisateur.ices
-  Un prochain forum sera organisé cette fin d'année. Ce sera une autre occasion de nous faire remonter vos difficultés ou souhaits de développement. Vous pouvez dès à présent répondre au `sondage <https://framadate.org/polls/4bf863f22a93203585b0>`_ pour choisir la date de ce prochain forum. Nous discuterons notamment de certains développements à prioriser.
+  Un prochain forum sera organisé en décembre. Ce sera une autre occasion de nous faire remonter vos difficultés ou souhaits de développement. Vous pouvez dès à présent répondre au `sondage <https://framadate.org/polls/4bf863f22a93203585b0>`_ pour choisir la date de ce prochain forum. Nous discuterons notamment de certains développements à prioriser.
 
 Prochaines sessions de la formation Méso-NH
   - du 22 au 25 mars 2027 (en hybride et anglais)
