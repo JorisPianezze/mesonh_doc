@@ -45,3 +45,5 @@ Newsletters
    newsletter_10_english.rst
 
    newsletter_11.rst
+
+   newsletter_11_english.rst
