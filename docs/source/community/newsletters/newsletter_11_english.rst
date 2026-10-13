@@ -35,7 +35,7 @@ What have you been able to discuss so far?
   The second meeting of the Scientific Committee took place on 23 September 2026. We began by reviewing the ongoing work on the microphysical schemes that had been agreed at the previous meeting, then discussed the next steps in porting Meso-NH to GPUs, and recent work on the implementation of surface fluxes was presented. An update on the Technical Division’s work and priorities was also presented by Philippe Wautelet.
 
 What prospects do you see for the Scientific Committee?
-  The forthcoming meetings will be devoted to issues or topics that require relatively swift attention (diagnostics in output files, numerical efficiency, simulation preparation steps, etc.) and which will help to improve the model’s usability and efficiency. We also wish to explore the role of AI in modelling, whilst continuing to invite specialists in the field to contribute.
+  The forthcoming meetings will be devoted to issues or topics that require relatively swift attention (diagnostics in output files, numerical efficiency, simulation preparation steps, etc.) and which will help to improve the model’s usability and efficiency. We also wish to explore the role of AI in modelling, continuing to invite specialists in the field to contribute.
 
 .. note::
 
