@@ -55,7 +55,7 @@ Prioritising future developments
   An overview of “Technical challenges and difficulties” has been drawn up to provide a comprehensive picture of these issues and to prioritise the Technical Division’s actions in collaboration with the Meso-NH Scientific Committee. The `Technical Division <mailto:mesonhsupport@obs-mip.fr>`_ remains open to any new suggestions.
 
 User Forum
-  The next forum will be held towards the end of this year. This will be another opportunity for you to share any difficulties you are experiencing or suggestions for future developments. You can now complete the `survey <https://framadate.org/polls/4bf863f22a93203585b0>`_ to help choose the date for this upcoming forum. We will be discussing, in particular, which developments to prioritise.
+  The next forum will be held in December. This will be another opportunity for you to share any difficulties you are experiencing or suggestions for future developments. You can now complete the `survey <https://framadate.org/polls/4bf863f22a93203585b0>`_ to help choose the date for this upcoming forum. We will be discussing, in particular, which developments to prioritise.
 
 Upcoming Meso-NH training sessions
   - 22–25 March 2027 (hybrid format, in English)
