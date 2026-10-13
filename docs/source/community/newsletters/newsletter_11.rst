@@ -6,7 +6,7 @@ Infolettre #11
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
 
-Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout récent Comité scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
+Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout nouveau Comité scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
 
 Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) et `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
@@ -49,7 +49,7 @@ Nouvelle version
   La version de Méso-NH `5.7.4 <https://src.koda.cnrs.fr/mesonh/mesonh-code/-/releases>`_ est sortie le 11 août 2026. Tout.e utilisateur.ice de la branche 5.7 est invité.e à télécharer et installer ce nouveau *bugfix*, en particulier si vous utilisez des fichiers AROME pour initialiser ou forcer le modèle. Toutes les infos dans la note de version disponible sur le lien.
 
 Développement en cours
-  - Séries multiples de sorties fréquentes (séries temporelles indépendantes avec sélection fine des champs, sous-domaines, paramètres de compression, ...) : l'implantation est maintenant effective et testée. Elles seront disponibles dans la future version 6.1 (sortie prévue fin 2026 / début 2027).
+  - Séries multiples de sorties fréquentes (séries temporelles indépendantes avec sélection fine des champs, sous-domaines, paramètres de compression, ...) : l'implantation est maintenant effective et testée. Elles seront disponibles dans la future version 6.1 (sortie prévue fin 2026 ou début 2027).
   - Forge logicielle `Koda <https://src.koda.cnrs.fr/mesonh/mesonh-code>`_ (dépôt du code) : mise en place progressive de l’intégration continue avec de la vérification automatique de code (compilation, syntaxe, cas tests...).
 
 Priorisation des développements à venir
