@@ -6,7 +6,7 @@ Infolettre #11
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
 
-Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout nouveau Comité scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
+Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout nouveau Comité Scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
 
 Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) et `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
@@ -19,22 +19,22 @@ Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) e
 .. |pic2| image:: photo_dr.jpg
   :width: 250
 
-Christelle et Didier, vous êtes les animatrice et animateur du Comité scientifique de Méso-NH. Pourriez-vous nous expliquer ce que c'est, et qui y participe ?
-  L'organisation autour du code communautaire Méso-NH a été repensée en profondeur cette année. En lieu et place du Comité de pilotage qui existait auparavant, deux instances ont été créées : un Comité scientifique et un Comité des tutelles, en interactions fortes avec le Service Méso-NH et ses deux pôles : le Pôle technique et le Pôle utilisateur.ices.
+Christelle et Didier, vous êtes les animatrice et animateur du Comité Scientifique de Méso-NH. Pourriez-vous nous expliquer ce que c'est, et qui y participe ?
+  L'organisation autour du code communautaire Méso-NH a été repensée en profondeur cette année. En lieu et place du Comité de Pilotage qui existait auparavant, deux instances ont été créées : un Comité Scientifique et un Comité des Tutelles, en interactions fortes avec le Service Méso-NH et ses deux pôles : le Pôle Technique et le Pôle Utilisateur.
 
-  Le Comité scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Méso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeur.euses ou les utilisateur.ices, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
+  Le Comité Scientifique (CS) a vocation à discuter, structurer et évaluer les développements nécessaires du code Méso-NH en assurant leur suivi. Il s’organise autour de réunions trimestrielles sur des thèmes ou problèmes spécifiques, soulevés par les développeur.euses ou les utilisateur.ices, afin de favoriser les interactions et le codéveloppement, et anticiper les évolutions du modèle.
 
-  Les membres du Comité scientifique ont été choisi.es pour leur expertise sur les thématiques scientifiques au cœur du développement du code Méso-NH (schémas numériques, convection, turbulence, microphysique, rayonnement, électricité atmosphérique, aérosols, chimie, schémas urbains, océan et couplage, feux, éoliennes). Les membres du SNO-CC (Service National d’Observation – Code Communautaire) participent à chaque réunion du Comité scientifique pendant laquelle un.e spécialiste de la thématique abordée, extérieur.e à Méso-NH, est invité.e pour nous apporter un regard neuf. 
+  Les membres du Comité Scientifique ont été choisi.es pour leur expertise sur les thématiques scientifiques au cœur du développement du code Méso-NH (schémas numériques, convection, turbulence, microphysique, rayonnement, électricité atmosphérique, aérosols, chimie, schémas urbains, océan et couplage, feux, éoliennes). Les membres du SNO-CC (Service National d’Observation – Code Communautaire) participent à chaque réunion du Comité Scientifique pendant laquelle un.e spécialiste de la thématique abordée, extérieur.e à Méso-NH, est invité.e pour nous apporter un regard neuf. 
 
 Quel est l'objectif de ce Comité scientifique ? à quoi sert-il ?
-  Le premier objectif du Conseil scientifique est de suivre les développements scientifiques et techniques du modèle Méso-NH, définir des priorités scientifiques de développement du code et donner des recommandations de développements techniques prioritaires au Pôle Technique. Le deuxième objectif est de faire remonter au Comité des tutelles les avancées, les difficultés rencontrées ainsi que les besoins identifiés nécessitant des moyens. Tout cela pour répondre aux priorités scientifiques du CNRS, de Météo-France et de la communauté des utilisateur.ices, et améliorer l’offre de service du code communautaire pour les applications académiques, appliquées et sociétales.
+  Le premier objectif du Comité Scientifique est de suivre les développements scientifiques et techniques du modèle Méso-NH, définir des priorités scientifiques de développement du code et donner des recommandations de développements techniques prioritaires au Pôle Technique. Le deuxième objectif est de faire remonter au Comité des Tutelles les avancées, les difficultés rencontrées ainsi que les besoins identifiés nécessitant des moyens. Tout cela pour répondre aux priorités scientifiques du CNRS, de Météo-France et de la communauté des utilisateur.ices, et améliorer l’offre de service du code communautaire pour les applications académiques, appliquées et sociétales.
 
 De quoi avez-vous pu discuter jusqu'à présent ?
   Le CS s’est réuni pour la première fois le 1er juillet 2026. En plus d’informations générales sur l’actualité de Méso-NH, cette première réunion a traité de la représentation de la microphysique. Les sujets abordés ont balayé des questions très techniques comme la cohérence entre les différentes variables microphysiques, des thèmes à la frontière avec d’autres schémas de Méso-NH comme l’initialisation du schéma à 2 moments par les aérosols, mais aussi des chantiers à plus long terme comme l’unification des schémas microphysiques (KHKO, ICE3, LIMA) pour faciliter leur maintenance et leur utilisation. Les évolutions futures de la microphysique dans Méso-NH ont aussi été évoquées. 
 
-  La deuxième réunion du CS s’est tenue le 23 septembre 2026. Nous avons d’abord fait un retour sur les actions en cours sur les schémas microphysiques qui avaient été décidées à la précédente réunion, puis nous avons débattu de la suite du portage de Méso-NH sur GPU, et les travaux récents sur l’implicitation des flux de surface ont été présentés. Un point sur les travaux et priorités du Pôle technique a également été présenté par Philippe Wautelet.
+  La deuxième réunion du CS s’est tenue le 23 septembre 2026. Nous avons d’abord fait un retour sur les actions en cours sur les schémas microphysiques qui avaient été décidées à la précédente réunion, puis nous avons débattu de la suite du portage de Méso-NH sur GPU, et les travaux récents sur l’implicitation des flux de surface ont été présentés. Un point sur les travaux et priorités du Pôle Technique a également été présenté par Philippe Wautelet.
 
-Quelles perspectives voyez-vous pour le Comité scientifique ?
+Quelles perspectives voyez-vous pour le Comité Scientifique ?
   Les prochaines séances vont être dédiées à des problèmes ou des thèmes qui nécessitent un traitement assez rapide (diagnostics dans les fichiers de sortie, efficacité numérique, étapes de préparation des simulations…) et qui permettront d’améliorer l’ergonomie et l’efficacité du modèle. Nous souhaitons aussi aborder le rôle de l’IA dans la modélisation, toujours en s’entourant d’invités spécialistes du sujet.
 
 .. note::
@@ -53,7 +53,7 @@ Développement en cours
   - Forge logicielle `Koda <https://src.koda.cnrs.fr/mesonh/mesonh-code>`_ (dépôt du code) : mise en place progressive de l’intégration continue avec de la vérification automatique de code (compilation, syntaxe, cas tests...).
 
 Priorisation des développements à venir
-  Un état des lieux des “Défis et difficultés techniques” a été établi afin d'avoir une vision globale de ceux-ci et de prioriser les actions du Pôle technique en collaboration avec le Comité scientifique de Méso-NH. Le `Pôle technique <mailto:mesonhsupport@obs-mip.fr>`_ reste ouvert à toute nouvelle suggestion.
+  Un état des lieux des “Défis et difficultés techniques” a été établi afin d'avoir une vision globale de ceux-ci et de prioriser les actions du Pôle Technique en collaboration avec le Comité Scientifique de Méso-NH. Le `Pôle technique <mailto:mesonhsupport@obs-mip.fr>`_ reste ouvert à toute nouvelle suggestion.
 
 Forum des utilisateur.ices
   Un prochain forum sera organisé cette fin d'année. Ce sera une autre occasion de nous faire remonter vos difficultés ou souhaits de développement. Vous pouvez dès à présent répondre au `sondage <https://framadate.org/polls/4bf863f22a93203585b0>`_ pour choisir la date de ce prochain forum. Nous discuterons notamment de certains développements à prioriser.
