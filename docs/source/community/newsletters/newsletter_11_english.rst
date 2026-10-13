@@ -81,7 +81,8 @@ Surface wind and temperature
 Tropical meteorology
   - Characteristics of a multi-model ensemble of mock-Walker simulations [`O’Donnell et al. <https://doi.org/10.1029/2026MS005781>`_, 2026]
   - Localized precipitation enhancement induced by orography and wind dynamics in southern Réunion Island during Tropical Cyclone Batsirai [`Ramanamahefa et al. <https://doi.org/10.2139/ssrn.5529525>`_, *submitted*]
-  - Le projet OrgAmazon (LAERO Univ. Toulouse & IAG Univ. São Paulo, 2027-2032) a été financé par l'ANR et la FAPESP, agence de recherche de l'état de São Paulo. Des simulations Meso-NH seront réalisées dans le but de comprendre l'évolution de l'organisation de la convection en Amazonie due au changement climatique et à la déforestation. Un déploiement instrumental autour du site d' `ATTO-Campina <https://doi.org/10.1175/BAMS-D-24-0092.1>`_ est prévu en 2030.
+  - The OrgAmazon project (LAERO, University of Toulouse & IAG, University of São Paulo, 2027–2032) was funded by the ANR and FAPESP, the São Paulo State Research Agency. Meso-NH simulations will be carried out to understand how convection patterns in the Amazon are changing as a result of climate change and deforestation. An instrumental deployment around the `ATTO-Campina <https://doi.org/10.1175/BAMS-D-24-0092.1>`_ site is planned for 2030.
+
 
 PhD thesis
   Interactions entre les éoliennes et la stratification de l'atmosphère : impacts sur la météorologie proche de la surface [`P. Boumendil <https://theses.fr/s415518>`_, Univ. Toulouse, 2026]
