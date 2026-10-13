@@ -39,7 +39,7 @@ What prospects do you see for the Scientific Committee?
 
 .. note::
 
-  If you too would like to explain a development you have implemented in Meso-NH, or an analytical method you wish to share with the community, please do not hesitate to let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
+  If you too would like to explain a development you have implemented in Meso-NH, or a method of analysis you wish to share with the community, please do not hesitate to let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
 News from the support team
 ************************************
