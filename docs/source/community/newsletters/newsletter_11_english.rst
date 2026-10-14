@@ -6,7 +6,7 @@ Newsletter #11
 
 Dear Meso-NH users,
 
-Below is the 11th newsletter from our community. In it, you’ll find an interview with the co-chairs of the Meso-NH brand-new Scientific Committee, news from the support team, and the list of the latest publications and project using Meso-NH.
+Below is the 11th newsletter from our community. In it, you’ll find an interview with the co-chairs of the Meso-NH brand-new Scientific Committee, news from the Meso-NH team, and the list of the latest publications and project using Meso-NH.
 
 Interview with `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) and `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
@@ -41,7 +41,7 @@ What prospects do you see for the Scientific Committee?
 
   If you too would like to explain a development you have implemented in Meso-NH, or a method of analysis you wish to share with the community, please do not hesitate to let me know by `email <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
-News from the support team
+News from the Meso-NH team
 ************************************
 
 New version
