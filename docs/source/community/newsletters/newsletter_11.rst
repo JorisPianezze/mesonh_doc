@@ -42,7 +42,7 @@ Quelles perspectives voyez-vous pour le Comité Scientifique ?
   Si vous aussi vous souhaitez expliquer un développement que vous avez mis en place dans Méso-NH, ou une méthode d’analyse à partager avec la communauté, n’hésitez pas à me le signaler par `mail <mailto:thibaut.dauhut@utoulouse.fr>`_.
 
     
-Les nouvelles de l’équipe support
+Les nouvelles du service Méso-NH
 ************************************
 
 Nouvelle version
