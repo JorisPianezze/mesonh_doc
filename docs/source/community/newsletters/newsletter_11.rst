@@ -6,7 +6,7 @@ Infolettre #11
 
 Chers utilisateurs, chères utilisatrices de Méso-NH,
 
-Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout nouveau Comité Scientifique de Méso-NH, les nouvelles de l’équipe support et la liste des dernières publications et projet utilisant Méso-NH.
+Voici ci-dessous la 11ème infolettre de notre communauté. Vous y trouverez un entretien avec l'animatrice et l'animateur du tout nouveau Comité Scientifique de Méso-NH, les nouvelles du service et la liste des dernières publications et projet utilisant Méso-NH.
 
 Entretien avec `Christelle Barthe <mailto:christelle.barthe@cnrs.fr>`_ (LAERO) et `Didier Ricard <mailto:didier.ricard@meteo.fr>`_ (CNRM)
 ******************************************************************************************************************
