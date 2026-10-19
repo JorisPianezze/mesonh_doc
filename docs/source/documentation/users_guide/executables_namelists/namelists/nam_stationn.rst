@@ -34,7 +34,7 @@ This namelist is used to configure a virtual observed point at a station by usin
 
 * :code:`XZ_STAT` : height above the model orography (in meters) of the station
 
-* :code:`CNAME_STAT` : name of the station
+* :code:`CNAME_STAT` : name of the station. If not provided, the name will be automatically generated as "STAT_0001", "STAT_0002", etc.
 
 * :code:`CFILE_STAT` : name of the .csv file containing the definition of the stations (see below). If CFILE_STAT='NO_INPUT_CSV', the .csv file is not read.
 

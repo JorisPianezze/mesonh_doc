@@ -34,7 +34,7 @@ This namelist is used to configure virtual vertical profilers by using the follo
 
 * :code:`XZ_PROF` : height above the model orography (in meters) of the profiler
 
-* :code:`CNAME_PROF` : name of the profiler
+* :code:`CNAME_PROF` : name of the profiler. If not provided, the name will be automatically generated as "PROF_0001", "PROF_0002", etc.
 
 * :code:`CFILE_PROF` : name of the .csv file containing the definition of the profilers (see below). If CFILE_PROF='NO_INPUT_CSV', the .csv file is not read.
 
