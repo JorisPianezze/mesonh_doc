@@ -35,8 +35,6 @@ Material
 
 * :download:`Diagnostics <tutorial_material/diag.pdf>`
 
-* :download:`Documentation <tutorial_material/documentation.pdf>`
-
 * :download:`Post-processing <tutorial_material/postprocessing.pdf>`
 
 * :download:`Exercise for ideal cases <tutorial_material/tp_ideal.pdf>`
