@@ -68,6 +68,12 @@ To extract ARPEGE or AROME-France data by yourself you need to copy the $MESONH/
 
      TYPE = FC
 
+* Turn on the LSFX_FILE boolean to get surface files from AROME (necessary for PREP_REAL_CASE) :
+
+  .. code-block:: bash
+
+     LSFX_FILE=T          # to get surface files for arome
+
 * AROME can zoom in to extract a sub-domain of the AROME-FRANCE domain with the LZOOM=T flag. You then need to enter the edges of the domain, for example :
 
   .. code-block:: bash
