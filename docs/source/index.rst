@@ -50,7 +50,7 @@ Meso-NH website
    :caption: Community
 
    Meetings <https://mesonh.cnrs.fr/meetings/>
-   Publications <http://mesonh.aero.obs-mip.fr/cgi-bin/mesonh/publi.pl?art=on&phd=on>
+   Publications <https://mesonh.cnrs.fr/publications/>
    community/newsletters/newsletters.rst
    Contributors <https://mesonh.cnrs.fr/contributors/>
 
