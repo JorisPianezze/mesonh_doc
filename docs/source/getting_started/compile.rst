@@ -720,6 +720,25 @@ Then, you can follow the compilation steps described in the section dedicated to
 
    * RTTOV can be used with :ref:`diag` program by setting :ref:`nam_diag_satellite_simulator` namelist.
 
+.. tip::
+
+   If you compiled the MASTER version without RTTOV but want to use it afterwards, you can do so without recompiling everything: compile RTTOV manually, then create a user version (``MY_VER_USER``) that contains the ``call_rttov14.f90`` and ``write_diag_data_supp.f90`` routines:
+
+   .. code-block:: bash
+      :substitutions:
+
+      cd |MNH_directory_extract_current|/src/
+      mkdir MY_VER_USER
+      cp MNH/call_rttov14.f90 MY_VER_USER/
+      cp MNH/write_diag_data_supp.f90 MY_VER_USER/
+      export VER_USER=MY_VER_USER
+      export VER_RTTOV=RTTOVAUTO
+      ./configure
+      . ../conf/profile-mesonh
+      make rttov
+      make user
+      make installuser
+
 
 .. _compile_mesonh_with_megan:
 
