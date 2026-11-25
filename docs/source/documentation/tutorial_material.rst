@@ -9,7 +9,7 @@ A 4-day tutorial class is organized two times a year at Toulouse, France:
 
 .. note::
 
-   The next tutorial is the 2-5 November 2026 (**registration deadline 2nd October**). For informations about application and registration, send your request to quentin.rodier .at. meteo.fr. 
+   The next tutorial will be held on 22-25 March 2027 (**registration deadline 22nd February**). For more information (application and registration), send an email to quentin.rodier .at. meteo.fr. 
 
 Agenda
 ------------------------------------------------------------------------------
